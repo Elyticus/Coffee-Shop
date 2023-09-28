@@ -59,7 +59,8 @@ body {
 .offer-details,
 .offer-title,
 .shop-btn,
-.order-me {
+.order-me,
+.sub-text {
   font-family: var(--font-forum);
 }
 
@@ -217,6 +218,33 @@ body {
   flex: 4;
 }
 
+/* Subscribe Mobile */
+.sub-text {
+  text-align: center;
+  margin-inline: 3rem;
+}
+
+.subscribe {
+  flex-direction: column;
+  gap: 1rem;
+  margin: 5rem 2rem;
+}
+
+.subscribe-input {
+  border: none;
+  outline: none;
+  border-bottom: 1px solid black;
+  text-align: center;
+}
+
+.sub-btn {
+  border: none;
+  background-color: black;
+  color: white;
+  text-transform: uppercase;
+  padding: 1rem;
+}
+
 @media all and (max-width: 480px) {
   .container-gallery {
     margin-top: 1rem;
@@ -290,5 +318,38 @@ body {
 
   .sticky {
     padding-inline: 7rem;
+  }
+
+  /* Subscribe */
+
+  .sub-text {
+    display: none;
+  }
+
+  .subscribe {
+    margin-bottom: 6rem;
+    flex-direction: row;
+    gap: 0;
+  }
+
+  .subscribe-input {
+    width: 100%;
+    border: none;
+    outline: none;
+    background-color: black;
+    padding: 1.5rem;
+    color: white;
+    margin-left: 6rem;
+    text-align: left;
+  }
+
+  .sub-btn {
+    margin-right: 6rem;
+    border: none;
+    background-color: black;
+    color: white;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    padding: 2rem;
   }
 }
