@@ -42,11 +42,15 @@ body {
 }
 
 .navbar-brand,
-.hero-text {
+.hero-text,
+.offer-details,
+.offer-title,
+.shop-btn {
   font-family: var(--font-forum);
 }
 
-.navbar-brand {
+.navbar-brand,
+.shop-btn {
   letter-spacing: 2px;
 }
 
@@ -124,6 +128,46 @@ body {
   font-weight: 700;
 }
 
+main {
+  flex-direction: column;
+}
+
+main,
+.card {
+  background-color: #f4f0e5;
+}
+
+.products {
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+  padding-inline: 1rem;
+  padding-top: 2rem;
+}
+
+.image-product {
+  height: 100%;
+  max-width: 100%;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+.card {
+  width: 200px;
+  border: none;
+}
+
+.products-details {
+  text-align: center;
+  margin: 4rem;
+}
+
+.shop-btn {
+  border: none;
+  background: transparent;
+}
+
 @media all and (min-width: 1024px) {
   .logo {
     margin-left: 9.7rem;
@@ -143,18 +187,43 @@ body {
   }
 
   .hero-video-container {
-    object-fit: cover;
-    border-radius: 10px;
+    position: relative;
+    width: 700px;
+    height: 700px;
+    border-radius: ;
+    overflow: hidden;
   }
 
   .video {
     margin-top: 0;
-    width: 700px;
-    height: 700px;
-    overflow: hidden;
   }
 
   .nav-link {
     margin-right: 1rem;
+  }
+
+  .products {
+    flex-direction: row;
+    justify-content: left;
+  }
+
+  .image-product {
+    height: 570px;
+    object-fit: cover;
+  }
+
+  .card {
+    margin-left: 3rem;
+    width: 400px;
+  }
+
+  main {
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .products-details {
+    margin: 3rem;
   }
 }
