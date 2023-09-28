@@ -3,6 +3,7 @@ const main = document.querySelector("main");
 
 const mainPos = main.getBoundingClientRect().top;
 
+// Navbar
 window.addEventListener("scroll", (e) => {
   let scrollPos = window.scrollY;
   if (scrollPos >= mainPos) {
