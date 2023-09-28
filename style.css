@@ -24,7 +24,7 @@ body {
   position: absolute;
   min-width: 100%;
   transform: scaleX(0);
-  height: 2px;
+  height: 1.5px;
   bottom: 2px;
   left: 0;
   background-color: black;
@@ -39,6 +39,19 @@ body {
 
 .navbar {
   background-color: #efe7d2;
+}
+
+.sticky {
+  background-color: #efe7d2;
+  box-shadow: 0px 5px 6px hsl(306, 19%, 11%, 0.2);
+  padding-inline: 2rem;
+  position: fixed;
+  z-index: 1;
+  width: 100%;
+  top: 0;
+  left: 0;
+
+  transition: 0.7s ease-in-out;
 }
 
 .navbar-brand,
@@ -190,7 +203,6 @@ main,
     position: relative;
     width: 700px;
     height: 700px;
-    border-radius: ;
     overflow: hidden;
   }
 
@@ -225,5 +237,9 @@ main,
 
   .products-details {
     margin: 3rem;
+  }
+
+  .sticky {
+    padding-inline: 7rem;
   }
 }
