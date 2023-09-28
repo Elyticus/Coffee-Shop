@@ -3,33 +3,60 @@
   --font-forum: "Forum", cursive;
 }
 
+::selection {
+  color: white;
+  background: black;
+}
+
 body {
   margin: 0;
 }
 
-a {
+.nav-link {
   display: inline-block;
   position: relative;
   text-transform: uppercase;
   letter-spacing: 1.5px;
 }
 
-a:after {
+.nav-link:after {
   content: "";
   position: absolute;
-  width: 100%;
+  min-width: 100%;
   transform: scaleX(0);
   height: 2px;
   bottom: 2px;
   left: 0;
-  background-color: #feca9a;
+  background-color: black;
   transform-origin: bottom right;
   transition: transform 0.25s ease-out;
 }
 
-a:hover:after {
+.nav-link:hover:after {
   transform: scaleX(1);
   transform-origin: bottom left;
+}
+
+.navbar {
+  background-color: #efe7d2;
+}
+
+.navbar-brand,
+.hero-text {
+  font-family: var(--font-forum);
+}
+
+.navbar-brand {
+  letter-spacing: 2px;
+}
+
+.navbar-brand:hover {
+  color: #4b4b4ad3;
+}
+
+.nav-link {
+  padding-right: 0;
+  padding-left: 0;
 }
 
 .logo {
@@ -44,7 +71,10 @@ a:hover:after {
 
 .navbar-collapse {
   flex-grow: 0;
+}
 
+.navbar-collapse,
+.hero-content {
   text-align: center;
 }
 
@@ -63,9 +93,16 @@ a:hover:after {
 }
 
 .hero-content {
-  text-align: center;
   margin-inline: 1.5rem;
   margin-top: 2rem;
+}
+
+.hero-title {
+  font-weight: 900;
+}
+
+.hero-text {
+  line-height: 1.7rem;
 }
 
 .video {
@@ -77,19 +114,19 @@ a:hover:after {
 .btn {
   border: 2px solid #feca9a;
   background-color: #feca9a;
-  padding-inline: 5rem;
+  padding: 0.6rem 3rem;
   font-weight: 700;
 }
 
 .btn:hover {
   border: 2px solid black;
-  color: #feca9a;
+  color: #ff7e05;
   font-weight: 700;
 }
 
 @media all and (min-width: 1024px) {
   .logo {
-    margin-left: 3.2rem;
+    margin-left: 9.7rem;
   }
 
   .hero-section {
@@ -105,10 +142,19 @@ a:hover:after {
     align-self: center;
   }
 
+  .hero-video-container {
+    object-fit: cover;
+    border-radius: 10px;
+  }
+
   .video {
     margin-top: 0;
     width: 700px;
     height: 700px;
-    border-radius: 50% 50%;
+    overflow: hidden;
+  }
+
+  .nav-link {
+    margin-right: 1rem;
   }
 }
