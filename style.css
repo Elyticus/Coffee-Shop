@@ -58,7 +58,8 @@ body {
 .hero-text,
 .offer-details,
 .offer-title,
-.shop-btn {
+.shop-btn,
+.order-me {
   font-family: var(--font-forum);
 }
 
@@ -141,11 +142,11 @@ body {
   font-weight: 700;
 }
 
-main {
+.flex-div {
   flex-direction: column;
 }
 
-main,
+.flex-div,
 .card {
   background-color: #f4f0e5;
 }
@@ -179,6 +180,56 @@ main,
 .shop-btn {
   border: none;
   background: transparent;
+}
+
+.order-now {
+  text-align: center;
+}
+
+.order-me {
+  width: 100%;
+  background-color: rgba(147, 80, 215, 0.516);
+  align-self: center;
+  padding: 5rem 0;
+}
+
+/* Gallery */
+
+.container-gallery {
+  margin: 10rem;
+  display: flex;
+  justify-content: center;
+  height: 27rem;
+  gap: 2.5em;
+}
+
+.container-gallery > div {
+  flex: 1;
+  border-radius: 1rem;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: auto 100%;
+  transition: all 0.8s cubic-bezier(0.78, -0.49, 0, 1.81);
+}
+
+.container-gallery > div:hover {
+  cursor: pointer;
+  flex: 4;
+}
+
+@media all and (max-width: 480px) {
+  .container-gallery {
+    gap: 1rem;
+  }
+
+  .container-gallery {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .container-gallery > div:hover {
+    flex: 7;
+  }
 }
 
 @media all and (min-width: 1024px) {
@@ -229,7 +280,7 @@ main,
     width: 400px;
   }
 
-  main {
+  .flex-div {
     flex-direction: row;
     justify-content: center;
     align-items: center;
