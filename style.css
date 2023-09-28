@@ -194,30 +194,6 @@ body {
   padding: 5rem 0;
 }
 
-/* Gallery */
-
-.container-gallery {
-  margin: 5rem 7rem;
-  display: flex;
-  justify-content: center;
-  height: 27rem;
-  gap: 2rem;
-}
-
-.container-gallery > div {
-  flex: 1;
-  border-radius: 1rem;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: auto 100%;
-  transition: all 0.8s cubic-bezier(0.78, -0.49, 0, 1.81);
-}
-
-.container-gallery > div:hover {
-  cursor: pointer;
-  flex: 4;
-}
-
 /* Subscribe Mobile */
 .sub-text {
   text-align: center;
@@ -238,6 +214,7 @@ body {
 }
 
 .sub-btn {
+  cursor: not-allowed;
   border: none;
   background-color: black;
   color: white;
@@ -245,11 +222,35 @@ body {
   padding: 1rem;
 }
 
+/* Gallery */
+
+.container-gallery {
+  margin: 5rem 3rem;
+  display: flex;
+  justify-content: center;
+  height: 8rem;
+  gap: 2rem;
+}
+
+.container-gallery > div {
+  flex: 1;
+  border-radius: 1rem;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: auto 100%;
+  transition: all 0.8s cubic-bezier(0.78, -0.49, 0, 1.81);
+}
+
+.container-gallery > div:hover {
+  cursor: pointer;
+  flex: 4;
+}
+
 @media all and (max-width: 480px) {
   .container-gallery {
-    margin-top: 1rem;
+    margin-top: 5rem;
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     gap: 1rem;
   }
 
@@ -259,6 +260,11 @@ body {
 }
 
 @media all and (min-width: 1024px) {
+  .container-gallery {
+    margin: 5rem 7rem;
+    height: 27rem;
+  }
+
   .logo {
     margin-left: 9.7rem;
   }
