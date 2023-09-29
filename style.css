@@ -4,8 +4,8 @@
 }
 
 ::selection {
-  color: white;
-  background: black;
+  color: rgb(231, 238, 43);
+  background: #8b31e5;
 }
 
 body {
@@ -69,7 +69,8 @@ a,
 
 .navbar-brand,
 .shop-btn,
-.nav-link {
+.nav-link,
+.hero-title {
   letter-spacing: 2px;
 }
 
@@ -118,7 +119,10 @@ a,
   flex-direction: column;
 }
 
-.hero-content,
+.hero-content {
+  margin-top: 5rem;
+}
+
 .video {
   margin-top: 3rem;
 }
@@ -127,12 +131,20 @@ a,
   margin-inline: 1.5rem;
 }
 
-.hero-title {
-  font-weight: 900;
-}
-
 .hero-text {
   line-height: 1.7rem;
+}
+
+.border-change {
+  background-color: #c7a4ea;
+  border-radius: 50% 50% / 0% 50%;
+  padding-inline: 0.2rem;
+}
+
+.swap-color {
+  background-color: #f4f0e5;
+  border-radius: 50% 50% / 0% 50%;
+  padding-inline: 0.2rem;
 }
 
 .video {
