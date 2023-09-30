@@ -35,170 +35,246 @@
     <!-- CSS Link -->
     <link rel="stylesheet" href="style.css" />
 
+    <!-- Favicon Link -->
+    <link rel="icon" type="image/x-icon" href="#" />
+
     <!-- Document Title -->
     <title>Creamy Cup</title>
   </head>
   <body>
-    <header>
-      <nav class="navbar navbar-expand-lg">
-        <div class="container-fluid">
-          <div class="logo">
-            <a class="navbar-brand fw-bold" href="#">Creamy Cup</a>
-            <i class="fa-solid fa-mug-hot"></i>
+    <div id="container-main" class="blur">
+      <header>
+        <nav class="navbar navbar-expand-lg">
+          <div class="container-fluid">
+            <div class="logo">
+              <a class="navbar-brand fw-bold" href="#">Creamy Cup</a>
+              <i class="fa-solid fa-mug-hot"></i>
+            </div>
+
+            <button
+              class="navbar-toggler"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#navbarSupportedContent"
+              aria-controls="navbarSupportedContent"
+              aria-expanded="false"
+              aria-label="Toggle navigation"
+            >
+              <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+              <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                <li class="nav-item">
+                  <a class="nav-link px-0 active" aria-current="page" href="#"
+                    >About</a
+                  >
+                </li>
+
+                <li class="nav-item">
+                  <a class="nav-link px-0 active" aria-current="page" href="#"
+                    >Contact</a
+                  >
+                </li>
+
+                <li class="nav-item">
+                  <a class="nav-link px-0 active" aria-current="page" href="#"
+                    >Order</a
+                  >
+                </li>
+
+                <li class="nav-item">
+                  <a class="nav-link px-0 active" aria-current="page" href="#"
+                    >Reviews</a
+                  >
+                </li>
+              </ul>
+            </div>
+          </div>
+        </nav>
+
+        <div class="hero-section">
+          <div class="hero-content">
+            <h1 class="hero-title fw-bold text-uppercase">Treat Yourself</h1>
+
+            <p class="hero-text">
+              Discover a unique specialty coffee place in the heart of the city!
+              Lorem ipsum, dolor sit amet
+              <span class="border-change">consectetur</span> adipisicing elit.
+              Reiciendis molestias, nesciunt maiores fuga minus suscipit
+              <span class="border-change">assumenda</span>
+              eum provident pariatur! Deserunteser sint magni vero id numquam?
+              Ipsum rem molestias et minima?
+            </p>
+
+            <button class="btn" type="submit">Order now</button>
           </div>
 
-          <button
-            class="navbar-toggler"
-            type="button"
-            data-bs-toggle="collapse"
-            data-bs-target="#navbarSupportedContent"
-            aria-controls="navbarSupportedContent"
-            aria-expanded="false"
-            aria-label="Toggle navigation"
-          >
-            <span class="navbar-toggler-icon"></span>
-          </button>
-
-          <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-              <li class="nav-item">
-                <a class="nav-link px-0 active" aria-current="page" href="#"
-                  >About</a
-                >
-              </li>
-
-              <li class="nav-item">
-                <a class="nav-link px-0 active" aria-current="page" href="#"
-                  >Contact</a
-                >
-              </li>
-
-              <li class="nav-item">
-                <a class="nav-link px-0 active" aria-current="page" href="#"
-                  >Order</a
-                >
-              </li>
-
-              <li class="nav-item">
-                <a class="nav-link px-0 active" aria-current="page" href="#"
-                  >Reviews</a
-                >
-              </li>
-            </ul>
+          <div class="hero-video-container">
+            <video
+              autoplay
+              class="video"
+              src="assets/main.mp4"
+              loop=""
+              muted=""
+            ></video>
           </div>
         </div>
-      </nav>
+      </header>
 
-      <div class="hero-section">
-        <div class="hero-content">
-          <h1 class="hero-title fw-bold text-uppercase">Treat Yourself</h1>
-          <p class="hero-text">
-            Discover a unique specialty coffee place in the heart of the city!
-            Lorem ipsum, dolor sit amet
-            <span class="border-change">consectetur</span> adipisicing elit.
-            Reiciendis molestias, nesciunt maiores fuga minus suscipit
-            <span class="border-change">assumenda</span>
-            eum provident pariatur! Deserunteser sint magni vero id numquam?
-            Ipsum rem molestias et minima?
+      <main>
+        <div class="flex-div d-flex">
+          <section id="products" class="products d-flex">
+            <figure class="card">
+              <div class="img-container">
+                <img class="image-product" src="assets/product 1.webp" alt="" />
+              </div>
+
+              <div class="label">
+                <span>Single Origin</span>
+                <p class="product-name">Costa Rica Ceres Nubes</p>
+                <span>$26.00</span>
+              </div>
+            </figure>
+
+            <figure class="card">
+              <div class="img-container">
+                <img class="image-product" src="assets/product 2.jpg" alt="" />
+              </div>
+
+              <div class="label">
+                <span>Single Origin</span>
+                <p class="product-name">Colombia Chami Natural</p>
+                <span>$22.00</span>
+              </div>
+            </figure>
+          </section>
+
+          <section class="products-details">
+            <figcaption>
+              <p class="text-uppercase">New Arrivals</p>
+              <h3 class="offer-title">Freshest of the Fresh</h3>
+              <p class="offer-details">
+                Featuring the freshest in our beautiful range of seasonal
+                <span class="border-change">coffees</span>
+                sourced throughout the year.
+              </p>
+            </figcaption>
+          </section>
+        </div>
+
+        <section class="order-now">
+          <div class="order-me">
+            <p>No time to sit down?</p>
+
+            <p>
+              Order our <span class="swap-color">coffee</span> for takeaway!
+            </p>
+
+            <button class="shop-btn nav-link" type="submit">Shop Now</button>
+          </div>
+        </section>
+
+        <!-- Gallery Section -->
+        <section id="container" class="container-gallery"></section>
+
+        <section class="subscribe d-flex">
+          <p class="sub-text">
+            Sign up for our <span class="border-change">newsletter</span> to
+            receive special offers, event invitations, and more.
           </p>
 
-          <button class="btn" type="submit">Order now</button>
-        </div>
+          <input
+            placeholder="Enter your email address"
+            class="subscribe-input"
+            type="email"
+          />
 
-        <div class="hero-video-container">
-          <video
-            autoplay
-            class="video"
-            src="assets/main.mp4"
-            loop=""
-            muted=""
-          ></video>
-        </div>
-      </div>
-    </header>
-
-    <main>
-      <div class="flex-div d-flex">
-        <section id="products" class="products d-flex">
-          <figure class="card">
-            <div class="img-container">
-              <img class="image-product" src="assets/product 1.webp" alt="" />
-            </div>
-          </figure>
-          <figure class="card">
-            <div class="img-container">
-              <img class="image-product" src="assets/product 2.jpg" alt="" />
-            </div>
-          </figure>
+          <button class="sub-btn" disabled>Subscribe</button>
         </section>
-        <section class="products-details">
-          <figcaption>
-            <p class="text-uppercase">New Arrivals</p>
-            <h3 class="offer-title">Freshest of the Fresh</h3>
-            <p class="offer-details">
-              Featuring the freshest in our beautiful range of seasonal
-              <span class="border-change">coffees</span>
-              sourced throughout the year.
-            </p>
-          </figcaption>
-        </section>
-      </div>
+      </main>
 
-      <section class="order-now">
-        <div class="order-me">
-          <p>No time to sit down?</p>
-          <p>Order our <span class="swap-color">coffee</span> for takeaway!</p>
-          <button class="shop-btn nav-link" type="submit">Shop Now</button>
+      <footer>
+        <div class="details-footer">
+          <p class="footer-text">
+            Copyright &copy;
+            <a
+              class="link-text nav-link"
+              href="https://www.linkedin.com/in/pirvulescu-catalin-100390159/"
+              target="_blank"
+              >Pirvulescu Catalin</a
+            >
+            2023
+          </p>
+
+          <p class="subtext">
+            Made with <span class="fst-italic">passion</span>
+          </p>
         </div>
-      </section>
 
-      <section id="container" class="container-gallery"></section>
-
-      <section class="subscribe d-flex">
-        <p class="sub-text">
-          Sign up for our <span class="border-change">newsletter</span> to
-          receive special offers, event invitations, and more.
-        </p>
-
-        <input
-          placeholder="Enter your email address"
-          class="subscribe-input"
-          type="email"
-        />
-
-        <button class="sub-btn" disabled>Subscribe</button>
-      </section>
-    </main>
-
-    <footer>
-      <div class="details-footer">
-        <p class="footer-text">
-          Copyright &copy;
-
+        <div class="social-media fs-3">
           <a
-            class="link-text nav-link"
             href="https://www.linkedin.com/in/pirvulescu-catalin-100390159/"
             target="_blank"
-            >Pirvulescu Catalin</a
-          >
-          2023
+            ><i class="fa-brands fa-linkedin ms-3"></i
+          ></a>
+
+          <a href="https://www.instagram.com/catalinclaudiu_/" target="_blank"
+            ><i class="fa-brands fa-instagram ms-3"></i
+          ></a>
+
+          <a href="https://github.com/Elyticus" target="_blank"
+            ><i class="fa-brands fa-github ms-3"></i
+          ></a>
+        </div>
+      </footer>
+    </div>
+
+    <div class="modal-main" id="modal">
+      <div class="close-modal-btn-container">
+        <button
+          class="fa-regular fa-circle-xmark modal-close-btn"
+          id="modal-close-btn"
+          disabled
+        ></button>
+      </div>
+
+      <div class="modal-inner" id="modal-inner">
+        <h2>We ❤️ Your Data!</h2>
+
+        <p class="modal-text" id="modal-text">
+          We have a strict policy on tracking and spamming: we'll definitely
+          track you, and we'll definitely spam you. To use this site, enter your
+          name and email address and accept our ridiculous terms and conditions.
         </p>
-        <p class="subtext">Made with <span class="fst-italic">passion</span></p>
+
+        <form id="login-form">
+          <input
+            class="input-form"
+            type="text"
+            name="fullName"
+            placeholder="Enter your name *"
+            required
+          />
+
+          <input
+            class="input-form"
+            type="email"
+            name="email"
+            placeholder="Enter your email *"
+            required
+          />
+
+          <div class="modal-choice-btns" id="modal-choice-btns">
+            <button id="decline-btn" class="modal-btn" type="button">
+              Decline
+            </button>
+
+            <button class="modal-btn" type="submit">Accept</button>
+          </div>
+        </form>
       </div>
-      <div class="social-media fs-3">
-        <a
-          href="https://www.linkedin.com/in/pirvulescu-catalin-100390159/"
-          target="_blank"
-          ><i class="fa-brands fa-linkedin ms-3"></i
-        ></a>
-        <a href="https://www.instagram.com/catalinclaudiu_/" target="_blank"
-          ><i class="fa-brands fa-instagram ms-3"></i
-        ></a>
-        <a href="https://github.com/Elyticus" target="_blank"
-          ><i class="fa-brands fa-github ms-3"></i
-        ></a>
-      </div>
-    </footer>
+    </div>
 
     <!-- Bootstrap JS Link -->
     <script

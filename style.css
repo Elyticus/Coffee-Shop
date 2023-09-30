@@ -13,6 +13,12 @@ body {
   font-family: var(--font-forum);
 }
 
+.blur {
+  filter: blur(8px);
+  -webkit-filter: blur(8px);
+  pointer-events: none;
+}
+
 a,
 .sub-btn,
 .btn {
@@ -86,7 +92,7 @@ a,
 }
 
 .nav-link {
-  padding: 0.7rem 0;
+  padding: 0.2rem 0;
 }
 
 .logo,
@@ -104,6 +110,7 @@ a,
 }
 
 .navbar-collapse {
+  padding-top: 1rem;
   flex-grow: 0;
 }
 
@@ -127,15 +134,12 @@ a,
 }
 
 .hero-content {
-  margin-top: 5rem;
+  margin-top: 10rem;
+  margin-inline: 1.5rem;
 }
 
 .video {
   margin-top: 3rem;
-}
-
-.hero-content {
-  margin-inline: 1.5rem;
 }
 
 .hero-text {
@@ -194,6 +198,24 @@ a,
   justify-content: center;
   align-items: center;
   padding-top: 2rem;
+}
+
+.label {
+  width: 100%;
+  position: absolute;
+  top: 75%;
+  margin: 0 auto;
+  text-transform: uppercase;
+  text-decoration: none;
+  letter-spacing: 0.1rem;
+  font-size: 0.6rem;
+  opacity: 0.9;
+  font-weight: 500;
+  text-align: center;
+}
+
+.product-name {
+  margin-bottom: 0;
 }
 
 .image-product {
@@ -307,6 +329,10 @@ footer {
   margin-bottom: 0;
 }
 
+.details-footer {
+  line-height: 40px;
+}
+
 a.link-text {
   text-decoration: none;
   color: #ff7e05;
@@ -324,6 +350,121 @@ a.link-text {
 
 .subtext {
   text-align: center;
+}
+
+/* Modal */
+
+.modal-main {
+  z-index: 2;
+  display: none;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  height: 450px;
+  max-width: 300px;
+  border-radius: 5px;
+  background-color: #58bdec;
+  color: whitesmoke;
+  text-align: center;
+}
+
+.modal-inner {
+  width: 290px;
+  margin: 0 auto;
+}
+
+.modal-inner-loading {
+  text-align: center;
+}
+
+/* modal buttons */
+
+.close-modal-btn-container {
+  padding-top: 1rem;
+  text-align: right;
+  margin: 0.2rem;
+}
+
+.modal-close-btn {
+  font-size: 1.2rem;
+  font-weight: bold;
+  background-color: transparent;
+  border: 1px solid transparent;
+  color: whitesmoke;
+  padding-inline: 1rem;
+}
+
+.modal-close-btn:hover,
+.modal-close-btn:active {
+  color: red;
+  cursor: pointer;
+}
+
+.modal-close-btn:disabled {
+  color: rgb(242, 10, 10);
+  opacity: 0.4;
+  cursor: not-allowed;
+}
+
+.modal-choice-btns {
+  margin-top: 0.2rem;
+  padding: 0.2rem 1rem;
+  display: flex;
+  justify-content: center;
+}
+
+.modal-btn {
+  margin: 1rem;
+  padding: 0.5rem 2rem;
+  cursor: pointer;
+  border: none;
+  background-color: #000000;
+  color: white;
+}
+
+.modal-btn:hover {
+  background-color: #212529;
+}
+
+/* modal input */
+.input-form {
+  border: 1px solid #212529;
+  padding: 0.5rem;
+  width: 90%;
+  margin: 0.5rem 0;
+  outline: none;
+  border: none;
+  border-radius: 10px;
+}
+
+/* modal after submit */
+
+.loading {
+  width: 100%;
+  margin-top: 0.2rem;
+}
+
+.modal-display-name {
+  color: rgb(228, 2, 55);
+}
+
+.modal-text {
+  height: 140px;
+  line-height: 23px;
+  margin-bottom: 0;
+  margin-inline: 1rem;
+}
+
+.inner-flex {
+  width: 100%;
+  margin-top: 50%;
+}
+
+.reverse {
+  flex-direction: row-reverse;
 }
 
 @media all and (max-width: 480px) {
@@ -390,6 +531,26 @@ a.link-text {
     object-fit: cover;
   }
 
+  .label {
+    width: 100%;
+    position: absolute;
+    top: 80%;
+    margin: 0 auto;
+    text-transform: uppercase;
+    text-decoration: none;
+    letter-spacing: 0.1rem;
+    font-size: 0.8rem;
+    opacity: 0.9;
+    font-weight: 500;
+    text-align: center;
+  }
+
+  .product-name {
+    font-weight: 900;
+    text-transform: capitalize;
+    font-size: 1.5rem;
+  }
+
   .card {
     margin-left: 3rem;
   }
@@ -445,5 +606,25 @@ a.link-text {
 
   .subtext {
     text-align: left;
+  }
+
+  /* Modal Desktop */
+
+  .modal-main {
+    margin: auto;
+    max-width: 550px;
+  }
+
+  .input-form {
+    margin: 0.5rem;
+  }
+
+  .inner-flex {
+    width: 100%;
+    margin-top: 50%;
+  }
+
+  .display-name {
+    font-size: 1.8rem;
   }
 }
