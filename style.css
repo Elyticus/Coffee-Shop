@@ -33,6 +33,7 @@ a,
 .nav-link {
   display: inline-block;
   position: relative;
+  padding: 0.2rem 0;
 }
 
 .nav-link:after {
@@ -89,10 +90,6 @@ a,
 
 .navbar-brand:hover {
   color: #4b4b4ad3;
-}
-
-.nav-link {
-  padding: 0.2rem 0;
 }
 
 .logo,

@@ -1,16 +1,26 @@
 // Navbar
 const navbar = document.querySelector(".navbar");
 const main = document.querySelector("main");
-const mainPos = main.getBoundingClientRect().top;
+let mainPos = main.getBoundingClientRect().top;
 
-window.addEventListener("scroll", (e) => {
-  let scrollPos = window.scrollY;
+function updateNavbar() {
+  const scrollPos = window.scrollY;
+
   if (scrollPos >= mainPos) {
     navbar.classList.add("sticky");
   } else {
     navbar.classList.remove("sticky");
   }
+
+  requestAnimationFrame(updateNavbar);
+}
+
+window.addEventListener("scroll", () => {
+  mainPos = main.getBoundingClientRect().top;
 });
+
+// Start the animation loop
+updateNavbar();
 
 // __________________________________________________
 
@@ -47,10 +57,6 @@ const choiceBtn = document.getElementById("modal-choice-btns");
 setTimeout(() => {
   cookieModal.style.display = "inline";
 }, 1000);
-
-bodyElement.addEventListener("click", (e) => {
-  e.preventDefault();
-});
 
 modalCloseBtn.addEventListener("click", () => {
   cookieModal.style.display = "none";
