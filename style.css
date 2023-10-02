@@ -321,7 +321,7 @@ footer {
   justify-content: space-around;
   flex-direction: column;
   width: 100%;
-  height: 150px;
+  height: 200px;
   background-color: #f4f0e5;
 }
 
@@ -448,7 +448,7 @@ a.link-text {
 }
 
 .modal-display-name {
-  color: rgb(228, 2, 55);
+  color: rgb(2, 89, 228);
 }
 
 .modal-text {

@@ -1,8 +1,8 @@
+// Navbar
 const navbar = document.querySelector(".navbar");
 const main = document.querySelector("main");
 const mainPos = main.getBoundingClientRect().top;
 
-// Navbar
 window.addEventListener("scroll", (e) => {
   let scrollPos = window.scrollY;
   if (scrollPos >= mainPos) {
@@ -11,6 +11,8 @@ window.addEventListener("scroll", (e) => {
     navbar.classList.remove("sticky");
   }
 });
+
+// __________________________________________________
 
 // Gallery
 const images = [
@@ -30,6 +32,8 @@ function renderImg() {
 }
 
 renderImg();
+
+// ______________________________________________________
 
 // Cookie Setup
 const cookieModal = document.getElementById("modal");
@@ -76,3 +80,5 @@ consentForm.addEventListener("submit", (e) => {
     modalCloseBtn.disabled = false;
   }, 0);
 });
+
+// _____________________________________________________
