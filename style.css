@@ -136,7 +136,9 @@ a,
 }
 
 .video {
+  display: block;
   margin-top: 3rem;
+  height: 100%;
 }
 
 .hero-text {
@@ -153,10 +155,6 @@ a,
   background-color: #f4f0e5;
   border-radius: 50% 50% / 0% 50%;
   padding-inline: 0.2rem;
-}
-
-.video {
-  height: 100%;
 }
 
 .video,

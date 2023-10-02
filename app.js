@@ -57,9 +57,11 @@ const choiceBtn = document.getElementById("modal-choice-btns");
 // Deactivate the cookies when the page is lodded
 
 // if (!localStorage.getItem("visitedBefore")) {
-//   const firstTimeDiv = document.getElementById("first-time-div");
-//   if (firstTimeDiv) {
-//     firstTimeDiv.style.display = "block";
+//   const cookieModal = document.getElementById("modal");
+//   const bodyElement = document.getElementById("container-main");
+
+//   if (cookieModal) {
+//     cookieModal.style.display = "block";
 //   }
 
 //   localStorage.setItem("visitedBefore", "true");
