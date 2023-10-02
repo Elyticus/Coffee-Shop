@@ -54,6 +54,17 @@ const innerText = document.getElementById("modal-inner");
 const declineBtn = document.getElementById("decline-btn");
 const choiceBtn = document.getElementById("modal-choice-btns");
 
+// Deactivate the cookies when the page is lodded
+
+// if (!localStorage.getItem("visitedBefore")) {
+//   const firstTimeDiv = document.getElementById("first-time-div");
+//   if (firstTimeDiv) {
+//     firstTimeDiv.style.display = "block";
+//   }
+
+//   localStorage.setItem("visitedBefore", "true");
+// }
+
 setTimeout(() => {
   cookieModal.style.display = "inline";
 }, 1000);
