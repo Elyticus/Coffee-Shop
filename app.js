@@ -101,7 +101,3 @@ consentForm.addEventListener("submit", (e) => {
 });
 
 // _____________________________________________________
-
-function validatePIN(pin) {
-  return /^(\d{4}|\d{6})$/.test(pin);
-}

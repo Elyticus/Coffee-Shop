@@ -131,14 +131,7 @@ a,
 }
 
 .hero-content {
-  margin-top: 10rem;
-  margin-inline: 1.5rem;
-}
-
-.video {
-  display: block;
-  margin-top: 3rem;
-  height: 100%;
+  margin: 5rem 1.5rem 3rem 1.5rem;
 }
 
 .hero-text {
@@ -157,7 +150,6 @@ a,
   padding-inline: 0.2rem;
 }
 
-.video,
 .image-product {
   max-width: 100%;
 }
@@ -261,7 +253,7 @@ a,
 
 .subscribe,
 .container-gallery {
-  margin: 5rem 3rem;
+  margin: 5rem 2rem;
 }
 
 .subscribe {
@@ -462,19 +454,6 @@ a.link-text {
   flex-direction: row-reverse;
 }
 
-@media all and (max-width: 480px) {
-  .container-gallery {
-    margin-top: 5rem;
-    display: flex;
-    flex-direction: row;
-    gap: 1rem;
-  }
-
-  .container-gallery > div:hover {
-    flex: 7;
-  }
-}
-
 @media all and (min-width: 1024px) {
   .container-gallery {
     margin: 5rem 7rem;
@@ -482,34 +461,35 @@ a.link-text {
   }
 
   .logo {
-    margin-left: 9.7rem;
+    margin-left: 8rem;
   }
 
   .hero-section {
     display: flex;
     flex-direction: row;
-    justify-content: center;
+    justify-content: space-around;
   }
 
-  .hero-content,
   .card {
     width: 400px;
   }
 
   .hero-content {
+    width: 600px;
     text-align: left;
     align-self: center;
-  }
-
-  .hero-video-container {
-    position: relative;
-    width: 700px;
-    height: 700px;
-    overflow: hidden;
-  }
-
-  .video {
     margin-top: 0;
+    margin-bottom: 0;
+  }
+
+  .hero-image-main {
+    padding: 2rem;
+    height: 500px;
+  }
+
+  .coffee-home {
+    max-width: 100px;
+    height: 100px;
   }
 
   .nav-link {
