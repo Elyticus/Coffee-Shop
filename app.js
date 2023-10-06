@@ -1,6 +1,7 @@
 // Navbar
 const navbar = document.querySelector(".navbar");
 const main = document.querySelector("main");
+
 let mainPos = main.getBoundingClientRect().top;
 
 function updateNavbar() {
@@ -26,11 +27,11 @@ updateNavbar();
 
 // Gallery
 const images = [
-  "imgs/1.png",
-  "imgs/3.png",
-  "imgs/4.png",
-  "imgs/2.png",
-  "imgs/5.png",
+  "imgs/1.webp",
+  "imgs/3.webp",
+  "imgs/4.webp",
+  "imgs/2.webp",
+  "imgs/5.webp",
 ];
 
 const container = document.getElementById("container");
@@ -92,7 +93,7 @@ consentForm.addEventListener("submit", (e) => {
       <h2 class="display-name">
       Thanks <span class="modal-display-name">${name}</span>!
       </h2>
-      <p>We just sold the rights to your eternal soul.</p>
+      <p class="end-message">Congratulations, you just unwittingly traded your eternal soul for a coffee refill! 😄</p>
     </div>
     `;
 
