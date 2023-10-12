@@ -112,12 +112,12 @@ function emailValidation() {
   if (subInput.value.trim() === "") {
     document.getElementsByName(
       "Email"
-    )[0].placeholder = `This field cannot be empty!`;
+    )[0].placeholder = `This field cannot be left empty!`;
     return false;
   } else if (!regex.test(subInput.value)) {
     document.getElementsByName(
       "Email"
-    )[0].placeholder = `You need email address format!`;
+    )[0].placeholder = `Please ensure that your email address is correctly formatted, e.g., 'example@email.com'`;
     subInput.value = "";
     return false;
   } else {

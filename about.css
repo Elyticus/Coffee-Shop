@@ -1,13 +1,106 @@
+:root {
+  --Cormorant-Garamond: "Cormorant Garamond", serif;
+}
+
 .about-main {
   display: flex;
+  flex-direction: column;
   align-items: center;
   gap: 2rem;
   margin: 2rem;
 }
 
+.hero-image {
+  width: 100%;
+}
+
 .about-img {
-  width: 200px;
-  height: 300px;
+  width: 388px;
+  height: 340px;
   border-radius: 10px;
   opacity: 95%;
+}
+
+.coffee-feed {
+  overflow: auto;
+  margin-inline: 2rem;
+}
+
+.about-hero-text {
+  text-align: center;
+}
+
+.market {
+  margin: 2rem;
+  font-family: var(--Cormorant-Garamond);
+}
+
+.statistics {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  width: 100%;
+  height: 130px;
+  background-color: #c8935f;
+  font-size: 1.5rem;
+  color: whitesmoke;
+  font-weight: 700;
+  text-align: center;
+  margin-top: 2rem;
+}
+
+.records {
+  font-size: 2.7rem;
+  font-weight: 400;
+}
+
+.goals {
+  font-size: 1.2rem;
+}
+
+.about-sec-image {
+  margin-top: 2rem;
+  width: 100%;
+}
+
+@media all and (min-width: 1024px) {
+  .about-hero-text {
+    text-align: left;
+  }
+
+  .hero-image {
+    width: 300%;
+  }
+
+  .about-main {
+    flex-direction: row;
+  }
+
+  .market {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin: 0 5rem;
+  }
+
+  .benefits {
+    font-size: 4rem;
+  }
+
+  .statistics {
+    max-width: 500px;
+    height: 180px;
+  }
+
+  .records {
+    font-size: 4rem;
+  }
+
+  .about-sec-image {
+    margin-top: 0;
+    height: 400px;
+    border-radius: 0 0 25px 25px;
+  }
 }
