@@ -155,10 +155,6 @@ a,
   padding-inline: 0.2rem;
 }
 
-.image-product {
-  max-width: 100%;
-}
-
 .btn {
   border: 2px solid #feca9a;
   background-color: #feca9a;
@@ -522,11 +518,6 @@ a.link-text {
   .products {
     flex-direction: row;
     justify-content: left;
-  }
-
-  .image-product {
-    height: 570px;
-    object-fit: cover;
   }
 
   .label {

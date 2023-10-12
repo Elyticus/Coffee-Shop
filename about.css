@@ -1,0 +1,5 @@
+.about-main {
+  display: flex;
+  gap: 2rem;
+  margin: 2rem;
+}
