@@ -101,4 +101,32 @@ consentForm.addEventListener("submit", (e) => {
   }, 0);
 });
 
-// _____________________________________________________
+// Email Address Validation________________________________________
+const subButton = document.getElementById("subscribe-btn");
+const subInput = document.getElementById("subscribe-input");
+const validMessage = document.getElementById("validation");
+
+function emailValidation() {
+  const regex = /\S+@\S+\.\S+/;
+
+  if (subInput.value.trim() === "") {
+    document.getElementsByName(
+      "Email"
+    )[0].placeholder = `This field cannot be empty!`;
+    return false;
+  } else if (!regex.test(subInput.value)) {
+    document.getElementsByName(
+      "Email"
+    )[0].placeholder = `You need email address format!`;
+    subInput.value = "";
+    return false;
+  } else {
+    subButton.style.display = "none";
+    subInput.style.display = "none";
+    validMessage.style.display = "block";
+    subInput.value = "";
+    return true;
+  }
+}
+
+subButton.addEventListener("click", emailValidation);

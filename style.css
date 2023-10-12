@@ -269,6 +269,13 @@ a,
   padding: 1rem;
 }
 
+.valid_confirmation {
+  font-style: italic;
+  font-weight: 900;
+  color: #176fc7a7;
+  display: none;
+}
+
 /* Gallery */
 
 .container-gallery,
@@ -587,6 +594,12 @@ a.link-text {
     background-color: black;
     color: white;
     letter-spacing: 2px;
+  }
+
+  .valid_confirmation {
+    text-align: center;
+    font-weight: 400;
+    margin-right: 6rem;
   }
 
   footer {

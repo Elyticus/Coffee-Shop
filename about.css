@@ -1,5 +1,13 @@
 .about-main {
   display: flex;
+  align-items: center;
   gap: 2rem;
   margin: 2rem;
+}
+
+.about-img {
+  width: 200px;
+  height: 300px;
+  border-radius: 10px;
+  opacity: 95%;
 }
