@@ -122,6 +122,7 @@
   width: auto;
   text-align: center;
   margin-inline: 2rem;
+  height: 316px;
 }
 
 @media all and (min-width: 1024px) {
