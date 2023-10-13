@@ -7,11 +7,13 @@ function getHTML() {
   coffeeData.forEach((coffee) => {
     feedHTML += `
     <div class="about-content">
-    <img class="about-img" src = "${coffee.image}"
-    </div>
+    <div><img class="about-img" src = "${coffee.image}"/></div>
     <div>
-      <p>${coffee.city}</p>
-      <p>${coffee.address}</p>
+    <p class="location-title fw-bold fs-5 mt-4">${coffee.city}</p>
+    </div>
+
+    <p>${coffee.address}</p>
+
     </div>
     `;
   });
