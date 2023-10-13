@@ -1,27 +1,22 @@
 export const coffeeData = [
   {
     image: "assets/coffee-bags.webp",
-    description:
-      "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Officia repellendus alias ad.",
+    city: "DOWNTOWN CITY",
+    address: "8502 Preston Rd. Inglewood, Maine 98380",
   },
   {
     image: "assets/coffee-bar.webp",
-    description:
-      "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Officia repellendus alias ad.",
+    city: "NEVADA",
+    address: "2118 Thornridge Cir. Syracuse, Connecticut 35624",
   },
   {
     image: "assets/coffee-office.webp",
-    description:
-      "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Officia repellendus alias ad.",
+    city: "LAS VEGAS",
+    address: "6391 Elgin St. Celina, Delaware 10299",
   },
   {
     image: "assets/still-life-coffee-tools.webp",
-    description:
-      "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Officia repellendus alias ad.",
-  },
-  {
-    image: "assets/coffee-make.webp",
-    description:
-      "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Officia repellendus alias ad.",
+    city: "SANTA MONICA BEACH",
+    address: "3517 W. Gray St. Utica, Pennsylvania 57867",
   },
 ];

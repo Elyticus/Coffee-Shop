@@ -6,8 +6,12 @@ function getHTML() {
 
   coffeeData.forEach((coffee) => {
     feedHTML += `
-    <div class="about-content d-flex justify-content-center gap-2 mb-2">
+    <div class="about-content">
     <img class="about-img" src = "${coffee.image}"
+    </div>
+    <div>
+      <p>${coffee.city}</p>
+      <p>${coffee.address}</p>
     </div>
     `;
   });
@@ -19,4 +23,4 @@ function renderHTML() {
   document.getElementById("coffee-feed").innerHTML = getHTML();
 }
 
-// renderHTML();
+renderHTML();
