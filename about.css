@@ -106,7 +106,7 @@
 }
 
 .cards:hover {
-  background-color: #cfc04cd1;
+  background-color: #cf4c4cd1;
   color: whitesmoke;
   transition: 0.2s ease-in-out;
 }
