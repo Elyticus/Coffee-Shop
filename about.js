@@ -82,3 +82,5 @@ cardElement3.addEventListener("click", () => {
   Accusantium, recusandae ipsam!
   `;
 });
+
+// Canvas Drawing_______________________________________________________
