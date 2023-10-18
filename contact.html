@@ -117,53 +117,76 @@
         <h1>Reservation Form</h1>
 
         <form class="form">
-          <input type="text" />
+          <!-- <input type="hidden" name="_captcha" value="false" /> -->
+          <!-- <input type="hidden" name="_subject" value="New submission!" /> -->
+          <div class="inputs-wrapper">
+            <input
+              required
+              onfocus="this.placeholder = ''"
+              onblur="this.placeholder = 'Your Name*'"
+              placeholder="Your Name*"
+              type="text"
+            />
 
-          <input type="email" />
+            <input
+              required
+              onfocus="this.placeholder = ''"
+              onblur="this.placeholder = 'Your Email*'"
+              placeholder="Your Email*"
+              type="email"
+            />
 
-          <input type="number" />
+            <input
+              required
+              onfocus="this.placeholder = ''"
+              onblur="this.placeholder = 'Your Phone*'"
+              placeholder="Your Phone*"
+              type="number"
+            />
 
-          <select name="seats" id="seats">
-            <option value="seats">Seats*</option>
-            <option value="1">1</option>
-            <option value="2">2</option>
-            <option value="3">3</option>
-            <option value="4">4</option>
-            <option value="5">5</option>
-            <option value="6">6</option>
-            <option value="7">7</option>
-            <option value="8">8</option>
-            <option value="9">9</option>
-            <option value="10">10</option>
-          </select>
+            <select name="seats" id="seats">
+              <option value="seats">Seats*</option>
+              <option value="1">1</option>
+              <option value="2">2</option>
+              <option value="3">3</option>
+              <option value="4">4</option>
+              <option value="5">5</option>
+              <option value="6">6</option>
+              <option value="7">7</option>
+              <option value="8">8</option>
+              <option value="9">9</option>
+              <option value="10">10</option>
+            </select>
 
-          <select name="time" id="time">
-            <option value="time">Time*</option>
-            <option value="10:00">10:00</option>
-            <option value="11:00">11:00</option>
-            <option value="12:00">12:00</option>
-            <option value="13:00">13:00</option>
-            <option value="14:00">14:00</option>
-            <option value="15:00">15:00</option>
-            <option value="16:00">16:00</option>
-            <option value="17:00">17:00</option>
-            <option value="18:00">18:00</option>
-            <option value="19:00">19:00</option>
-            <option value="20:00">20:00</option>
-          </select>
+            <select name="time" id="time">
+              <option value="time">Time*</option>
+              <option value="10:00">10:00</option>
+              <option value="11:00">11:00</option>
+              <option value="12:00">12:00</option>
+              <option value="13:00">13:00</option>
+              <option value="14:00">14:00</option>
+              <option value="15:00">15:00</option>
+              <option value="16:00">16:00</option>
+              <option value="17:00">17:00</option>
+              <option value="18:00">18:00</option>
+              <option value="19:00">19:00</option>
+              <option value="20:00">20:00</option>
+            </select>
 
-          <select name="day" id="day">
-            <option value="day">Day*</option>
-            <option value="Monday">Monday</option>
-            <option value="Thusday">Thusday</option>
-            <option value="Wednesday">Wednesday</option>
-            <option value="Thursday">Thursday</option>
-            <option value="Friday">Friday</option>
-            <option value="Saturday">Saturday</option>
-            <option value="Sunday">Sunday</option>
-          </select>
+            <select name="day" id="day">
+              <option value="day">Day*</option>
+              <option value="Monday">Monday</option>
+              <option value="Thusday">Thusday</option>
+              <option value="Wednesday">Wednesday</option>
+              <option value="Thursday">Thursday</option>
+              <option value="Friday">Friday</option>
+              <option value="Saturday">Saturday</option>
+              <option value="Sunday">Sunday</option>
+            </select>
+          </div>
 
-          <textarea name="" id="" cols="30" rows="10"></textarea>
+          <textarea required name="name" id="" cols="30" rows="10"></textarea>
+          <button type="submit" class="send-btn">Send message</button>
         </form>
       </div>
     </main>
