@@ -34,6 +34,7 @@
 
     <!-- CSS Link -->
     <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="contact.css" />
 
     <!-- Favicon Link -->
     <link rel="icon" type="image/x-icon" href="#" />
@@ -98,7 +99,74 @@
           </div>
         </div>
       </nav>
+
+      <section class="contact-header">
+        <div class="contact-hero">
+          <h1 class="contact-title">Reservation</h1>
+          <p class="contact-hero-text">
+            Since 1970, our family has been on a mission to provide sustainable
+            and ethical, hand-roasted, speciality coffee, at a fair price for
+            you and the farmers.
+          </p>
+        </div>
+      </section>
     </header>
+
+    <main class="contact-form">
+      <div class="reservation-menu">
+        <h1>Reservation Form</h1>
+
+        <form class="form">
+          <input type="text" />
+
+          <input type="email" />
+
+          <input type="number" />
+
+          <select name="seats" id="seats">
+            <option value="seats">Seats*</option>
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+            <option value="6">6</option>
+            <option value="7">7</option>
+            <option value="8">8</option>
+            <option value="9">9</option>
+            <option value="10">10</option>
+          </select>
+
+          <select name="time" id="time">
+            <option value="time">Time*</option>
+            <option value="10:00">10:00</option>
+            <option value="11:00">11:00</option>
+            <option value="12:00">12:00</option>
+            <option value="13:00">13:00</option>
+            <option value="14:00">14:00</option>
+            <option value="15:00">15:00</option>
+            <option value="16:00">16:00</option>
+            <option value="17:00">17:00</option>
+            <option value="18:00">18:00</option>
+            <option value="19:00">19:00</option>
+            <option value="20:00">20:00</option>
+          </select>
+
+          <select name="day" id="day">
+            <option value="day">Day*</option>
+            <option value="Monday">Monday</option>
+            <option value="Thusday">Thusday</option>
+            <option value="Wednesday">Wednesday</option>
+            <option value="Thursday">Thursday</option>
+            <option value="Friday">Friday</option>
+            <option value="Saturday">Saturday</option>
+            <option value="Sunday">Sunday</option>
+          </select>
+
+          <textarea name="" id="" cols="30" rows="10"></textarea>
+        </form>
+      </div>
+    </main>
 
     <footer>
       <div class="details-footer">
@@ -142,5 +210,6 @@
 
     <!-- JavaScript Link -->
     <script src="app.js"></script>
+    <script src="contact.js"></script>
   </body>
 </html>

@@ -1,0 +1,62 @@
+.contact-header {
+  position: relative;
+  background-image: url(assets/Contact-Coffee.webp);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.contact-header,
+.contact-hero {
+  width: 100%;
+  height: 350px;
+}
+
+.contact-hero {
+  position: absolute;
+  background-color: rgba(30, 30, 30, 0.373);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  gap: 2rem;
+  color: whitesmoke;
+  font-weight: 900;
+  font-size: 1.2rem;
+}
+
+.contact-title {
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  font-weight: 900;
+}
+
+.contact-hero-text {
+  align-self: center;
+  width: 70%;
+}
+
+.contact-form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  width: 100%;
+  margin: 4rem 0;
+}
+
+.reservation-menu {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+form {
+}
+
+@media all and (min-width: 1024px) {
+  .contact-hero-text {
+    width: 40%;
+  }
+}
