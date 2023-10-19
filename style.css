@@ -44,7 +44,7 @@ a,
   height: 1.5px;
   bottom: 2px;
   left: 0;
-  background-color: black;
+  background-color: rgb(15, 14, 14);
   transform-origin: bottom right;
   transition: transform 0.25s ease-out;
 }
@@ -112,7 +112,6 @@ a,
 }
 
 .navbar-collapse {
-  padding-top: 2.2rem;
   flex-grow: 0;
 }
 

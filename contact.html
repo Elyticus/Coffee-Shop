@@ -116,13 +116,12 @@
 
     <main class="contact-form">
       <div class="reservation-menu">
-        <h1>Reservation Form</h1>
+        <h1 class="mb-5">Reservation Form</h1>
 
-        <form class="form">
-          <!-- <input type="hidden" name="_captcha" value="false" /> -->
-          <!-- <input type="hidden" name="_subject" value="New submission!" /> -->
+        <form id="form" class="form">
           <div class="inputs-wrapper">
             <input
+              id="input-name"
               required
               onfocus="this.placeholder = ''"
               onblur="this.placeholder = 'Your Name*'"
@@ -131,6 +130,7 @@
             />
 
             <input
+              id="input-email"
               required
               onfocus="this.placeholder = ''"
               onblur="this.placeholder = 'Your Email*'"
@@ -139,6 +139,7 @@
             />
 
             <input
+              id="input-phone"
               required
               onfocus="this.placeholder = ''"
               onblur="this.placeholder = 'Your Phone*'"
@@ -146,8 +147,8 @@
               type="number"
             />
 
-            <select name="seats" id="seats">
-              <option value="seats">Seats*</option>
+            <select required name="seats" id="seats">
+              <option value="">Seats*</option>
               <option value="1">1</option>
               <option value="2">2</option>
               <option value="3">3</option>
@@ -160,8 +161,8 @@
               <option value="10">10</option>
             </select>
 
-            <select name="time" id="time">
-              <option value="time">Time*</option>
+            <select required name="time" id="time">
+              <option value="">Time*</option>
               <option value="10:00">10:00</option>
               <option value="11:00">11:00</option>
               <option value="12:00">12:00</option>
@@ -175,8 +176,8 @@
               <option value="20:00">20:00</option>
             </select>
 
-            <select name="day" id="day">
-              <option value="day">Day*</option>
+            <select required name="day" id="day">
+              <option value="">Day*</option>
               <option value="Monday">Monday</option>
               <option value="Thusday">Thusday</option>
               <option value="Wednesday">Wednesday</option>
@@ -187,9 +188,23 @@
             </select>
           </div>
 
-          <textarea required name="name" id="" cols="30" rows="10"></textarea>
-          <button type="submit" class="send-btn">Send message</button>
+          <textarea
+            required
+            name="name"
+            id="textarea"
+            cols="30"
+            rows="10"
+          ></textarea>
+
+          <button type="submit" value="Submit" id="send-btn" class="send-btn">
+            Send message
+          </button>
         </form>
+
+        <div id="thank-message" class="thank-message">
+          <h1>Thank you!</h1>
+          <p>Your submission has been received!</p>
+        </div>
       </div>
     </main>
 
