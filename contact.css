@@ -47,7 +47,6 @@
   align-items: center;
   text-align: center;
   width: 100%;
-  margin: 4rem 0;
   background-color: rgb(199, 228, 253);
   padding: 3rem;
 }
@@ -78,7 +77,7 @@ textarea {
   outline: none;
   font-family: var(--Cormorant-Garamond);
   border: none;
-  background-color: rgba(246, 252, 217, 0.816);
+  background-color: rgba(252, 253, 243, 0.816);
 }
 
 select {
