@@ -120,13 +120,23 @@ input[type="number"] {
   background-color: #cd9bffd4;
 }
 
-.send-btn:focus {
+.send-btn:active {
   border: 3px solid #9e50ecc4;
   background-color: transparent;
 }
 
 .thank-message {
   display: none;
+}
+
+.error-message {
+  font-style: italic;
+  font-family: var(--Cormorant-Garamond);
+  padding-top: 1rem;
+  display: none;
+  letter-spacing: 2px;
+  color: rgba(255, 46, 4, 0.934);
+  font-size: 0.7rem;
 }
 
 @media all and (min-width: 1024px) {
@@ -140,5 +150,9 @@ input[type="number"] {
 
   .thank-message {
     padding: 3rem 7rem;
+  }
+
+  .error-message {
+    font-size: 1rem;
   }
 }

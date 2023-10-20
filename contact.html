@@ -118,7 +118,15 @@
       <div class="reservation-menu">
         <h1 class="mb-5">Reservation Form</h1>
 
-        <form id="form" class="form">
+        <form
+          action="https://formsubmit.co/igunereve@gmail.com"
+          method="POST"
+          id="form"
+          class="form"
+        >
+          <input type="hidden" name="_subject" value="New submission!" />
+          <input type="hidden" name="_captcha" value="false" />
+
           <div class="inputs-wrapper">
             <input
               id="input-name"
@@ -194,12 +202,17 @@
             id="textarea"
             cols="30"
             rows="10"
+            placeholder="Type your sweet message..."
           ></textarea>
 
           <button type="submit" value="Submit" id="send-btn" class="send-btn">
             Send message
           </button>
         </form>
+
+        <p class="error-message">
+          Please enter a minimum of 50 characters to submit your form
+        </p>
 
         <div id="thank-message" class="thank-message">
           <h1>Thank you!</h1>
