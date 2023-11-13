@@ -34,6 +34,7 @@
 
     <!-- CSS Link -->
     <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="order.css" />
 
     <!-- Favicon Link -->
     <link rel="icon" type="image/x-icon" href="#" />
@@ -95,10 +96,20 @@
                 >
               </li>
             </ul>
+
+            <div class="cart">
+              <a href="order.html"><i class="fa-solid fa-cart-shopping"></i></a>
+
+              <p id="count">0</p>
+            </div>
           </div>
         </div>
       </nav>
     </header>
+
+    <main>
+      <div id="feed"></div>
+    </main>
 
     <footer>
       <div class="details-footer">
@@ -142,5 +153,6 @@
 
     <!-- JavaScript Link -->
     <script src="app.js"></script>
+    <script src="order.js" type="module"></script>
   </body>
 </html>

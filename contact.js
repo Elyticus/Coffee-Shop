@@ -29,5 +29,6 @@ reserveForm.addEventListener("submit", (e) => {
   } else {
     reserveForm.style.display = "none";
     thankMessage.style.display = "block";
+    errorMessage.style.display = "none";
   }
 });
