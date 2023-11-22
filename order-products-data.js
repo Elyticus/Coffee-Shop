@@ -1,6 +1,6 @@
 export const productData = [
   {
-    id: 0,
+    id: "a0",
     img: "./assets/products/1.png",
     title: "FRAPPE",
     description: `Lorem ipsum dolor, sit amet consectetur adipisicing elit. 
@@ -8,7 +8,7 @@ export const productData = [
     price: "$ 10.00",
   },
   {
-    id: 1,
+    id: "a1",
     img: "./assets/products/2.png",
     title: "AEROPRESS",
     description: `Lorem ipsum dolor, sit amet consectetur adipisicing elit. 
@@ -16,8 +16,53 @@ export const productData = [
     price: "$ 10.00",
   },
   {
-    id: 2,
+    id: "a2",
     img: "./assets/products/3.png",
+    title: "SLOW BREW",
+    description: `Lorem ipsum dolor, sit amet consectetur adipisicing elit. 
+    Ea dignissimos magni in tenetur.`,
+    price: "$ 10.00",
+  },
+
+  {
+    id: "a3",
+    img: "./assets/products/4.png",
+    title: "SLOW BREW",
+    description: `Lorem ipsum dolor, sit amet consectetur adipisicing elit. 
+    Ea dignissimos magni in tenetur.`,
+    price: "$ 10.00",
+  },
+
+  {
+    id: "a4",
+    img: "./assets/products/5.png",
+    title: "SLOW BREW",
+    description: `Lorem ipsum dolor, sit amet consectetur adipisicing elit. 
+    Ea dignissimos magni in tenetur.`,
+    price: "$ 10.00",
+  },
+
+  {
+    id: "a5",
+    img: "./assets/products/6.png",
+    title: "SLOW BREW",
+    description: `Lorem ipsum dolor, sit amet consectetur adipisicing elit. 
+    Ea dignissimos magni in tenetur.`,
+    price: "$ 10.00",
+  },
+
+  {
+    id: "a6",
+    img: "./assets/products/7.png",
+    title: "SLOW BREW",
+    description: `Lorem ipsum dolor, sit amet consectetur adipisicing elit. 
+    Ea dignissimos magni in tenetur.`,
+    price: "$ 10.00",
+  },
+
+  {
+    id: "a7",
+    img: "./assets/products/8.png",
     title: "SLOW BREW",
     description: `Lorem ipsum dolor, sit amet consectetur adipisicing elit. 
     Ea dignissimos magni in tenetur.`,

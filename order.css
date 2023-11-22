@@ -18,6 +18,10 @@
   flex-direction: column;
 }
 
+.cart {
+  padding: 1em;
+}
+
 .order-btn {
   margin-bottom: 2em;
   border: none;

@@ -498,6 +498,7 @@ a {
 }
 
 .fa-cart-shopping {
+  cursor: pointer;
   display: flex;
   align-items: center;
   color: #212529;
