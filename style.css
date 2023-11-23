@@ -546,6 +546,7 @@ a {
   }
 
   .hero-image-main {
+    border-radius: 27% 73% 50% 50% / 65% 71% 29% 35%;
     padding: 2rem;
     height: 500px;
   }

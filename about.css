@@ -11,6 +11,7 @@
 }
 
 .hero-image {
+  border-radius: 36% 64% 58% 42% / 36% 64% 36% 64%;
   width: 100%;
 }
 

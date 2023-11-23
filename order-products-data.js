@@ -5,7 +5,7 @@ export const productData = [
     title: "FRAPPE",
     description: `Lorem ipsum dolor, sit amet consectetur adipisicing elit. 
     Ea dignissimosmagni in tenetur.`,
-    price: 10,
+    price: 10.99,
   },
   {
     id: "a1",
@@ -13,7 +13,7 @@ export const productData = [
     title: "AEROPRESS",
     description: `Lorem ipsum dolor, sit amet consectetur adipisicing elit. 
     Ea dignissimos magni in tenetur.`,
-    price: 10,
+    price: 17.99,
   },
   {
     id: "a2",
@@ -21,69 +21,69 @@ export const productData = [
     title: "SLOW BREW",
     description: `Lorem ipsum dolor, sit amet consectetur adipisicing elit. 
     Ea dignissimos magni in tenetur.`,
-    price: 10,
+    price: 12.99,
   },
 
   {
     id: "a3",
     img: "./assets/products/4.png",
-    title: "SLOW BREW",
+    title: "ESPRESSO",
     description: `Lorem ipsum dolor, sit amet consectetur adipisicing elit. 
     Ea dignissimos magni in tenetur.`,
-    price: 10,
+    price: 10.99,
   },
 
   {
     id: "a4",
     img: "./assets/products/5.png",
-    title: "SLOW BREW",
+    title: "MOCHA",
     description: `Lorem ipsum dolor, sit amet consectetur adipisicing elit. 
     Ea dignissimos magni in tenetur.`,
-    price: 10,
+    price: 8.99,
   },
 
   {
     id: "a5",
     img: "./assets/products/6.png",
-    title: "SLOW BREW",
+    title: "CAFFE LATTE",
     description: `Lorem ipsum dolor, sit amet consectetur adipisicing elit. 
     Ea dignissimos magni in tenetur.`,
-    price: 10,
+    price: 12.99,
   },
 
   {
     id: "a6",
     img: "./assets/products/7.png",
-    title: "SLOW BREW",
+    title: "ICE LATTE",
     description: `Lorem ipsum dolor, sit amet consectetur adipisicing elit. 
     Ea dignissimos magni in tenetur.`,
-    price: 10,
+    price: 14.99,
   },
 
   {
     id: "a7",
     img: "./assets/products/8.png",
-    title: "SLOW BREW",
+    title: "FRAPPUCCINO",
     description: `Lorem ipsum dolor, sit amet consectetur adipisicing elit. 
     Ea dignissimos magni in tenetur.`,
-    price: 10,
+    price: 17.99,
   },
 
   {
     id: "a8",
     img: "./assets/products/9.png",
-    title: "SLOW BREW",
+    title: "AMERICANO",
     description: `Lorem ipsum dolor, sit amet consectetur adipisicing elit. 
     Ea dignissimos magni in tenetur.`,
-    price: 10,
+    price: 15.99,
   },
 
   {
     id: "a9",
     img: "./assets/products/10.png",
-    title: "SLOW BREW",
+    title: "FRAPPE",
     description: `Lorem ipsum dolor, sit amet consectetur adipisicing elit. 
     Ea dignissimos magni in tenetur.`,
-    price: 10,
+    price: 10.99,
   },
 ];

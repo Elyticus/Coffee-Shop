@@ -11,11 +11,11 @@
 }
 
 .checkout {
-  background-color: green;
+  background-color: rgb(14, 119, 14);
 }
 
 .removeAll {
-  background-color: red;
+  background-color: rgb(220, 59, 38);
 }
 
 .orderBtn:hover {
@@ -40,14 +40,16 @@
 
 .shopping-cart {
   margin-top: 5em;
+  margin-bottom: 5em;
   display: grid;
   place-items: center;
   min-width: 100%;
-  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(370px, 1fr));
   gap: 1.5em;
 }
 
 .cart-item {
+  border: 1px solid red;
   display: flex;
   gap: 0.5em;
 }
@@ -55,7 +57,6 @@
 .title-price-close {
   width: 170px;
   display: flex;
-  /* align-items: center; */
   justify-content: space-between;
 }
 
@@ -63,4 +64,31 @@
   display: flex;
   align-items: center;
   gap: 0.7em;
+}
+
+.text-center {
+  margin-top: 3em;
+}
+
+.cart-btn {
+  display: flex;
+  align-items: center;
+  gap: 1em;
+}
+
+.fa-minus,
+.fa-plus {
+  cursor: pointer;
+  background: rgb(17, 14, 21);
+  padding: 0.5em;
+  border-radius: 50%;
+  color: whitesmoke;
+}
+
+.subtotal-text {
+  margin-bottom: 0;
+}
+
+.image-cart {
+  border-radius: 78% 22% 68% 32% / 28% 80% 20% 72%;
 }

@@ -38,13 +38,13 @@ const generateCartItem = () => {
 
         return `
         <div class="cart-item">
-            <img width="200px" 
+            <img class="image-cart" width="200px" 
             src=${search.img} alt="Images with products from the shop"/>
             <div class="details">
                 <div id=${id} class="title-price-close">
                     <div class="product-details">
                         <p>${search.title}</p>
-                        <p>${search.price}</p>
+                        <p>$ ${search.price}</p>
                     </div>
                     <i class="fa-solid fa-xmark"></i>
                 </div>
@@ -55,7 +55,10 @@ const generateCartItem = () => {
                 <i id=${id} class="fa-solid fa-plus"></i>
                 </div>
 
-                <h3>$ ${item * search.price}</h3>
+                <div class="subtotal">
+                    <p class="subtotal-text">Subtotal</p>
+                    <h5>$ ${Math.floor(item * search.price).toFixed(2)}</h5>
+                </div>
 
             </div>
         </div>
@@ -137,7 +140,6 @@ let calculation = () => {
 calculation();
 
 let removeItem = (id) => {
-  console.log(id);
   basket = basket.filter((e) => e.id !== id);
   generateCartItem();
   totalAmount();
@@ -155,7 +157,7 @@ let totalAmount = (id) => {
       })
       .reduce((total, currentItem) => total + currentItem, 0);
     label.innerHTML = `
-      <h2>Total Bill : $ ${amount}</h2>
+      <h2>Total Bill : $ ${amount.toFixed(2)}</h2>
       <button id=${id} class="checkout">Checkout</button>
       <button id="remove-all" class="removeAll">Clear Cart</button>
       `;

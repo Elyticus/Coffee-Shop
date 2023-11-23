@@ -34,3 +34,11 @@
   color: whitesmoke;
   transition: 0.2s ease-in-out;
 }
+
+.product-image {
+  border-radius: 10px;
+}
+
+.order-title {
+  margin-top: 1em;
+}
