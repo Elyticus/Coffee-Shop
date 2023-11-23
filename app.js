@@ -20,7 +20,6 @@ window.addEventListener("scroll", () => {
   mainPos = main.getBoundingClientRect().top;
 });
 
-// Start the animation loop
 updateNavbar();
 
 // __________________________________________________
@@ -54,19 +53,6 @@ const consentForm = document.getElementById("login-form");
 const innerText = document.getElementById("modal-inner");
 const declineBtn = document.getElementById("decline-btn");
 const choiceBtn = document.getElementById("modal-choice-btns");
-
-// Deactivate the cookies when the page is lodded
-
-// if (!localStorage.getItem("visitedBefore")) {
-//   const cookieModal = document.getElementById("modal");
-//   const bodyElement = document.getElementById("container-main");
-
-//   if (cookieModal) {
-//     cookieModal.style.display = "block";
-//   }
-
-//   localStorage.setItem("visitedBefore", "true");
-// }
 
 setTimeout(() => {
   cookieModal.style.display = "inline";
@@ -130,3 +116,14 @@ function emailValidation() {
 }
 
 subButton.addEventListener("click", emailValidation);
+
+let basket = JSON.parse(localStorage.getItem("data")) || [];
+
+let calculation = () => {
+  let cartIcon = document.getElementById("count");
+  cartIcon.innerHTML = basket
+    .map((e) => e.item)
+    .reduce((total, currentItem) => total + currentItem, 0);
+};
+
+calculation();

@@ -1,5 +1,29 @@
 import { coffeeData } from "./about-data.js";
 
+// Navbar
+const navbar = document.querySelector(".navbar");
+const main = document.querySelector("main");
+
+let mainPos = main.getBoundingClientRect().top;
+
+function updateNavbar() {
+  const scrollPos = window.scrollY;
+
+  if (scrollPos >= mainPos) {
+    navbar.classList.add("sticky");
+  } else {
+    navbar.classList.remove("sticky");
+  }
+
+  requestAnimationFrame(updateNavbar);
+}
+
+window.addEventListener("scroll", () => {
+  mainPos = main.getBoundingClientRect().top;
+});
+
+updateNavbar();
+
 // About Page________________________________________________
 function getHTML() {
   let feedHTML = "";
@@ -87,14 +111,13 @@ cardElement3.addEventListener("click", () => {
 
 // _________________________________________________________________
 
-let number = "" + 15;
-let newNum = new Array();
+let basket = JSON.parse(localStorage.getItem("data")) || [];
 
-console.log(typeof number);
-console.log(newNum);
+let calculation = () => {
+  let cartIcon = document.getElementById("count");
+  cartIcon.innerHTML = basket
+    .map((e) => e.item)
+    .reduce((total, currentItem) => total + currentItem, 0);
+};
 
-console.log(
-  number.split("").map((n) => {
-    newNum.push(n ** 2);
-  })
-);
+calculation();

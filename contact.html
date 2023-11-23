@@ -109,10 +109,12 @@
               </li>
             </ul>
 
-            <div class="cart">
-              <i class="fa-solid fa-cart-shopping"></i>
-              <p id="count">0</p>
-            </div>
+            <a href="cart.html">
+              <div class="cart">
+                <i id="shopCart" class="fa-solid fa-cart-shopping"></i>
+                <p id="count">0</p>
+              </div>
+            </a>
           </div>
         </div>
       </nav>
@@ -133,12 +135,7 @@
       <div class="reservation-menu">
         <h1 class="mb-5">Reservation Form</h1>
 
-        <form
-          action="https://formsubmit.co/igunereve@gmail.com"
-          method="POST"
-          id="form"
-          class="form"
-        >
+        <form id="form" class="form">
           <input type="hidden" name="_subject" value="New submission!" />
           <input type="hidden" name="_captcha" value="false" />
 
@@ -300,7 +297,6 @@
     ></script>
 
     <!-- JavaScript Link -->
-    <script src="app.js"></script>
     <script src="contact.js"></script>
   </body>
 </html>

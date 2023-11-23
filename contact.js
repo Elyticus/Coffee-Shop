@@ -11,6 +11,30 @@ const reserveForm = document.getElementById("form");
 const thankMessage = document.getElementById("thank-message");
 const errorMessage = document.querySelector(".error-message");
 
+// Navbar
+const navbar = document.querySelector(".navbar");
+const main = document.querySelector("main");
+
+let mainPos = main.getBoundingClientRect().top;
+
+function updateNavbar() {
+  const scrollPos = window.scrollY;
+
+  if (scrollPos >= mainPos) {
+    navbar.classList.add("sticky");
+  } else {
+    navbar.classList.remove("sticky");
+  }
+
+  requestAnimationFrame(updateNavbar);
+}
+
+window.addEventListener("scroll", () => {
+  mainPos = main.getBoundingClientRect().top;
+});
+
+updateNavbar();
+
 reserveForm.addEventListener("submit", (e) => {
   e.preventDefault();
 

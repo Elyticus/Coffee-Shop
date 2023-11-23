@@ -5,7 +5,7 @@ export const productData = [
     title: "FRAPPE",
     description: `Lorem ipsum dolor, sit amet consectetur adipisicing elit. 
     Ea dignissimosmagni in tenetur.`,
-    price: "$ 10.00",
+    price: 10,
   },
   {
     id: "a1",
@@ -13,7 +13,7 @@ export const productData = [
     title: "AEROPRESS",
     description: `Lorem ipsum dolor, sit amet consectetur adipisicing elit. 
     Ea dignissimos magni in tenetur.`,
-    price: "$ 10.00",
+    price: 10,
   },
   {
     id: "a2",
@@ -21,7 +21,7 @@ export const productData = [
     title: "SLOW BREW",
     description: `Lorem ipsum dolor, sit amet consectetur adipisicing elit. 
     Ea dignissimos magni in tenetur.`,
-    price: "$ 10.00",
+    price: 10,
   },
 
   {
@@ -30,7 +30,7 @@ export const productData = [
     title: "SLOW BREW",
     description: `Lorem ipsum dolor, sit amet consectetur adipisicing elit. 
     Ea dignissimos magni in tenetur.`,
-    price: "$ 10.00",
+    price: 10,
   },
 
   {
@@ -39,7 +39,7 @@ export const productData = [
     title: "SLOW BREW",
     description: `Lorem ipsum dolor, sit amet consectetur adipisicing elit. 
     Ea dignissimos magni in tenetur.`,
-    price: "$ 10.00",
+    price: 10,
   },
 
   {
@@ -48,7 +48,7 @@ export const productData = [
     title: "SLOW BREW",
     description: `Lorem ipsum dolor, sit amet consectetur adipisicing elit. 
     Ea dignissimos magni in tenetur.`,
-    price: "$ 10.00",
+    price: 10,
   },
 
   {
@@ -57,7 +57,7 @@ export const productData = [
     title: "SLOW BREW",
     description: `Lorem ipsum dolor, sit amet consectetur adipisicing elit. 
     Ea dignissimos magni in tenetur.`,
-    price: "$ 10.00",
+    price: 10,
   },
 
   {
@@ -66,6 +66,24 @@ export const productData = [
     title: "SLOW BREW",
     description: `Lorem ipsum dolor, sit amet consectetur adipisicing elit. 
     Ea dignissimos magni in tenetur.`,
-    price: "$ 10.00",
+    price: 10,
+  },
+
+  {
+    id: "a8",
+    img: "./assets/products/9.png",
+    title: "SLOW BREW",
+    description: `Lorem ipsum dolor, sit amet consectetur adipisicing elit. 
+    Ea dignissimos magni in tenetur.`,
+    price: 10,
+  },
+
+  {
+    id: "a9",
+    img: "./assets/products/10.png",
+    title: "SLOW BREW",
+    description: `Lorem ipsum dolor, sit amet consectetur adipisicing elit. 
+    Ea dignissimos magni in tenetur.`,
+    price: 10,
   },
 ];
