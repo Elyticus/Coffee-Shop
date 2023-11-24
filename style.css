@@ -492,8 +492,17 @@ a {
 }
 
 #count {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   margin-bottom: 0;
   color: #212529;
+  background-color: #ff7e05;
+  padding: 0.8em;
+  border-radius: 50%;
+  width: 15px;
+  height: 15px;
+  font-weight: 900;
 }
 
 .fa-cart-shopping {
