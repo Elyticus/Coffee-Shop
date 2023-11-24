@@ -539,6 +539,10 @@ a {
   padding: 1em;
 }
 
+.shopping-cart {
+  padding-inline: 0px;
+}
+
 @media all and (min-width: 1024px) {
   .container-gallery {
     margin: 5rem 7rem;
@@ -550,7 +554,7 @@ a {
   }
 
   .total-bill {
-    margin-inline: 7em;
+    margin-inline: 5.7em;
   }
 
   .cart {
@@ -566,6 +570,10 @@ a {
 
   .menu-header {
     height: 350px;
+  }
+
+  .shopping-cart {
+    padding-inline: 11em;
   }
 
   .menu-intro {

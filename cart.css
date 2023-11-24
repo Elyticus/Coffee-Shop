@@ -24,6 +24,7 @@
 .checkout:hover {
   background-color: #0c59a7;
   color: whitesmoke;
+  transition: 0.2s ease-in-out;
 }
 
 .removeAll {
@@ -33,11 +34,13 @@
 .removeAll:hover {
   background-color: #e01f2d;
   color: whitesmoke;
+  transition: 0.2s ease-in-out;
 }
 
 .orderBtn:hover {
   background-color: #125496;
   border: 2px solid #125496;
+  transition: 0.2s ease-in-out;
 }
 
 .orderBtn:active {
@@ -51,12 +54,12 @@
 }
 
 .fa-xmark {
+  cursor: pointer;
   display: flex;
   align-items: center;
   justify-content: center;
-  cursor: pointer;
-  color: rgb(234, 235, 217);
-  background-color: #962412;
+  background-color: #5b5b5c;
+  color: #212529;
   width: 15px;
   height: 15px;
   padding: 0.7em;
@@ -64,8 +67,9 @@
 }
 
 .fa-xmark:hover {
-  background-color: #5b5b5c;
-  color: #212529;
+  background-color: #962412;
+  color: rgb(234, 235, 217);
+  transition: 0.2s ease-in-out;
 }
 
 .shopping-cart {
@@ -75,7 +79,7 @@
   place-items: center;
   min-width: 100%;
   grid-template-columns: repeat(auto-fit, minmax(370px, 1fr));
-  gap: 1.5em;
+  gap: 2.3em;
 }
 
 .cart-item {
@@ -109,6 +113,11 @@
 
 .fa-minus,
 .fa-plus {
+  width: 30px;
+  height: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   cursor: pointer;
   background: rgb(17, 14, 21);
   padding: 0.5em;
@@ -119,6 +128,7 @@
 .fa-minus:hover,
 .fa-plus:hover {
   background-color: #125496;
+  transition: 0.2s ease-in-out;
 }
 
 .subtotal-text {
@@ -152,12 +162,6 @@
 h5 {
   margin: 0;
   font-size: 14px;
-}
-
-.details {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
 }
 
 .amount-bill {
