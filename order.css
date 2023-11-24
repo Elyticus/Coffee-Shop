@@ -18,10 +18,6 @@
   flex-direction: column;
 }
 
-.cart {
-  padding: 1em;
-}
-
 .order-btn {
   margin-bottom: 2em;
   border: none;
@@ -41,4 +37,10 @@
 
 .order-title {
   margin-top: 1em;
+}
+
+.price {
+  color: #c8935f;
+  letter-spacing: 2px;
+  font-size: 18px;
 }

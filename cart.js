@@ -38,26 +38,29 @@ const generateCartItem = () => {
 
         return `
         <div class="cart-item">
-            <img class="image-cart" width="200px" 
+            <img class="image-cart" width="150px" 
             src=${search.img} alt="Images with products from the shop"/>
             <div class="details">
-                <div id=${id} class="title-price-close">
-                    <div class="product-details">
-                        <p>${search.title}</p>
-                        <p>$ ${search.price}</p>
-                    </div>
-                    <i class="fa-solid fa-xmark"></i>
-                </div>
-
-                <div class="cart-btn">
-                <i id=${id} class="fa-solid fa-minus"></i>
-                <div id="quantity-id-${id}" class="quantity">${item}</div>
-                <i id=${id} class="fa-solid fa-plus"></i>
+                <div class="card-product">
+                  <div id=${id} class="title-price-close">
+                      <div class="product-details">
+                          <p class="product-info">${search.title}</p>
+                          <p class="product-info">$ ${search.price}</p>
+                      </div>
+                      <i class="fa-solid fa-xmark"></i>
+                  </div>
+                  <div class="cart-btn">
+                  <i id=${id} class="fa-solid fa-minus"></i>
+                  <div id="quantity-id-${id}" class="quantity">${item}</div>
+                  <i id=${id} class="fa-solid fa-plus"></i>
+                  </div>
                 </div>
 
                 <div class="subtotal">
-                    <p class="subtotal-text">Subtotal</p>
-                    <h5>$ ${Math.floor(item * search.price).toFixed(2)}</h5>
+                    <div class="subtotal-product-details">
+                      <p class="subtotal-text">Subtotal</p>
+                      <h5>$ ${Math.floor(item * search.price).toFixed(2)}</h5>
+                    </div>
                 </div>
 
             </div>
@@ -157,7 +160,8 @@ let totalAmount = (id) => {
       })
       .reduce((total, currentItem) => total + currentItem, 0);
     label.innerHTML = `
-      <h2>Total Bill : $ ${amount.toFixed(2)}</h2>
+      <h2 class="total-bill">Total Bill : 
+      <span class="amount-bill">$ ${amount.toFixed(2)}</span></h2>
       <button id=${id} class="checkout">Checkout</button>
       <button id="remove-all" class="removeAll">Clear Cart</button>
       `;

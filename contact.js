@@ -35,6 +35,17 @@ window.addEventListener("scroll", () => {
 
 updateNavbar();
 
+let basket = JSON.parse(localStorage.getItem("data")) || [];
+
+let calculation = () => {
+  let cartIcon = document.getElementById("count");
+  cartIcon.innerHTML = basket
+    .map((e) => e.item)
+    .reduce((total, currentItem) => total + currentItem, 0);
+};
+
+calculation();
+
 reserveForm.addEventListener("submit", (e) => {
   e.preventDefault();
 
