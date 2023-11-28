@@ -491,6 +491,17 @@ a {
   text-decoration: none;
 }
 
+.feedback-button {
+  color: #212529;
+  background-color: #58bdecd3;
+  padding: 0.5em 1em;
+  border-radius: 7px;
+}
+
+.shop-btn {
+  margin-right: 0;
+}
+
 #count {
   display: flex;
   justify-content: center;
