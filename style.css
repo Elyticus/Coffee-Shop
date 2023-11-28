@@ -492,8 +492,8 @@ a {
 }
 
 .feedback-button {
-  color: #212529;
-  background-color: #58bdecd3;
+  color: #151a1f;
+  background-color: rgba(221, 223, 224, 0.841);
   padding: 0.5em 1em;
   border-radius: 7px;
 }
