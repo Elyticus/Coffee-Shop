@@ -43,7 +43,6 @@ updateNavbar();
 // Build the review function__________________________________________
 const textareaElement = document.getElementById("textarea");
 const fromElement = document.getElementById("from_input");
-const toElement = document.getElementById("to_input");
 const pushButton = document.querySelector(".publish");
 const displayFeedback = document.getElementById("display_feedback");
 
@@ -53,28 +52,21 @@ pushButton.addEventListener("click", () => {
   let messageObject = {
     messageText: textareaElement.value,
     messageFrom: fromElement.value ? fromElement.value : "Anon",
-    messageTo: toElement.value,
   };
 
-  if (
-    fromElement.value != "" &&
-    toElement.value != "" &&
-    textareaElement.value != ""
-  ) {
+  if (fromElement.value != "" && textareaElement.value != "") {
     push(feedbackInDB, messageObject);
 
     textareaElement.style.border = "none";
     textareaElement.placeholder = "Add your thought here...";
 
     fromElement.style.border = "none";
-    toElement.style.border = "none";
 
     clearTextArea();
   } else {
     textareaElement.style.border = "2px solid #EA3C3E";
 
     fromElement.style.border = "2px solid #EA3C3E";
-    toElement.style.border = "2px solid #EA3C3E";
     textareaElement.placeholder = "This cannot be empty";
 
     textareaElement.classList.remove("shake");
@@ -112,13 +104,11 @@ function clearMessages() {
 function clearTextArea() {
   textareaElement.value = "";
   fromElement.value = "";
-  toElement.value = "";
 }
 
 function appaendMessagesList(feedbackValue) {
   displayFeedback.innerHTML += `
      <li class="message">
-       <p class = "reciverName"><span class="reciver">To:</span> ${feedbackValue.messageTo}</p>
        <p class="message-text">${feedbackValue.messageText}</p>
        <div class = "flex">
        <p class = "senderName"><span class = "sender">From:</span> ${feedbackValue.messageFrom}</p>

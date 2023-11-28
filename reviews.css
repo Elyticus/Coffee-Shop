@@ -37,7 +37,7 @@ main {
 }
 
 #textarea {
-  width: 317px;
+  width: 350px;
   height: 118px;
   background: #444059;
   border-radius: 8px;
@@ -172,21 +172,6 @@ input:focus::placeholder {
 
 .reciverName,
 .senderName {
-  color: rgb(204, 0, 255);
+  color: rgb(0, 195, 255);
   font-style: italic;
-}
-
-@media all and (max-width: 350px) {
-  #textarea {
-    width: 280px;
-  }
-
-  .publish {
-    width: 310px;
-  }
-
-  #from_input,
-  #to_input {
-    width: 100px;
-  }
 }
