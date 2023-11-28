@@ -34,6 +34,7 @@
 
     <!-- CSS Link -->
     <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="reviews.css" />
 
     <!-- Favicon Link -->
     <link rel="icon" type="image/x-icon" href="./assets/coffee-cup.png" />
@@ -60,6 +61,7 @@
           >
             <span class="navbar-toggler-icon"></span>
           </button>
+
           <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav me-auto mb-2 mb-lg-0">
               <li class="nav-item">
@@ -107,6 +109,38 @@
       </nav>
     </header>
 
+    <main>
+      <img
+        class="coffee-review"
+        src="./assets/coffee reviews.jpg"
+        alt="An illustration with two cups of coffee"
+      />
+      <div class="container">
+        <h2 id="title">Share your thoughts</h2>
+
+        <textarea
+          name="Feedback Field"
+          id="textarea"
+          cols="20"
+          rows="10"
+          placeholder="Add your thought here..."
+        ></textarea>
+
+        <div class="form_field">
+          <input id="from_input" type="text" placeholder="From" />
+          <input id="to_input" type="text" placeholder="To" />
+        </div>
+
+        <button id="add-button" type="button" class="publish">Publish</button>
+
+        <p class="endorsements">- Your Awesome Reviews -</p>
+
+        <div class="reviews">
+          <ul class="display_feedback" id="display_feedback"></ul>
+        </div>
+      </div>
+    </main>
+
     <footer>
       <div class="details-footer">
         <p class="footer-text">
@@ -148,6 +182,6 @@
     ></script>
 
     <!-- JavaScript Link -->
-    <script src="app.js"></script>
+    <script type="module" src="rewiews.js"></script>
   </body>
 </html>
