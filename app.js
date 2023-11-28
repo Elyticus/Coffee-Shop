@@ -54,9 +54,7 @@ const innerText = document.getElementById("modal-inner");
 const declineBtn = document.getElementById("decline-btn");
 const choiceBtn = document.getElementById("modal-choice-btns");
 
-setTimeout(() => {
-  cookieModal.style.display = "inline";
-}, 1000);
+cookieModal.style.display = "inline";
 
 modalCloseBtn.addEventListener("click", () => {
   cookieModal.style.display = "none";
@@ -73,8 +71,7 @@ consentForm.addEventListener("submit", (e) => {
   const formLoginData = new FormData(consentForm);
   const name = formLoginData.get("fullName");
 
-  setTimeout(() => {
-    innerText.innerHTML = `
+  innerText.innerHTML = `
     <div class="inner-flex">
       <h2 class="display-name">
       Thanks <span class="modal-display-name">${name}</span>!
@@ -83,8 +80,7 @@ consentForm.addEventListener("submit", (e) => {
     </div>
     `;
 
-    modalCloseBtn.disabled = false;
-  }, 0);
+  modalCloseBtn.disabled = false;
 });
 
 // Email Address Validation________________________________________
