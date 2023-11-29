@@ -40,6 +40,19 @@ window.addEventListener("scroll", () => {
 
 updateNavbar();
 
+// Set LocalStorage___________________________________________________
+
+let basket = JSON.parse(localStorage.getItem("data")) || [];
+
+let calculation = () => {
+  let cartIcon = document.getElementById("count");
+  cartIcon.innerHTML = basket
+    .map((e) => e.item)
+    .reduce((total, currentItem) => total + currentItem, 0);
+};
+
+calculation();
+
 // Build the review function__________________________________________
 const textareaElement = document.getElementById("textarea");
 const fromElement = document.getElementById("from_input");
