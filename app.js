@@ -53,8 +53,11 @@ const consentForm = document.getElementById("login-form");
 const innerText = document.getElementById("modal-inner");
 const declineBtn = document.getElementById("decline-btn");
 const choiceBtn = document.getElementById("modal-choice-btns");
+const inputEmailCookie = document.getElementById("input-email-cookie");
+const inputNameCookie = document.getElementById("input-name-cookie");
 
 cookieModal.style.display = "inline";
+modalCloseBtn.disabled = true;
 
 modalCloseBtn.addEventListener("click", () => {
   cookieModal.style.display = "none";
@@ -71,16 +74,35 @@ consentForm.addEventListener("submit", (e) => {
   const formLoginData = new FormData(consentForm);
   const name = formLoginData.get("fullName");
 
-  innerText.innerHTML = `
-    <div class="inner-flex">
-      <h2 class="display-name">
-      Thanks <span class="modal-display-name">${name}</span>!
-      </h2>
-      <p class="end-message">Congratulations, you just unwittingly traded your eternal soul for a coffee refill! 😄</p>
-    </div>
-    `;
+  function validCookieEmail() {
+    const regex = /\S+@\S+\.\S+/;
 
-  modalCloseBtn.disabled = false;
+    if (inputEmailCookie.value.trim() === "") {
+      return false;
+    } else if (!regex.test(inputEmailCookie.value)) {
+      document.getElementById(
+        "input-email-cookie"
+      ).placeholder = `Enter a valid email address`;
+      inputEmailCookie.value = "";
+      return false;
+    } else {
+      inputEmailCookie.value = "";
+      inputNameCookie.value = "";
+      innerText.innerHTML = `
+      <div class="inner-flex">
+        <h2 class="display-name">
+        Thanks <span class="modal-display-name">${name}</span>!
+        </h2>
+        <p class="end-message">Congratulations, you just unwittingly traded your eternal soul for a coffee refill! 😄</p>
+      </div>
+      `;
+      modalCloseBtn.disabled = false;
+
+      return true;
+    }
+  }
+
+  validCookieEmail();
 });
 
 // Email Address Validation________________________________________
