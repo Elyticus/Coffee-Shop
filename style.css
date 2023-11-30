@@ -204,6 +204,13 @@ a,
 .image-product {
   object-fit: cover;
   border-radius: 10px;
+  transition: transform 0.2s;
+}
+
+.image-product:hover {
+  -ms-transform: scale(0.5); /* IE 9 */
+  -webkit-transform: scale(1.5); /* Safari 3-8 */
+  transform: scale(1.12);
 }
 
 .card,
@@ -298,7 +305,6 @@ a,
 }
 
 .container-gallery > div:hover {
-  cursor: pointer;
   flex: 4;
 }
 
