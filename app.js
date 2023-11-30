@@ -58,6 +58,8 @@ const inputNameCookie = document.getElementById("input-name-cookie");
 
 cookieModal.style.display = "inline";
 modalCloseBtn.disabled = true;
+inputEmailCookie.value = "";
+inputNameCookie.value = "";
 
 modalCloseBtn.addEventListener("click", () => {
   cookieModal.style.display = "none";
@@ -88,6 +90,7 @@ consentForm.addEventListener("submit", (e) => {
     } else {
       inputEmailCookie.value = "";
       inputNameCookie.value = "";
+      subInput.value = "";
       innerText.innerHTML = `
       <div class="inner-flex">
         <h2 class="display-name">

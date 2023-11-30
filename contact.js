@@ -11,6 +11,14 @@ const reserveForm = document.getElementById("form");
 const thankMessage = document.getElementById("thank-message");
 const errorMessage = document.querySelector(".error-message");
 
+inputName.value = "";
+inputPhone.value = "";
+inputEmail.value = "";
+messageArea.value = "";
+selectSeats.value = "";
+selectTime.value = "";
+selectDay.value = "";
+
 // Navbar
 const navbar = document.querySelector(".navbar");
 const main = document.querySelector("main");
