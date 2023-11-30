@@ -59,6 +59,9 @@ const fromElement = document.getElementById("from_input");
 const pushButton = document.querySelector(".publish");
 const displayFeedback = document.getElementById("display_feedback");
 
+textareaElement.value = "";
+fromElement.value = "";
+
 pushButton.addEventListener("click", () => {
   event.preventDefault();
 
