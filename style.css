@@ -585,6 +585,19 @@ a {
   padding-inline: 0px;
 }
 
+/* Scroll Effect */
+.reveal {
+  position: relative;
+  transform: translateY(150px);
+  opacity: 0;
+  transition: all 2s ease;
+}
+
+.reveal.active {
+  transform: translateY(0px);
+  opacity: 1;
+}
+
 @media all and (min-width: 1024px) {
   .container-gallery {
     margin: 5rem 7rem;
