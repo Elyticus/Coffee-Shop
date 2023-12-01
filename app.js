@@ -112,31 +112,7 @@ consentForm.addEventListener("submit", (e) => {
 const subButton = document.getElementById("subscribe-btn");
 const subInput = document.getElementById("subscribe-input");
 const validMessage = document.getElementById("validation");
-
-function emailValidation() {
-  const regex = /\S+@\S+\.\S+/;
-
-  if (subInput.value.trim() === "") {
-    document.getElementsByName(
-      "Email"
-    )[0].placeholder = `This field cannot be left empty!`;
-    return false;
-  } else if (!regex.test(subInput.value)) {
-    document.getElementsByName(
-      "Email"
-    )[0].placeholder = `Enter a valid email address, 'example@email.com'`;
-    subInput.value = "";
-    return false;
-  } else {
-    subButton.style.display = "none";
-    subInput.style.display = "none";
-    validMessage.style.display = "block";
-    subInput.value = "";
-    return true;
-  }
-}
-
-subButton.addEventListener("click", emailValidation);
+const formValidation = document.getElementById("sub-form");
 
 let basket = JSON.parse(localStorage.getItem("data")) || [];
 
@@ -148,3 +124,44 @@ let calculation = () => {
 };
 
 calculation();
+
+// Send Email Form_________________________________________________________
+formValidation.addEventListener("submit", (e) => {
+  e.preventDefault();
+
+  function emailValidation() {
+    const regex = /\S+@\S+\.\S+/;
+
+    if (subInput.value.trim() === "") {
+      document.getElementById(
+        "subscribe-input"
+      ).placeholder = `This field cannot be left empty!`;
+      return false;
+    } else if (!regex.test(subInput.value)) {
+      document.getElementById(
+        "subscribe-input"
+      ).placeholder = `Enter a valid email address, 'example@email.com'`;
+      subInput.value = "";
+      return false;
+    } else {
+      subButton.style.display = "none";
+      subInput.style.display = "none";
+      validMessage.style.display = "block";
+      subInput.value = "";
+      return true;
+    }
+  }
+
+  function sendEmail() {
+    Email.send({
+      SecureToken: "62ef4901-bbc6-42db-8871-5dc11888dccf",
+      To: "igunereve@gmail.com",
+      From: "igunereve@gmail.com",
+      Subject: "This is the subject",
+      Body: "Thank you for your subscription. Now you will receive newletters with our best offers",
+    }).then();
+  }
+
+  emailValidation();
+  sendEmail();
+});

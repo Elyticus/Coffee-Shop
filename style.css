@@ -13,6 +13,15 @@ body {
   font-family: var(--font-forum);
 }
 
+form {
+  width: 100%;
+  margin: 0 auto;
+}
+
+#sub-form {
+  display: flex;
+}
+
 .blur {
   filter: blur(8px);
   -webkit-filter: blur(8px);
@@ -259,20 +268,27 @@ a,
   margin: 5rem 2rem;
 }
 
+#sub-form {
+  flex-direction: column;
+}
+
 .subscribe {
   flex-direction: column;
 }
 
 .subscribe-input {
+  display: flex;
   outline: none;
   border-bottom: 1px solid black;
   text-align: center;
+  margin: 0 auto;
 }
 
 .sub-btn {
   background-color: black;
   color: white;
   padding: 1rem;
+  margin-top: 2em;
 }
 
 .valid_confirmation {
@@ -690,7 +706,7 @@ a {
     display: none;
   }
 
-  .subscribe {
+  #sub-form {
     margin-bottom: 6rem;
     flex-direction: row;
     gap: 0;
@@ -716,6 +732,7 @@ a {
     background-color: black;
     color: white;
     letter-spacing: 2px;
+    margin-top: 0;
   }
 
   .valid_confirmation {

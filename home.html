@@ -247,20 +247,25 @@
             receive special offers, event invitations, and more.
           </p>
 
-          <input
-            placeholder="Enter your email address"
-            id="subscribe-input"
-            class="subscribe-input"
-            type="email"
-            name="Email"
-          />
+          <form id="sub-form">
+            <input
+              placeholder="Enter your email address"
+              id="subscribe-input"
+              class="subscribe-input"
+              type="email"
+              name="email"
+              required
+            />
 
-          <p id="validation" class="subscribe-input valid_confirmation">
-            Thanks for signing up! You successfully subscribed for a magical
-            coffee cup.
-          </p>
+            <p id="validation" class="subscribe-input valid_confirmation">
+              Thanks for signing up! You successfully subscribed for a magical
+              coffee cup.
+            </p>
 
-          <button id="subscribe-btn" class="sub-btn">Subscribe</button>
+            <button type="submit" id="subscribe-btn" class="sub-btn">
+              Subscribe
+            </button>
+          </form>
         </section>
       </main>
 
@@ -369,6 +374,7 @@
     ></script>
 
     <!-- JavaScript Link -->
+    <script src="https://smtpjs.com/v3/smtp.js"></script>
     <script src="app.js"></script>
   </body>
 </html>
