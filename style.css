@@ -588,9 +588,9 @@ a {
 /* Scroll Effect */
 .reveal {
   position: relative;
-  transform: translateY(150px);
+  transform: translateY(100px);
   opacity: 0;
-  transition: all 2s ease;
+  transition: all 1s ease-in;
 }
 
 .reveal.active {
