@@ -150,3 +150,21 @@ function reveal() {
     }
   }
 }
+
+// Logo hover effect_____________________________________
+const logo = document.getElementById("web-logo");
+
+logo.addEventListener("mouseenter", () => {
+  logo.classList.add("fa-bounce");
+});
+
+logo.addEventListener("mouseout", () => {
+  logo.classList.remove("fa-bounce");
+});
+
+// Cart click animation__________________________________________
+const cartLogo = document.getElementById("shopCart");
+
+cartLogo.addEventListener("click", () => {
+  cartLogo.classList.add("fa-beat");
+});
