@@ -100,26 +100,37 @@ reserveForm.addEventListener("submit", (e) => {
 
   function sendEmail() {
     let name = document.getElementById("input-name").value;
-    // let email = document.getElementById("input-email").value;
-    // let phone = document.getElementById("input-phone").value;
-    // let seats = document.getElementById("seats").value;
-    // let time = document.getElementById("time").value;
-    // let day = document.getElementById("day").value;
-    // let textarea = document.getElementById("textarea").value;
+    let email = document.getElementById("input-email").value;
+    let phone = document.getElementById("input-phone").value;
+    let seats = document.getElementById("seats").value;
+    let time = document.getElementById("time").value;
+    let day = document.getElementById("day").value;
+    let textarea = document.getElementById("textarea").value;
 
-    // let body = name + email + phone + seats + time + day + textarea;
+    let body = `
+    <div>
+    <p>Name: ${name}</p>
+    <p>Email: ${email}</p>
+    <p>Phone: ${phone}</p>
+    <p>Seat: ${seats}</p>
+    <p>Time: ${time}</p>
+    <p>Day: ${day}</p>
+    <p>Message: ${textarea}</p>
+    </div>
+    `;
 
     Email.send({
-      SecureToken: "62ef4901-bbc6-42db-8871-5dc11888dccf",
-      To: "igunereve@gmail.com",
+      Host: "smtp.elasticemail.com",
+      Username: "igunereve@gmail.com",
+      Password: "39C66BCCBF545827BE10C4614840411A78B7",
+      To: "cryptokitz0409@gmail.com",
       From: "igunereve@gmail.com",
-      Subject: "This is the subject",
-      Body: name,
+      Subject: "Reservation Request",
+      Body: body,
     }).then();
   }
-
-  validateContactEmail();
   sendEmail();
+  validateContactEmail();
 });
 
 // Scroll Effect________________________________________________________

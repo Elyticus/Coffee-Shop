@@ -153,17 +153,21 @@ formValidation.addEventListener("submit", (e) => {
   }
 
   function sendEmail() {
+    let email = document.getElementById("subscribe-input").value;
+    let message = "New Subscriber: " + email;
     Email.send({
-      SecureToken: "62ef4901-bbc6-42db-8871-5dc11888dccf",
-      To: "igunereve@gmail.com",
+      Host: "smtp.elasticemail.com",
+      Username: "igunereve@gmail.com",
+      Password: "39C66BCCBF545827BE10C4614840411A78B7",
+      To: "cryptokitz0409@gmail.com",
       From: "igunereve@gmail.com",
-      Subject: "This is the subject",
-      Body: "Thank you for your subscription. Now you will receive newletters with our best offers",
+      Subject: "Creamy Cup - Subscirbe",
+      Body: message,
     }).then();
   }
 
-  emailValidation();
   sendEmail();
+  emailValidation();
 });
 
 // Scroll Effect________________________________________________________
