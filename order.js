@@ -37,7 +37,8 @@ const generateShop = () => {
       return `
      <div id="product-id-${id}" class="wrapper">
 
-      <img class="product-image" src=${img} alt="This is a product image" />
+      <img id="product-image-${id}" class="product-image" 
+      src=${img} alt="This is a product image" />
       <h3 class="order-title">${title}</h3>
       <p>${description}</p>
       <p class="price">$ ${price}</p>
