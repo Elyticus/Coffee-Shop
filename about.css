@@ -22,6 +22,10 @@
   margin: 5rem 0;
 }
 
+.fa-brands {
+  margin-right: 0.5em;
+}
+
 .location-title {
   letter-spacing: 2px;
   font-family: var(--Cormorant-Garamond);
@@ -168,14 +172,11 @@
 
   .about-sec-image {
     margin-top: 0;
-    height: 500px;
+    height: 685px;
+    width: 100%;
     border-radius: 0 0 25px 25px;
     display: flex;
     justify-content: end;
-  }
-
-  .carousel {
-    margin-left: 26.52%;
   }
 
   .about-history {

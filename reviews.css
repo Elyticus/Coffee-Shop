@@ -22,6 +22,10 @@ main {
   width: 300px;
 }
 
+.fa-brands {
+  margin-right: 0.5em;
+}
+
 .container {
   display: flex;
   flex-direction: column;

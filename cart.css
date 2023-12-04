@@ -72,6 +72,10 @@
   transition: 0.2s ease-in-out;
 }
 
+.fa-brands {
+  margin-right: 0.5em;
+}
+
 .shopping-cart {
   margin-top: 5em;
   margin-bottom: 5em;

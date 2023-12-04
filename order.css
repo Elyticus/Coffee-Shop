@@ -25,6 +25,10 @@
   border-radius: 5px;
 }
 
+.fa-brands {
+  margin-right: 0.5em;
+}
+
 .order-btn:hover {
   background-color: #172225;
   color: whitesmoke;
