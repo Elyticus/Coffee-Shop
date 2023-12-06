@@ -130,8 +130,8 @@ formValidation.addEventListener("submit", (e) => {
   e.preventDefault();
 
   function sendEmail() {
-    let elementEmail = document.getElementById("subscribe-input").value;
-    let message = "New Subscriber: " + elementEmail;
+    // let elementEmail = document.getElementById("subscribe-input").value;
+    let message = "You have a new subscriber";
     Email.send({
       Host: "smtp.elasticemail.com",
       Username: "igunereve@gmail.com",

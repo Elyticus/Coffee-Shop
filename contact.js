@@ -58,25 +58,27 @@ reserveForm.addEventListener("submit", (e) => {
   e.preventDefault();
 
   function sendEmail() {
-    let name = document.getElementById("input-name").value;
-    let elementEmail = document.getElementById("input-email").value;
-    let phone = document.getElementById("input-phone").value;
-    let seats = document.getElementById("seats").value;
-    let time = document.getElementById("time").value;
-    let day = document.getElementById("day").value;
-    let textarea = document.getElementById("textarea").value;
+    // let name = document.getElementById("input-name").value;
+    // let elementEmail = document.getElementById("input-email").value;
+    // let phone = document.getElementById("input-phone").value;
+    // let seats = document.getElementById("seats").value;
+    // let time = document.getElementById("time").value;
+    // let day = document.getElementById("day").value;
+    // let textarea = document.getElementById("textarea").value;
 
-    let body = `
-    <div>
-    <p>Name: ${name}</p>
-    <p>Email: ${elementEmail}</p>
-    <p>Phone: ${phone}</p>
-    <p>Seat: ${seats}</p>
-    <p>Time: ${time}</p>
-    <p>Day: ${day}</p>
-    <p>Message: ${textarea}</p>
-    </div>
-    `;
+    // let body = `
+    // <div>
+    // <p>Name: ${name}</p>
+    // <p>Email: ${elementEmail}</p>
+    // <p>Phone: ${phone}</p>
+    // <p>Seat: ${seats}</p>
+    // <p>Time: ${time}</p>
+    // <p>Day: ${day}</p>
+    // <p>Message: ${textarea}</p>
+    // </div>
+    // `;
+
+    let body = "You have a NEW message";
 
     Email.send({
       Host: "smtp.elasticemail.com",
