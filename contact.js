@@ -57,6 +57,38 @@ calculation();
 reserveForm.addEventListener("submit", (e) => {
   e.preventDefault();
 
+  function sendEmail() {
+    let name = document.getElementById("input-name").value;
+    let elementEmail = document.getElementById("input-email").value;
+    let phone = document.getElementById("input-phone").value;
+    let seats = document.getElementById("seats").value;
+    let time = document.getElementById("time").value;
+    let day = document.getElementById("day").value;
+    let textarea = document.getElementById("textarea").value;
+
+    let body = `
+    <div>
+    <p>Name: ${name}</p>
+    <p>Email: ${elementEmail}</p>
+    <p>Phone: ${phone}</p>
+    <p>Seat: ${seats}</p>
+    <p>Time: ${time}</p>
+    <p>Day: ${day}</p>
+    <p>Message: ${textarea}</p>
+    </div>
+    `;
+
+    Email.send({
+      Host: "smtp.elasticemail.com",
+      Username: "igunereve@gmail.com",
+      Password: "39C66BCCBF545827BE10C4614840411A78B7",
+      To: "cryptokitz0409@gmail.com",
+      From: "igunereve@gmail.com",
+      Subject: "Reservation Request",
+      Body: body,
+    }).then();
+  }
+
   function validateContactEmail() {
     const regex = /\S+@\S+\.\S+/;
 
@@ -77,15 +109,13 @@ reserveForm.addEventListener("submit", (e) => {
     } else if (!regex.test(inputEmail.value)) {
       document.getElementById(
         "input-email"
-      ).placeholder = `Enter a valid email`;
+      ).placeholder = `Enter a valid email*`;
       inputEmail.value = "";
-      inputEmail.style.border = "2px solid red";
       return false;
     } else {
       reserveForm.style.display = "none";
       thankMessage.style.display = "block";
       errorMessage.style.display = "none";
-      inputEmail.style.border = "none";
       inputName.value = "";
       inputPhone.value = "";
       inputEmail.value = "";
@@ -93,43 +123,11 @@ reserveForm.addEventListener("submit", (e) => {
       selectSeats.value = "";
       selectTime.value = "";
       selectDay.value = "";
-
+      sendEmail();
       return true;
     }
   }
 
-  function sendEmail() {
-    let name = document.getElementById("input-name").value;
-    let email = document.getElementById("input-email").value;
-    let phone = document.getElementById("input-phone").value;
-    let seats = document.getElementById("seats").value;
-    let time = document.getElementById("time").value;
-    let day = document.getElementById("day").value;
-    let textarea = document.getElementById("textarea").value;
-
-    let body = `
-    <div>
-    <p>Name: ${name}</p>
-    <p>Email: ${email}</p>
-    <p>Phone: ${phone}</p>
-    <p>Seat: ${seats}</p>
-    <p>Time: ${time}</p>
-    <p>Day: ${day}</p>
-    <p>Message: ${textarea}</p>
-    </div>
-    `;
-
-    Email.send({
-      Host: "smtp.elasticemail.com",
-      Username: "igunereve@gmail.com",
-      Password: "39C66BCCBF545827BE10C4614840411A78B7",
-      To: "cryptokitz0409@gmail.com",
-      From: "igunereve@gmail.com",
-      Subject: "Reservation Request",
-      Body: body,
-    }).then();
-  }
-  sendEmail();
   validateContactEmail();
 });
 

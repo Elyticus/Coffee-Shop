@@ -129,6 +129,20 @@ calculation();
 formValidation.addEventListener("submit", (e) => {
   e.preventDefault();
 
+  function sendEmail() {
+    let elementEmail = document.getElementById("subscribe-input").value;
+    let message = "New Subscriber: " + elementEmail;
+    Email.send({
+      Host: "smtp.elasticemail.com",
+      Username: "igunereve@gmail.com",
+      Password: "39C66BCCBF545827BE10C4614840411A78B7",
+      To: "cryptokitz0409@gmail.com",
+      From: "igunereve@gmail.com",
+      Subject: "Creamy Cup - Subscirbe",
+      Body: message,
+    }).then();
+  }
+
   function emailValidation() {
     const regex = /\S+@\S+\.\S+/;
 
@@ -148,25 +162,11 @@ formValidation.addEventListener("submit", (e) => {
       subInput.style.display = "none";
       validMessage.style.display = "block";
       subInput.value = "";
+      sendEmail();
       return true;
     }
   }
 
-  function sendEmail() {
-    let email = document.getElementById("subscribe-input").value;
-    let message = "New Subscriber: " + email;
-    Email.send({
-      Host: "smtp.elasticemail.com",
-      Username: "igunereve@gmail.com",
-      Password: "39C66BCCBF545827BE10C4614840411A78B7",
-      To: "cryptokitz0409@gmail.com",
-      From: "igunereve@gmail.com",
-      Subject: "Creamy Cup - Subscirbe",
-      Body: message,
-    }).then();
-  }
-
-  sendEmail();
   emailValidation();
 });
 
