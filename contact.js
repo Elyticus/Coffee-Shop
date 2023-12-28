@@ -92,7 +92,7 @@ reserveForm.addEventListener("submit", (e) => {
   }
 
   function validateContactEmail() {
-    const regex = /\S+@\S+\.\S+/;
+    const regex = /^[a-zA-Z0-9._]+@[a-z]+\.[a-z]{2,6}$/;
 
     if (
       (inputName.value = inputName.value) &&

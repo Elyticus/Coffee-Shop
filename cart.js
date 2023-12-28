@@ -76,7 +76,7 @@ const generateCartItem = () => {
     shoppingCart.innerHTML = ``;
     label.innerHTML = `
     <div class="emptyCart">
-        <h2>Ooops... the cart is empty</h2>
+        <h2 id="errorCart">Ooops... the cart is empty</h2>
         <a href="order.html">
         <button class="orderBtn">Go back to Order page</button>
         </a>
@@ -154,7 +154,7 @@ let removeItem = (id) => {
   localStorage.setItem("data", JSON.stringify(basket));
 };
 
-let totalAmount = (id) => {
+let totalAmount = () => {
   if (basket.length !== 0) {
     let amount = basket
       .map((e) => {
@@ -166,12 +166,16 @@ let totalAmount = (id) => {
     label.innerHTML = `
       <h2 class="total-bill">Total to pay : 
       <span class="amount-bill">$ ${amount.toFixed(2)}</span></h2>
-      <button id=${id} class="checkout">Checkout</button>
+      <button id="check-out-btn" class="checkout">Checkout</button>
       <button id="remove-all" class="removeAll">Clear Cart</button>
       `;
 
     document.querySelectorAll(".removeAll").forEach((clear) => {
       clear.addEventListener("click", () => clearCart(clear.id));
+    });
+
+    document.querySelectorAll(".checkout").forEach((check) => {
+      check.addEventListener("click", () => handleChechout(check.id));
     });
   } else return;
 };
@@ -204,7 +208,7 @@ function reveal() {
   }
 }
 
-// Logo hover effect_____________________________________
+// Logo hover effect____________________________________________
 const logo = document.getElementById("web-logo");
 
 logo.addEventListener("mouseenter", () => {
@@ -220,4 +224,96 @@ const cartLogo = document.getElementById("shopCart");
 
 cartLogo.addEventListener("click", () => {
   cartLogo.classList.add("fa-beat");
+});
+
+// Checkout button_______________________________________________
+const closeBtn = document.getElementById("closeBtn");
+const divElement = document.getElementById("checkoutDisplay");
+const checkoutBG = document.getElementById("checkoutBackground");
+const totalBill = document.getElementById("totalBill");
+
+closeBtn.style.display = "none";
+
+let handleChechout = () => {
+  divElement.classList.toggle("display-message");
+  checkoutBG.classList.toggle("checkout-display");
+  closeBtn.style.display = "block";
+
+  let amount = basket
+    .map((e) => {
+      let { id, item } = e;
+      const search = productData.find((e) => e.id === id) || [];
+      return item * search.price;
+    })
+    .reduce((total, currentItem) => total + currentItem, 0);
+
+  totalBill.innerHTML = `
+  <span class="checkout-bill">Total bill: 
+  $${amount.toFixed(2)}</span>
+  <form id="checkoutForm" class="checkout-form">
+    <label>Cardholder Name:</label>
+    <input id="name" type="text" />
+    <p id="displayError" class="display-error">error</p>
+
+    <label>Card Number:</label>
+    <input id="cardNumber" type="number" />
+    <p id="displayError" class="display-error">error</p>
+
+    <div class="label-expirationCVC">
+      <label>Exp. Date (MM/YY)</label>
+      <label>CVC</label>
+    </div>
+
+    <div class="expiration-date">
+      <input id="expDateMonth" type="number" />
+      <input id="expDateYear" type="number" />
+
+      <input id="cvc" type="number" />
+    </div>
+    <p id="displayError" class="display-error">error</p>
+
+    <button id="paymentBtn" class="payment-btn">Confirm payment</button>
+  </form>
+
+  `;
+
+  document.querySelectorAll(".payment-btn").forEach((clear) => {
+    const inputName = document.getElementById("name");
+    const inputCard = document.getElementById("name");
+    const inputDate = document.getElementById("name");
+    const inputCVC = document.getElementById("name");
+
+    const form = document.getElementById("checkoutForm");
+
+    form.addEventListener("click", (e) => {
+      const regex =
+        /^(?:4[0-9]{12}(?:[0-9]{3})?|[25][1-7][0-9]{14}|6(?:011|5[0-9][0-9])[0-9]{12}|3[47][0-9]{13}|3(?:0[0-5]|[68][0-9])[0-9]{11}|(?:2131|1800|35\d{3})\d{11})$/;
+      const errorMessage = document.getElementById("displayError");
+      e.preventDefault();
+
+      if (
+        (inputName.value = inputName.value) &&
+        (inputCard.value = inputCard.value) &&
+        (inputDate.value = inputDate.value) &&
+        (inputCVC.value = inputCVC.value)
+      ) {
+        errorMessage.style.display = "block";
+        return false;
+      } else if (!regex.test(inputCard.value)) {
+        errorMessage.style.display = "block";
+        return false;
+      } else {
+        clear.addEventListener("click", () => clearCart(clear.id));
+        errorMessage.style.display = "none";
+        return true;
+      }
+    });
+  });
+};
+
+closeBtn.addEventListener("click", () => {
+  divElement.classList.remove("display-message");
+  checkoutBG.classList.remove("checkout-display");
+  totalBill.innerHTML = "";
+  closeBtn.style.display = "none";
 });

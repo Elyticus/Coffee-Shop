@@ -177,3 +177,71 @@ h5 {
 footer {
   height: 285px;
 }
+
+.checkout-bill {
+  background-color: #8fd125;
+  padding: 0.3em 1em;
+  border-radius: 7px;
+  font-weight: 900;
+}
+
+.close-btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #ff1205;
+  padding: 0.5em;
+  border-radius: 50%;
+  width: 15px;
+  height: 15px;
+  font-weight: 900;
+  border: none;
+  text-align: center;
+}
+
+.close-btn:hover {
+  background-color: rgb(250, 151, 151);
+}
+
+.checkout-form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 1em;
+}
+
+input {
+  outline: none;
+}
+
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type="number"] {
+  -moz-appearance: textfield;
+}
+
+.display-error {
+  display: none;
+  margin: 0;
+  color: red;
+}
+
+.payment-btn {
+  margin-top: 2em;
+  border: none;
+  background-color: #0c59a7;
+  color: whitesmoke;
+  padding: 0.5em;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+.payment-btn:hover {
+  background-color: #237fdb;
+}

@@ -77,7 +77,7 @@ consentForm.addEventListener("submit", (e) => {
   const name = formLoginData.get("fullName");
 
   function validCookieEmail() {
-    const regex = /\S+@\S+\.\S+/;
+    const regex = /^[a-zA-Z0-9._]+@[a-z]+\.[a-z]{2,6}$/;
 
     if (inputEmailCookie.value.trim() === "") {
       return false;
@@ -144,7 +144,7 @@ formValidation.addEventListener("submit", (e) => {
   }
 
   function emailValidation() {
-    const regex = /\S+@\S+\.\S+/;
+    const regex = /^[a-zA-Z0-9._]+@[a-z]+\.[a-z]{2,6}$/;
 
     if (subInput.value.trim() === "") {
       document.getElementById(
