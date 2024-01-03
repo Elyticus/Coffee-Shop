@@ -214,6 +214,13 @@ input {
   outline: none;
 }
 
+input:focus {
+  outline: 0.1rem solid #ee7d7d;
+  outline-offset: 0.15rem;
+  border-radius: 2px;
+  border: 1px solid black;
+}
+
 /* Chrome, Safari, Edge, Opera */
 input::-webkit-outer-spin-button,
 input::-webkit-inner-spin-button {

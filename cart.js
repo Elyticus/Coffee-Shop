@@ -190,24 +190,6 @@ let clearCart = () => {
   localStorage.setItem("data", JSON.stringify(basket));
 };
 
-// Scroll Effect________________________________________________________
-window.addEventListener("scroll", reveal);
-function reveal() {
-  const reveals = document.querySelectorAll(".reveal");
-
-  for (let i = 0; i < reveals.length; i++) {
-    const windowHeight = window.innerHeight;
-    const revealTop = reveals[i].getBoundingClientRect().top;
-    const revealPoint = 150;
-
-    if (revealTop < windowHeight - revealPoint) {
-      reveals[i].classList.add("active");
-    } else {
-      reveals[i].classList.remove("active");
-    }
-  }
-}
-
 // Logo hover effect____________________________________________
 const logo = document.getElementById("web-logo");
 
@@ -252,12 +234,10 @@ let handleChechout = () => {
   $${amount.toFixed(2)}</span>
   <form id="checkoutForm" class="checkout-form">
     <label>Cardholder Name:</label>
-    <input id="name" type="text" />
-    <p id="displayError" class="display-error">error</p>
+    <input required id="name" type="text" />
 
     <label>Card Number:</label>
-    <input id="cardNumber" type="number" />
-    <p id="displayError" class="display-error">error</p>
+    <input required id="cardNumber" type="number" />
 
     <div class="label-expirationCVC">
       <label>Exp. Date (MM/YY)</label>
@@ -265,46 +245,48 @@ let handleChechout = () => {
     </div>
 
     <div class="expiration-date">
-      <input id="expDateMonth" type="number" />
-      <input id="expDateYear" type="number" />
+      <input required id="expDateMonth" type="number" />
+      <input required id="expDateYear" type="number" />
 
-      <input id="cvc" type="number" />
+      <input required id="cvc" type="number" />
     </div>
-    <p id="displayError" class="display-error">error</p>
 
     <button id="paymentBtn" class="payment-btn">Confirm payment</button>
   </form>
 
   `;
 
-  document.querySelectorAll(".payment-btn").forEach((clear) => {
+  document.querySelectorAll(".payment-btn").forEach(() => {
     const inputName = document.getElementById("name");
-    const inputCard = document.getElementById("name");
-    const inputDate = document.getElementById("name");
-    const inputCVC = document.getElementById("name");
-
+    const inputCard = document.getElementById("cardNumber");
+    const inputMonth = document.getElementById("expDateMonth");
+    const inputYear = document.getElementById("expDateYear");
+    const inputCVC = document.getElementById("cvc");
     const form = document.getElementById("checkoutForm");
+    const totalBill = document.getElementById("totalBill");
 
-    form.addEventListener("click", (e) => {
-      const regex =
-        /^(?:4[0-9]{12}(?:[0-9]{3})?|[25][1-7][0-9]{14}|6(?:011|5[0-9][0-9])[0-9]{12}|3[47][0-9]{13}|3(?:0[0-5]|[68][0-9])[0-9]{11}|(?:2131|1800|35\d{3})\d{11})$/;
-      const errorMessage = document.getElementById("displayError");
+    form.addEventListener("submit", (e) => {
+      const mastercardRegex =
+        /^5[1-5][0-9]{14}|^(222[1-9]|22[3-9]\\d|2[3-6]\\d{2}|27[0-1]\\d|2720)[0-9]{12}$/;
+      const visaRegex = /^4[0-9]{12}(?:[0-9]{3})?$/;
+
+      const cardRegex = new RegExp(
+        `${mastercardRegex.source}|${visaRegex.source}`
+      );
+
+      const ExpMonth = /\D/gi;
+
       e.preventDefault();
 
       if (
-        (inputName.value = inputName.value) &&
-        (inputCard.value = inputCard.value) &&
-        (inputDate.value = inputDate.value) &&
-        (inputCVC.value = inputCVC.value)
+        cardRegex.test(inputCard.value) &&
+        inputName.value &&
+        ExpMonth.test(inputMonth.value) &&
+        ExpRegex.test(inputYear.value) &&
+        inputCVC.value
       ) {
-        errorMessage.style.display = "block";
-        return false;
-      } else if (!regex.test(inputCard.value)) {
-        errorMessage.style.display = "block";
-        return false;
-      } else {
-        clear.addEventListener("click", () => clearCart(clear.id));
-        errorMessage.style.display = "none";
+        clearCart();
+        totalBill.style.display = "none";
         return true;
       }
     });
