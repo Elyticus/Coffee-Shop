@@ -210,15 +210,10 @@ footer {
   padding: 1em;
 }
 
-input {
-  outline: none;
-}
-
 input:focus {
-  outline: 0.1rem solid #ee7d7d;
+  outline: 0.1rem solid #0e9cee;
   outline-offset: 0.15rem;
   border-radius: 2px;
-  border: 1px solid black;
 }
 
 /* Chrome, Safari, Edge, Opera */
@@ -231,12 +226,6 @@ input::-webkit-inner-spin-button {
 /* Firefox */
 input[type="number"] {
   -moz-appearance: textfield;
-}
-
-.display-error {
-  display: none;
-  margin: 0;
-  color: red;
 }
 
 .payment-btn {

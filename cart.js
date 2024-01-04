@@ -256,6 +256,28 @@ let handleChechout = () => {
 
   `;
 
+  function validateName(inputName) {
+    return /^[a-zA-Z]{3,}$/.test(inputName.value);
+  }
+
+  function validateCard(inputCard) {
+    return /^\d{16}$/.test(inputCard.value);
+  }
+
+  function validateCVC(inputCVC) {
+    return /^\d{3}$/.test(inputCVC.value);
+  }
+
+  function validateMonth(inputMonth) {
+    const monthValue = parseInt(inputMonth.value, 10);
+    return !isNaN(monthValue) && monthValue >= 1 && monthValue <= 12;
+  }
+
+  function validateYear(inputYear) {
+    const yearValue = parseInt(inputYear.value, 10);
+    return !isNaN(yearValue) && yearValue >= 2024 && yearValue <= 2099;
+  }
+
   document.querySelectorAll(".payment-btn").forEach(() => {
     const inputName = document.getElementById("name");
     const inputCard = document.getElementById("cardNumber");
@@ -266,28 +288,36 @@ let handleChechout = () => {
     const totalBill = document.getElementById("totalBill");
 
     form.addEventListener("submit", (e) => {
-      const mastercardRegex =
-        /^5[1-5][0-9]{14}|^(222[1-9]|22[3-9]\\d|2[3-6]\\d{2}|27[0-1]\\d|2720)[0-9]{12}$/;
-      const visaRegex = /^4[0-9]{12}(?:[0-9]{3})?$/;
-
-      const cardRegex = new RegExp(
-        `${mastercardRegex.source}|${visaRegex.source}`
-      );
-
-      const ExpMonth = /\D/gi;
-
       e.preventDefault();
 
       if (
-        cardRegex.test(inputCard.value) &&
-        inputName.value &&
-        ExpMonth.test(inputMonth.value) &&
-        ExpRegex.test(inputYear.value) &&
-        inputCVC.value
+        validateName(inputName) &&
+        validateCard(inputCard) &&
+        validateCVC(inputCVC) &&
+        validateMonth(inputMonth) &&
+        validateYear(inputYear)
       ) {
         clearCart();
-        totalBill.style.display = "none";
+        totalBill.innerHTML = `
+        <h2 class="thankMessage">
+        Thank you for your purchase. You will receive your order soon
+        </h2>
+        `;
         return true;
+      } else if (
+        inputName.value !== validateName(inputName) ||
+        inputCard.value !== validateCard(inputCard) ||
+        inputMonth.value !== validateMonth(inputMonth) ||
+        inputYear.value !== validateYear(inputYear) ||
+        inputCVC.value !== validateCVC(inputCVC)
+      ) {
+        alert("Something is wrong: Please verify your card details");
+      } else {
+        validateName(inputName);
+        validateCard(inputCard);
+        validateMonth(inputMonth);
+        validateYear(inputYear);
+        validateCVC(inputCVC);
       }
     });
   });

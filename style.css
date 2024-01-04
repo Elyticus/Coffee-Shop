@@ -647,6 +647,11 @@ main {
   width: 70px;
 }
 
+.thankMessage {
+  margin-top: 4.2em;
+  text-align: center;
+}
+
 @media all and (min-width: 1024px) {
   .container-gallery {
     margin: 5rem 7rem;
@@ -665,10 +670,15 @@ main {
     display: flex;
     justify-content: space-between;
     align-items: flex-start;
-    top: 35%;
+    top: 25%;
     left: 40%;
     z-index: 1;
     padding: 2em 1em;
+  }
+
+  .thankMessage {
+    margin-top: 2.2em;
+    text-align: center;
   }
 
   .logo {
