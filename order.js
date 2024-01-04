@@ -25,6 +25,24 @@ window.addEventListener("scroll", () => {
 
 updateNavbar();
 
+// Scroll Effect________________________________________________________
+window.addEventListener("scroll", reveal);
+function reveal() {
+  const reveals = document.querySelectorAll(".reveal");
+
+  for (let i = 0; i < reveals.length; i++) {
+    const windowHeight = window.innerHeight;
+    const revealTop = reveals[i].getBoundingClientRect().top;
+    const revealPoint = 150;
+
+    if (revealTop < windowHeight - revealPoint) {
+      reveals[i].classList.add("active");
+    } else {
+      reveals[i].classList.remove("active");
+    }
+  }
+}
+
 // Display the products on the screen_______________________________________
 const displayFeed = document.getElementById("feed");
 
@@ -39,12 +57,12 @@ const generateShop = () => {
 
       <img id="product-image-${id}" class="product-image" 
       src=${img} alt="This is a product image" />
-      <h3 class="order-title">${title}</h3>
+      <h3 class="order-title reveal">${title}</h3>
       <p class="reveal">${description}</p>
-      <p class="price">$ ${price}</p>
+      <p class="price reveal">$ ${price}</p>
 
       <div>
-        <button id=${id} class="order-btn">
+        <button id=${id} class="order-btn reveal">
           Add to Cart
         </button>
       </div>
@@ -82,24 +100,6 @@ let calculation = () => {
 };
 
 calculation();
-
-// Scroll Effect________________________________________________________
-window.addEventListener("scroll", reveal);
-function reveal() {
-  const reveals = document.querySelectorAll(".reveal");
-
-  for (let i = 0; i < reveals.length; i++) {
-    const windowHeight = window.innerHeight;
-    const revealTop = reveals[i].getBoundingClientRect().top;
-    const revealPoint = 150;
-
-    if (revealTop < windowHeight - revealPoint) {
-      reveals[i].classList.add("active");
-    } else {
-      reveals[i].classList.remove("active");
-    }
-  }
-}
 
 // Logo hover effect_____________________________________
 const logo = document.getElementById("web-logo");

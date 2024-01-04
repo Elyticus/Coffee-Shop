@@ -207,8 +207,8 @@ footer {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  margin-top: 1.5em;
   padding: 1em;
+  gap: 0.5em;
 }
 
 input:focus {
@@ -241,4 +241,8 @@ input[type="number"] {
 
 .payment-btn:hover {
   background-color: #237fdb;
+}
+
+#totalBill {
+  margin: 0;
 }

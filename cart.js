@@ -37,7 +37,7 @@ const generateCartItem = () => {
         const search = productData.find((e) => e.id === id) || [];
 
         return `
-        <div class="cart-item reveal">
+        <div class="cart-item">
             <img class="image-cart" width="150px" 
             src=${search.img} alt="Images with products from the shop"/>
 
@@ -190,24 +190,6 @@ let clearCart = () => {
   localStorage.setItem("data", JSON.stringify(basket));
 };
 
-// Scroll Effect________________________________________________________
-window.addEventListener("scroll", reveal);
-function reveal() {
-  const reveals = document.querySelectorAll(".reveal");
-
-  for (let i = 0; i < reveals.length; i++) {
-    const windowHeight = window.innerHeight;
-    const revealTop = reveals[i].getBoundingClientRect().top;
-    const revealPoint = 150;
-
-    if (revealTop < windowHeight - revealPoint) {
-      reveals[i].classList.add("active");
-    } else {
-      reveals[i].classList.remove("active");
-    }
-  }
-}
-
 // Logo hover effect____________________________________________
 const logo = document.getElementById("web-logo");
 
@@ -347,3 +329,39 @@ closeBtn.addEventListener("click", () => {
   totalBill.innerHTML = "";
   closeBtn.style.display = "none";
 });
+
+// Scroll Effect________________________________________________________
+// window.addEventListener("scroll", debounce(reveal, 100));
+
+// function reveal() {
+//   const reveals = document.querySelectorAll(".reveal");
+
+//   reveals.forEach((element) => {
+//     const windowHeight = window.innerHeight;
+//     const revealTop = element.getBoundingClientRect().top;
+//     const revealPoint = 150;
+
+//     if (revealTop < windowHeight - revealPoint) {
+//       element.classList.add("active");
+//     } else {
+//       element.classList.remove("active");
+//     }
+//   });
+// }
+
+// // Debounce function to limit the frequency of function calls
+// function debounce(func, wait) {
+//   let timeout;
+//   return function () {
+//     const context = this;
+//     const args = arguments;
+
+//     const later = function () {
+//       timeout = null;
+//       func.apply(context, args);
+//     };
+
+//     clearTimeout(timeout);
+//     timeout = setTimeout(later, wait);
+//   };
+// }
