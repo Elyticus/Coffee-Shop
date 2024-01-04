@@ -652,6 +652,10 @@ main {
   text-align: center;
 }
 
+.homeForm {
+  margin-top: 2em;
+}
+
 @media all and (min-width: 1024px) {
   .container-gallery {
     margin: 5rem 7rem;
