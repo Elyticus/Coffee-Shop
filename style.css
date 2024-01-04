@@ -590,7 +590,7 @@ a {
   position: relative;
   transform: translateY(100px);
   opacity: 0;
-  transition: all 1s ease-in;
+  transition: all 1s ease;
 }
 
 .reveal.active {
