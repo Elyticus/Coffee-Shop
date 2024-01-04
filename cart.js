@@ -37,7 +37,7 @@ const generateCartItem = () => {
         const search = productData.find((e) => e.id === id) || [];
 
         return `
-        <div class="cart-item">
+        <div class="cart-item reveal">
             <img class="image-cart" width="150px" 
             src=${search.img} alt="Images with products from the shop"/>
 

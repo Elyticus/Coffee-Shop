@@ -124,7 +124,7 @@ function clearTextArea() {
 
 function appaendMessagesList(feedbackValue) {
   displayFeedback.innerHTML += `
-     <li class="message">
+     <li class="message reveal">
        <p class="message-text">${feedbackValue.messageText}</p>
        <div class = "flex">
        <p class = "senderName"><span class = "sender">From:</span> ${feedbackValue.messageFrom}</p>
