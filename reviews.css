@@ -12,12 +12,13 @@
 
 main {
   margin-top: 1em;
+  margin-bottom: 2em;
 }
 
 .coffee-review {
   border-radius: 87% 13% 70% 30% / 28% 16% 84% 72%;
   display: flex;
-  margin: 0 auto;
+  margin: 4em auto 3em auto;
   padding: 2em;
   width: 300px;
 }
