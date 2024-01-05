@@ -78,7 +78,7 @@ reserveForm.addEventListener("submit", (e) => {
     // </div>
     // `;
 
-    let body = "You have a NEW message";
+    let body = "You have a NEW reservation request";
 
     Email.send({
       Host: "smtp.elasticemail.com",
@@ -91,11 +91,15 @@ reserveForm.addEventListener("submit", (e) => {
     }).then();
   }
 
+  function validateName(inputName) {
+    return /^[a-zA-Z ]{3,}$/.test(inputName.value);
+  }
+
   function validateContactEmail() {
     const regex = /^[a-zA-Z0-9._]+@[a-z]+\.[a-z]{2,6}$/;
 
     if (
-      (inputName.value = inputName.value) &&
+      validateName(inputName) &&
       (inputEmail.value = inputEmail.value) &&
       (inputPhone.value = inputPhone.value) &&
       (messageArea.value = messageArea.value) &&
@@ -141,7 +145,7 @@ function reveal() {
   for (let i = 0; i < reveals.length; i++) {
     const windowHeight = window.innerHeight;
     const revealTop = reveals[i].getBoundingClientRect().top;
-    const revealPoint = 150;
+    const revealPoint = 10;
 
     if (revealTop < windowHeight - revealPoint) {
       reveals[i].classList.add("active");
