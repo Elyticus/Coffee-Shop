@@ -74,8 +74,6 @@ reserveForm.addEventListener("submit", (e) => {
       (selectDay.value = selectDay.value) &&
       inputEmail.value.trim() === ""
     ) {
-      messageArea.value = messageArea.value.slice(0, 50);
-      errorMessage.style.display = "block";
       return false;
     } else if (!regex.test(inputEmail.value)) {
       document.getElementById(
@@ -86,7 +84,6 @@ reserveForm.addEventListener("submit", (e) => {
     } else {
       reserveForm.style.display = "none";
       thankMessage.style.display = "block";
-      errorMessage.style.display = "none";
       inputName.value = "";
       inputPhone.value = "";
       inputEmail.value = "";
