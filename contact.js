@@ -57,40 +57,6 @@ calculation();
 reserveForm.addEventListener("submit", (e) => {
   e.preventDefault();
 
-  function sendEmail() {
-    // let name = document.getElementById("input-name").value;
-    // let elementEmail = document.getElementById("input-email").value;
-    // let phone = document.getElementById("input-phone").value;
-    // let seats = document.getElementById("seats").value;
-    // let time = document.getElementById("time").value;
-    // let day = document.getElementById("day").value;
-    // let textarea = document.getElementById("textarea").value;
-
-    // let body = `
-    // <div>
-    // <p>Name: ${name}</p>
-    // <p>Email: ${elementEmail}</p>
-    // <p>Phone: ${phone}</p>
-    // <p>Seat: ${seats}</p>
-    // <p>Time: ${time}</p>
-    // <p>Day: ${day}</p>
-    // <p>Message: ${textarea}</p>
-    // </div>
-    // `;
-
-    let body = "You have a NEW reservation request";
-
-    Email.send({
-      Host: "smtp.elasticemail.com",
-      Username: "igunereve@gmail.com",
-      Password: "39C66BCCBF545827BE10C4614840411A78B7",
-      To: "cryptokitz0409@gmail.com",
-      From: "igunereve@gmail.com",
-      Subject: "Reservation Request",
-      Body: body,
-    }).then();
-  }
-
   function validateName(inputName) {
     return /^[a-zA-Z ]{3,}$/.test(inputName.value);
   }
@@ -103,7 +69,6 @@ reserveForm.addEventListener("submit", (e) => {
       (inputEmail.value = inputEmail.value) &&
       (inputPhone.value = inputPhone.value) &&
       (messageArea.value = messageArea.value) &&
-      messageArea.value.length < 50 &&
       (selectSeats.value = selectSeats.value) &&
       (selectTime.value = selectTime.value) &&
       (selectDay.value = selectDay.value) &&
@@ -129,7 +94,6 @@ reserveForm.addEventListener("submit", (e) => {
       selectSeats.value = "";
       selectTime.value = "";
       selectDay.value = "";
-      sendEmail();
       return true;
     }
   }
