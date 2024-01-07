@@ -257,6 +257,10 @@ input[type="number"] {
   justify-content: space-between;
 }
 
+.thankMessage {
+  margin: 0;
+}
+
 #totalBill {
   margin: 0;
 }
