@@ -74,12 +74,21 @@ consentForm.addEventListener("submit", (e) => {
   const formLoginData = new FormData(consentForm);
   const name = formLoginData.get("fullName");
 
-  function validCookieEmail() {
-    if (inputNameCookie.value === "") {
+  function validCookieForm() {
+    function validateName(inputNameCookie) {
+      return /^(?=\S)(?:(?=\S{3,})[a-zA-Z\s]+|[a-zA-Z]{2}(?!\s))\S*$/.test(
+        inputNameCookie
+      );
+    }
+
+    if (!validateName(name)) {
+      document.getElementById(
+        "input-name-cookie"
+      ).placeholder = `Enter a valid name`;
+      inputNameCookie.value = "";
       return false;
     } else {
       inputNameCookie.value = "";
-      subInput.value = "";
       innerText.innerHTML = `
       <div class="inner-flex">
         <h2 class="display-name">
@@ -90,17 +99,16 @@ consentForm.addEventListener("submit", (e) => {
       </div>
       `;
       modalCloseBtn.disabled = false;
-
       return true;
     }
   }
 
-  validCookieEmail();
+  validCookieForm();
 });
 
 // Email Address Validation________________________________________
 const subButton = document.getElementById("subscribe-btn");
-const subInput = document.getElementById("subscribe-input");
+const subInput = document.getElementById("email");
 const validMessage = document.getElementById("validation");
 const formValidation = document.getElementById("sub-form");
 
@@ -115,44 +123,46 @@ let calculation = () => {
 
 calculation();
 
+// Send email function______________________________________________________
+const sendEmail = () => {
+  const params = {
+    name: inputNameCookie.value,
+    email: subInput.value,
+  };
+
+  const serviceID = "service_we7kf8s";
+  const templateID = "template_z3v6orp";
+
+  emailjs.send(serviceID, templateID, params).then(() => {
+    inputNameCookie.value = "";
+    subInput.value = "";
+  });
+};
+
 // Send Email Form_________________________________________________________
 formValidation.addEventListener("submit", (e) => {
   e.preventDefault();
-
-  function sendEmail() {
-    // let elementEmail = document.getElementById("subscribe-input").value;
-    let message = "You have a new subscriber";
-    Email.send({
-      Host: "smtp.elasticemail.com",
-      Username: "igunereve@gmail.com",
-      Password: "39C66BCCBF545827BE10C4614840411A78B7",
-      To: "cryptokitz0409@gmail.com",
-      From: "igunereve@gmail.com",
-      Subject: "Creamy Cup - Subscirbe",
-      Body: message,
-    }).then();
-  }
 
   function emailValidation() {
     const regex = /^[a-zA-Z0-9._]+@[a-z]+\.[a-z]{2,6}$/;
 
     if (subInput.value.trim() === "") {
       document.getElementById(
-        "subscribe-input"
+        "email"
       ).placeholder = `This field cannot be left empty!`;
       return false;
     } else if (!regex.test(subInput.value)) {
       document.getElementById(
-        "subscribe-input"
+        "email"
       ).placeholder = `Enter a valid email address, 'example@email.com'`;
       subInput.value = "";
       return false;
     } else {
+      sendEmail();
       subButton.style.display = "none";
       subInput.style.display = "none";
       validMessage.style.display = "block";
       subInput.value = "";
-      sendEmail();
       return true;
     }
   }

@@ -54,34 +54,73 @@ let calculation = () => {
 
 calculation();
 
+// Send email function______________________________________________________
+
+const sendEmail = () => {
+  const params = {
+    name: inputName.value,
+    email: inputEmail.value,
+    phone: inputPhone.value,
+    seats: selectSeats.value,
+    time: selectTime.value,
+    day: selectDay.value,
+    message: messageArea.value,
+  };
+
+  const serviceID = "service_v4xi5hi";
+  const templateID = "template_cwn9adg";
+
+  emailjs.send(serviceID, templateID, params).then(() => {
+    inputName.value = "";
+    inputEmail.value = "";
+    inputPhone.value = "";
+    selectSeats.value = "";
+    selectTime.value = "";
+    selectDay.value = "";
+    messageArea.value = "";
+  });
+};
+
 reserveForm.addEventListener("submit", (e) => {
   e.preventDefault();
 
   function validateName(inputName) {
-    return /^[a-zA-Z ]{3,}$/.test(inputName.value);
+    return /^(?=\S)(?:(?=\S{3,})[a-zA-Z\s]+|[a-zA-Z]{2}(?!\s))\S*$/.test(
+      inputName.value
+    );
   }
 
   function validateContactEmail() {
     const regex = /^[a-zA-Z0-9._]+@[a-z]+\.[a-z]{2,6}$/;
 
     if (
-      validateName(inputName) &&
-      (inputEmail.value = inputEmail.value) &&
-      (inputPhone.value = inputPhone.value) &&
-      (messageArea.value = messageArea.value) &&
-      (selectSeats.value = selectSeats.value) &&
-      (selectTime.value = selectTime.value) &&
-      (selectDay.value = selectDay.value) &&
-      inputEmail.value.trim() === ""
+      !validateName(inputName) ||
+      inputEmail.value === "" ||
+      !regex.test(inputEmail.value)
     ) {
-      return false;
-    } else if (!regex.test(inputEmail.value)) {
-      document.getElementById(
-        "input-email"
-      ).placeholder = `Enter a valid email*`;
-      inputEmail.value = "";
+      if (!validateName(inputName)) {
+        document.getElementById(
+          "input-name"
+        ).placeholder = `Enter a valid name*`;
+        inputName.value = "";
+        return false;
+      }
+      if (inputEmail.value === "") {
+        document.getElementById(
+          "input-email"
+        ).placeholder = `Enter a valid email*`;
+        inputEmail.value = "";
+        return false;
+      }
+      if (!regex.test(inputEmail.value)) {
+        document.getElementById(
+          "input-email"
+        ).placeholder = `Enter a valid email*`;
+        inputEmail.value = "";
+      }
       return false;
     } else {
+      sendEmail();
       reserveForm.style.display = "none";
       thankMessage.style.display = "block";
       inputName.value = "";

@@ -261,7 +261,7 @@
           <form id="sub-form">
             <input
               placeholder="Enter your email address..."
-              id="subscribe-input"
+              id="email"
               class="subscribe-input"
               type="email"
               name="email"
@@ -273,7 +273,12 @@
               coffee cup.
             </p>
 
-            <button type="submit" id="subscribe-btn" class="sub-btn">
+            <button
+              value="Submit"
+              type="submit"
+              id="subscribe-btn"
+              class="sub-btn"
+            >
               Subscribe
             </button>
           </form>
@@ -384,14 +389,15 @@
     <script src="https://smtpjs.com/v3/smtp.js"></script>
     <script type="module" src="app.js"></script>
 
-    <!-- Email Send -->
+    <!-- Email Form -->
     <script
       type="text/javascript"
       src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"
     ></script>
-
     <script type="text/javascript">
-      emailjs.init("NpHkjTeTEXL9cOvga");
+      (function () {
+        emailjs.init("NpHkjTeTEXL9cOvga");
+      })();
     </script>
   </body>
 </html>

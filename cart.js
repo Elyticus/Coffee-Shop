@@ -257,7 +257,9 @@ let handleChechout = () => {
   `;
 
   function validateName(inputName) {
-    return /^[a-zA-Z ]{3,}$/.test(inputName.value);
+    return /^(?=\S)(?:(?=\S{3,})[a-zA-Z\s]+|[a-zA-Z]{2}(?!\s))\S*$/.test(
+      inputName.value
+    );
   }
 
   function validateCard(inputCard) {
