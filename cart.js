@@ -209,17 +209,13 @@ cartLogo.addEventListener("click", () => {
 });
 
 // Checkout button_______________________________________________
-const closeBtn = document.getElementById("closeBtn");
 const divElement = document.getElementById("checkoutDisplay");
 const checkoutBG = document.getElementById("checkoutBackground");
 const totalBill = document.getElementById("totalBill");
 
-closeBtn.style.display = "none";
-
 let handleChechout = () => {
   divElement.classList.toggle("display-message");
   checkoutBG.classList.toggle("checkout-display");
-  closeBtn.style.display = "block";
 
   let amount = basket
     .map((e) => {
@@ -230,14 +226,17 @@ let handleChechout = () => {
     .reduce((total, currentItem) => total + currentItem, 0);
 
   totalBill.innerHTML = `
-  <span class="checkout-bill">Total bill: 
-  $${amount.toFixed(2)}</span>
+  <div class="bill">
+    <span id="checkoutBill" class="checkout-bill">Total bill:
+    $${amount.toFixed(2)}</span>
+    <button id="closeBtn" class="close-btn"></button>
+  </div>
   <form id="checkoutForm" class="checkout-form">
     <label>Cardholder Name:</label>
-    <input required id="name" type="text" />
+    <input id="name" type="text" required />
 
     <label>Card Number:</label>
-    <input required id="cardNumber" type="number" />
+    <input maxlength="19" id="cardNumber" type="text" required />
 
     <div class="label-expirationCVC">
       <label>Exp. Date (MM/YY)</label>
@@ -245,25 +244,27 @@ let handleChechout = () => {
     </div>
 
     <div class="expiration-date">
-      <input required id="expDateMonth" type="number" />
-      <input required id="expDateYear" type="number" />
+      <input maxlength="2" id="expDateMonth" type="" required />
+      <input maxlength="2" id="expDateYear" type="" required />
 
-      <input required id="cvc" type="number" />
+      <input maxlength="3" id="cvc" type="" required />
     </div>
+    <p id="errorMessage" class="error-message">Please verify your card details</p>
+
+    <img class="cards" src="./assets/products/Visa MasterCard.png" />
 
     <button id="paymentBtn" class="payment-btn">Confirm payment</button>
   </form>
-
-  `;
+`;
 
   function validateName(inputName) {
-    return /^(?=\S)(?:(?=\S{3,})[a-zA-Z\s]+|[a-zA-Z]{2}(?!\s))\S*$/.test(
+    return /^(?=\S)(?:(?=\S{3,})[a-zA-Z\s]+|[a-zA-Z]{2}(?!\s))[\sa-zA-Z]*$/.test(
       inputName.value
     );
   }
 
   function validateCard(inputCard) {
-    return /^\d{16}$/.test(inputCard.value);
+    return /^[45]\d{3}(\s?\d{4}){3}$/.test(inputCard.value);
   }
 
   function validateCVC(inputCVC) {
@@ -277,7 +278,7 @@ let handleChechout = () => {
 
   function validateYear(inputYear) {
     const yearValue = parseInt(inputYear.value, 10);
-    return !isNaN(yearValue) && yearValue >= 2024 && yearValue <= 2099;
+    return !isNaN(yearValue) && yearValue >= 24 && yearValue <= 99;
   }
 
   document.querySelectorAll(".payment-btn").forEach(() => {
@@ -287,7 +288,16 @@ let handleChechout = () => {
     const inputYear = document.getElementById("expDateYear");
     const inputCVC = document.getElementById("cvc");
     const form = document.getElementById("checkoutForm");
-    const totalBill = document.getElementById("totalBill");
+    const finalMessage = document.getElementById("finalMessage");
+    const checkoutBill = document.getElementById("checkoutBill");
+    const errorMessage = document.getElementById("errorMessage");
+
+    inputCard.addEventListener("input", function (event) {
+      let inputValue = event.target.value;
+      inputValue = inputValue.replace(/\D/g, "");
+      inputValue = inputValue.replace(/(\d{4})(?=\d)/g, "$1 ");
+      event.target.value = inputValue;
+    });
 
     form.addEventListener("submit", (e) => {
       e.preventDefault();
@@ -300,11 +310,12 @@ let handleChechout = () => {
         validateYear(inputYear)
       ) {
         clearCart();
-        totalBill.innerHTML = `
-        <h2 class="thankMessage">
-        Thank you for your purchase. You will receive your order soon
-        </h2>
-        `;
+        form.style.display = "none";
+        checkoutBill.style.display = "none";
+        finalMessage.innerHTML =
+          "Thank you for your purchase. You will get your order soon";
+        divElement.style.height = "380px";
+
         return true;
       } else if (
         inputName.value !== validateName(inputName) ||
@@ -313,57 +324,16 @@ let handleChechout = () => {
         inputYear.value !== validateYear(inputYear) ||
         inputCVC.value !== validateCVC(inputCVC)
       ) {
-        alert("Something is wrong: Please verify your card details");
-      } else {
-        validateName(inputName);
-        validateCard(inputCard);
-        validateMonth(inputMonth);
-        validateYear(inputYear);
-        validateCVC(inputCVC);
+        divElement.style.height = "450px";
+        errorMessage.style.display = "block";
       }
     });
   });
+
+  const closeBtn = document.getElementById("closeBtn");
+
+  closeBtn.addEventListener("click", () => {
+    divElement.classList.remove("display-message");
+    checkoutBG.classList.remove("checkout-display");
+  });
 };
-
-closeBtn.addEventListener("click", () => {
-  divElement.classList.remove("display-message");
-  checkoutBG.classList.remove("checkout-display");
-  totalBill.innerHTML = "";
-  closeBtn.style.display = "none";
-});
-
-// Scroll Effect________________________________________________________
-// window.addEventListener("scroll", debounce(reveal, 100));
-
-// function reveal() {
-//   const reveals = document.querySelectorAll(".reveal");
-
-//   reveals.forEach((element) => {
-//     const windowHeight = window.innerHeight;
-//     const revealTop = element.getBoundingClientRect().top;
-//     const revealPoint = 150;
-
-//     if (revealTop < windowHeight - revealPoint) {
-//       element.classList.add("active");
-//     } else {
-//       element.classList.remove("active");
-//     }
-//   });
-// }
-
-// // Debounce function to limit the frequency of function calls
-// function debounce(func, wait) {
-//   let timeout;
-//   return function () {
-//     const context = this;
-//     const args = arguments;
-
-//     const later = function () {
-//       timeout = null;
-//       func.apply(context, args);
-//     };
-
-//     clearTimeout(timeout);
-//     timeout = setTimeout(later, wait);
-//   };
-// }

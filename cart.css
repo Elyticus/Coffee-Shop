@@ -186,17 +186,13 @@ footer {
 }
 
 .close-btn {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  display: block;
   background-color: #ff1205;
-  padding: 0.5em;
   border-radius: 50%;
   width: 15px;
   height: 15px;
   font-weight: 900;
   border: none;
-  text-align: center;
 }
 
 .close-btn:hover {
@@ -212,9 +208,9 @@ footer {
 }
 
 input:focus {
-  outline: 0.1rem solid #0e9cee;
-  outline-offset: 0.15rem;
-  border-radius: 2px;
+  border-radius: 5px;
+  border: 0.1rem solid #55ee0e;
+  outline: none;
 }
 
 /* Chrome, Safari, Edge, Opera */
@@ -230,7 +226,7 @@ input[type="number"] {
 }
 
 .payment-btn {
-  margin-top: 2em;
+  margin-top: 0.5em;
   border: none;
   background-color: #0c59a7;
   color: whitesmoke;
@@ -241,6 +237,36 @@ input[type="number"] {
 
 .payment-btn:hover {
   background-color: #237fdb;
+}
+
+.cards {
+  width: 100px;
+  padding: 0.5em 0;
+}
+
+.error-message {
+  display: none;
+  margin-bottom: 0;
+  color: #e01f2d;
+  font-style: italic;
+  font-size: 0.85em;
+}
+
+.bill {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.display-message {
+  display: flex;
+  flex-direction: row-reverse;
+}
+
+.final-message {
+  font-size: 2em;
+  text-align: center;
+  margin-top: 2em;
 }
 
 #totalBill {

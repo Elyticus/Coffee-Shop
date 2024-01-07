@@ -620,12 +620,12 @@ main {
 .display-message {
   position: fixed;
   width: 320px;
-  height: 380px;
+  height: 420px;
   background-color: white;
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
-  top: 35%;
+  top: 20%;
   left: 9%;
   z-index: 999;
   padding: 2em 1em;
@@ -667,17 +667,9 @@ main {
   }
 
   .display-message {
-    position: fixed;
-    width: 320px;
-    height: 380px;
-    background-color: white;
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
     top: 25%;
     left: 39.6%;
     z-index: 1;
-    padding: 2em 1em;
   }
 
   .thankMessage {

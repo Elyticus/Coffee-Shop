@@ -85,7 +85,7 @@ reserveForm.addEventListener("submit", (e) => {
   e.preventDefault();
 
   function validateName(inputName) {
-    return /^(?=\S)(?:(?=\S{3,})[a-zA-Z\s]+|[a-zA-Z]{2}(?!\s))\S*$/.test(
+    return /^(?=\S)(?:(?=\S{3,})[a-zA-Z\s]+|[a-zA-Z]{2}(?!\s))[\sa-zA-Z]*$/.test(
       inputName.value
     );
   }
