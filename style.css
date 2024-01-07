@@ -620,11 +620,7 @@ main {
 .display-message {
   position: fixed;
   width: 320px;
-  height: 420px;
   background-color: white;
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-start;
   top: 20%;
   left: 9%;
   z-index: 999;

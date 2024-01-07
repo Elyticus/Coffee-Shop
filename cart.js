@@ -226,11 +226,12 @@ let handleChechout = () => {
     .reduce((total, currentItem) => total + currentItem, 0);
 
   totalBill.innerHTML = `
-  <div class="bill">
-    <span id="checkoutBill" class="checkout-bill">Total bill:
-    $${amount.toFixed(2)}</span>
+  <div id="bill" class="bill">
+    <p id="checkoutBill"" class="checkout-bill">Total bill:
+    $${amount.toFixed(2)}</p>
     <button id="closeBtn" class="close-btn"></button>
   </div>
+  
   <form id="checkoutForm" class="checkout-form">
     <label>Cardholder Name:</label>
     <input id="name" type="text" required />
@@ -253,7 +254,7 @@ let handleChechout = () => {
 
     <img class="cards" src="./assets/products/Visa MasterCard.png" />
 
-    <button id="paymentBtn" class="payment-btn">Confirm payment</button>
+    <button class="payment-btn">Confirm payment</button>
   </form>
 `;
 
@@ -288,8 +289,7 @@ let handleChechout = () => {
     const inputYear = document.getElementById("expDateYear");
     const inputCVC = document.getElementById("cvc");
     const form = document.getElementById("checkoutForm");
-    const finalMessage = document.getElementById("finalMessage");
-    const checkoutBill = document.getElementById("checkoutBill");
+    const totalBill = document.getElementById("checkoutBill");
     const errorMessage = document.getElementById("errorMessage");
 
     inputCard.addEventListener("input", function (event) {
@@ -310,12 +310,12 @@ let handleChechout = () => {
         validateYear(inputYear)
       ) {
         clearCart();
-        form.style.display = "none";
-        checkoutBill.style.display = "none";
-        finalMessage.innerHTML =
-          "Thank you for your purchase. You will get your order soon";
-        divElement.style.height = "380px";
-
+        form.innerHTML = `
+        <h2 class="thankMessage">
+        Thank you for your purchase. You will receive your order soon
+        </h2>
+        `;
+        totalBill.style.visibility = "hidden";
         return true;
       } else if (
         inputName.value !== validateName(inputName) ||
@@ -324,7 +324,6 @@ let handleChechout = () => {
         inputYear.value !== validateYear(inputYear) ||
         inputCVC.value !== validateCVC(inputCVC)
       ) {
-        divElement.style.height = "450px";
         errorMessage.style.display = "block";
       }
     });
@@ -335,5 +334,7 @@ let handleChechout = () => {
   closeBtn.addEventListener("click", () => {
     divElement.classList.remove("display-message");
     checkoutBG.classList.remove("checkout-display");
+    totalBill.innerHTML = "";
+    closeBtn.style.display = "none";
   });
 };

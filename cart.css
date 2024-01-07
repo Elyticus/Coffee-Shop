@@ -255,18 +255,6 @@ input[type="number"] {
 .bill {
   display: flex;
   justify-content: space-between;
-  align-items: center;
-}
-
-.display-message {
-  display: flex;
-  flex-direction: row-reverse;
-}
-
-.final-message {
-  font-size: 2em;
-  text-align: center;
-  margin-top: 2em;
 }
 
 #totalBill {
