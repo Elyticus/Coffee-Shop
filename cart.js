@@ -76,6 +76,7 @@ const generateCartItem = () => {
     shoppingCart.innerHTML = ``;
     label.innerHTML = `
     <div class="emptyCart">
+    <img class="coffee-order" src="./assets/Coffee Cart.jpg" alt="Coffee Shop Illustration" />
         <h2 id="errorCart">Ooops... the cart is empty</h2>
         <a href="order.html">
         <button class="orderBtn">Go back to Order page</button>
