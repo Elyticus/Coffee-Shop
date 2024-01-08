@@ -84,10 +84,18 @@ const sendEmail = () => {
 reserveForm.addEventListener("submit", (e) => {
   e.preventDefault();
 
+  const inputName = document.getElementById("input-name");
+  const inputPhone = document.getElementById("input-phone");
+  const inputEmail = document.getElementById("input-email");
+
   function validateName(inputName) {
     return /^(?=\S)(?:(?=\S{3,})[a-zA-Z\s]+|[a-zA-Z]{2}(?!\s))[\sa-zA-Z]*$/.test(
       inputName.value
     );
+  }
+
+  function validatePhone(inputPhone) {
+    return /^\+?\d{10,}$/.test(inputPhone.value);
   }
 
   function validateContactEmail() {
@@ -96,28 +104,24 @@ reserveForm.addEventListener("submit", (e) => {
     if (
       !validateName(inputName) ||
       inputEmail.value === "" ||
-      !regex.test(inputEmail.value)
+      !regex.test(inputEmail.value) ||
+      !validatePhone(inputPhone)
     ) {
       if (!validateName(inputName)) {
-        document.getElementById(
-          "input-name"
-        ).placeholder = `Enter a valid name*`;
+        inputName.placeholder = "Enter a valid name*";
         inputName.value = "";
-        return false;
       }
-      if (inputEmail.value === "") {
-        document.getElementById(
-          "input-email"
-        ).placeholder = `Enter a valid email*`;
-        inputEmail.value = "";
-        return false;
-      }
-      if (!regex.test(inputEmail.value)) {
-        document.getElementById(
-          "input-email"
-        ).placeholder = `Enter a valid email*`;
+
+      if (inputEmail.value === "" || !regex.test(inputEmail.value)) {
+        inputEmail.placeholder = "Enter a valid email*";
         inputEmail.value = "";
       }
+
+      if (!validatePhone(inputPhone)) {
+        inputPhone.placeholder = "Enter a valid phone*";
+        inputPhone.value = "";
+      }
+
       return false;
     } else {
       sendEmail();
