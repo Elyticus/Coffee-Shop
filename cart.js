@@ -234,22 +234,22 @@ let handleChechout = () => {
   </div>
   
   <form id="checkoutForm" class="checkout-form">
-    <label>Cardholder Name:</label>
-    <input id="name" type="text" required />
+    <label for="name" >Cardholder Name:</label>
+    <input name="name" id="name" type="text" required />
 
-    <label>Card Number:</label>
-    <input maxlength="19" id="cardNumber" type="text" required />
+    <label for="cardNumber">Card Number:</label>
+    <input name="cardNumber" maxlength="19" id="cardNumber" type="text" required />
 
     <div class="label-expirationCVC">
-      <label>Exp. Date (MM/YY)</label>
-      <label>CVC</label>
+      <label for="expDateMonth">Exp. Date (MM/YY)</label>
+      <label for="cvc">CVC</label>
     </div>
 
     <div class="expiration-date">
-      <input maxlength="2" id="expDateMonth" type="" required />
-      <input maxlength="2" id="expDateYear" type="" required />
+      <input name="expDateMonth" min="1" max="12" maxlength="2" id="expDateMonth" type="" required />
+      <input name="expDateYear" maxlength="2" id="expDateYear" type="" required />
 
-      <input maxlength="3" id="cvc" type="" required />
+      <input name="cvc" maxlength="3" id="cvc" type="" required />
     </div>
     <p id="errorMessage" class="error-message">Please verify your card details</p>
 
