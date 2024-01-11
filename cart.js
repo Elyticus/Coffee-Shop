@@ -234,14 +234,15 @@ let handleChechout = () => {
   </div>
   
   <form id="checkoutForm" class="checkout-form">
-    <label for="name" >Cardholder Name:</label>
+    <label for="name" >Cardholder Name</label>
     <input name="name" id="name" type="text" required />
 
-    <label for="cardNumber">Card Number:</label>
+    <label for="cardNumber">Card Number</label>
     <input name="cardNumber" maxlength="19" id="cardNumber" type="text" required />
 
     <div class="label-expirationCVC">
-      <label for="expDateMonth">Exp. Date (MM/YY)</label>
+      <label>Exp. Date (<label for="expDateMonth">MM</label>/
+      <label for="expDateYear" class="me-5">YY<span>)</label>
       <label for="cvc">CVC</label>
     </div>
 
