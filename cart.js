@@ -296,9 +296,20 @@ let handleChechout = () => {
 
     inputCard.addEventListener("input", function (event) {
       let inputValue = event.target.value;
+      const cursorPosition = event.target.selectionStart;
+
+      // Remove non-numeric characters
       inputValue = inputValue.replace(/\D/g, "");
+
+      // Group digits into fours with space
       inputValue = inputValue.replace(/(\d{4})(?=\d)/g, "$1 ");
+
+      // Update the input value
       event.target.value = inputValue;
+
+      // Restore cursor position
+      const newPosition = cursorPosition + Math.floor((cursorPosition + 1) / 5);
+      event.target.setSelectionRange(newPosition, newPosition);
     });
 
     form.addEventListener("submit", (e) => {
