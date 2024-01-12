@@ -235,7 +235,7 @@ let handleChechout = () => {
   
   <form id="checkoutForm" class="checkout-form">
     <label for="name" >Cardholder Name</label>
-    <input name="name" id="name" type="text" required />
+    <input min="3" name="name" id="name" type="text" required />
 
     <label for="cardNumber">Card Number</label>
     <input name="cardNumber" maxlength="19" id="cardNumber" type="text" required />
@@ -261,7 +261,7 @@ let handleChechout = () => {
 `;
 
   function validateName(inputName) {
-    return /^(?=\S)(?:(?=\S{3,})[a-zA-Z\s]+|[a-zA-Z]{2}(?!\s))[\sa-zA-Z]*$/.test(
+    return /^(?=\S)(?:(?=\S{3,})[a-zA-Z]+(?:\s[a-zA-Z]+)?|[a-zA-Z]{3}(?!\s))[\sa-zA-Z]*$/.test(
       inputName.value
     );
   }

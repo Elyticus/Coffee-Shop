@@ -76,7 +76,7 @@ consentForm.addEventListener("submit", (e) => {
 
   function validCookieForm() {
     function validateName(inputNameCookie) {
-      return /^(?=\S)(?:(?=\S{3,})[a-zA-Z\s]+|[a-zA-Z]{2}(?!\s))[\sa-zA-Z]*$/.test(
+      return /^(?=\S)(?:(?=\S{3,})[a-zA-Z]+(?:\s[a-zA-Z]+)?|[a-zA-Z]{3}(?!\s))[\sa-zA-Z]*$/.test(
         inputNameCookie
       );
     }
