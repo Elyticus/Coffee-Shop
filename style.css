@@ -8,7 +8,8 @@
   background: #8b31e5;
 }
 
-input {
+input,
+textarea {
   caret-color: #ff00ff;
 }
 
