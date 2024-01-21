@@ -84,10 +84,6 @@ const sendEmail = () => {
 reserveForm.addEventListener("submit", (e) => {
   e.preventDefault();
 
-  const inputName = document.getElementById("input-name");
-  const inputPhone = document.getElementById("input-phone");
-  const inputEmail = document.getElementById("input-email");
-
   function validateName(inputName) {
     return /^(?=\S)(?:(?=\S{3,})[a-zA-Z]+(?:\s[a-zA-Z]+)?|[a-zA-Z]{3}(?!\s))[\sa-zA-Z]*$/.test(
       inputName.value

@@ -50,13 +50,13 @@ const generateCartItem = () => {
                             search.price
                           }</p>
                       </div>
-                      <i class="fa-solid fa-xmark"></i>
+                      <button class="cart-buttons"><i class="fa-solid fa-xmark"></i></button>
                   </div>
 
                   <div class="cart-btn">
-                  <i id=${id} class="fa-solid fa-minus"></i>
+                  <button class="cart-buttons"><i id=${id} class="fa-solid fa-minus"></i></button>
                   <div id="quantity-id-${id}" class="quantity">${item}</div>
-                  <i id=${id} class="fa-solid fa-plus"></i>
+                  <button class="cart-buttons"><i id=${id} class="fa-solid fa-plus"></i></button>
                   </div>
                 </div>
 

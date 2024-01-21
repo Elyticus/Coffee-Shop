@@ -36,7 +36,7 @@ export const productData = [
   {
     id: "a2",
     img: "./imgs/3.webp",
-    title: "Ethiopia Qonqana",
+    title: "Ethiopia",
     description: `Lorem ipsum dolor, sit amet consectetur adipisicing elit. 
     Ea dignissimos magni in tenetur.`,
     price: 12.99,

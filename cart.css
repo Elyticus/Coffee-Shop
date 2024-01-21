@@ -111,8 +111,14 @@
 
 .cart-btn {
   display: flex;
-  align-items: center;
   gap: 1em;
+  margin-top: 1em;
+}
+
+.cart-buttons {
+  background: transparent;
+  border: none;
+  height: 0;
 }
 
 .fa-minus,
