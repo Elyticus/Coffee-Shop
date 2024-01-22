@@ -293,10 +293,13 @@ a,
   color: white;
   padding: 1rem;
   margin-top: 2em;
+}
+
+.text-btn {
   transition: 0.1s ease-in;
 }
 
-.sub-btn:hover {
+.text-btn:hover {
   color: rgb(172, 170, 170);
 }
 
