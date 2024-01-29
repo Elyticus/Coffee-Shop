@@ -62,7 +62,7 @@ const displayFeedback = document.getElementById("display_feedback");
 textareaElement.value = "";
 fromElement.value = "";
 
-pushButton.addEventListener("click", () => {
+pushButton.addEventListener("click", (event) => {
   event.preventDefault();
 
   let messageObject = {
