@@ -37,18 +37,31 @@
     <link rel="stylesheet" href="contact.css" />
 
     <!-- Favicon Link -->
-    <link rel="icon" type="image/x-icon" href="#" />
+    <link rel="icon" type="image/x-icon" href="./assets/coffee-cup.png" />
 
     <!-- Document Title -->
     <title>Contact</title>
   </head>
+
   <body>
     <header>
       <nav class="navbar navbar-expand-lg">
         <div class="container-fluid">
           <div class="logo">
-            <a class="navbar-brand fw-bold" href="home.html">Creamy Cup</a>
-            <i class="fa-solid fa-mug-hot"></i>
+            <a
+              title="Home"
+              aria-label="This is a hyperlink that will redirect to a specific URL"
+              class="navbar-brand fw-bold"
+              href="home.html"
+              >Creamy Cup</a
+            >
+            <a href="home.html"
+              ><i
+                title="I am a happy cup"
+                id="web-logo"
+                class="fa-solid fa-mug-hot"
+              ></i
+            ></a>
           </div>
 
           <button
@@ -67,6 +80,7 @@
             <ul class="navbar-nav me-auto mb-2 mb-lg-0">
               <li class="nav-item">
                 <a
+                  aria-label="This is a hyperlink that will redirect to a specific URL"
                   class="nav-link px-0 active"
                   aria-current="page"
                   href="about.html"
@@ -75,6 +89,7 @@
               </li>
               <li class="nav-item">
                 <a
+                  aria-label="This is a hyperlink that will redirect to a specific URL"
                   class="nav-link px-0 active"
                   aria-current="page"
                   href="contact.html"
@@ -83,6 +98,7 @@
               </li>
               <li class="nav-item">
                 <a
+                  aria-label="This is a hyperlink that will redirect to a specific URL"
                   class="nav-link px-0 active"
                   aria-current="page"
                   href="order.html"
@@ -91,6 +107,7 @@
               </li>
               <li class="nav-item">
                 <a
+                  aria-label="This is a hyperlink that will redirect to a specific URL"
                   class="nav-link px-0 active"
                   aria-current="page"
                   href="reviews.html"
@@ -99,11 +116,24 @@
               </li>
             </ul>
 
+<<<<<<< HEAD
             <div class="cart">
               <a href="order.html"><i class="fa-solid fa-cart-shopping"></i></a>
 
               <p id="count">0</p>
             </div>
+=======
+            <a href="cart.html">
+              <div class="cart">
+                <i
+                  title="order cart"
+                  id="shopCart"
+                  class="fa-solid fa-cart-shopping"
+                ></i>
+                <p id="count">0</p>
+              </div>
+            </a>
+>>>>>>> ed75509f935288f667b6ded105d0b81399ff7bf3
           </div>
         </div>
       </nav>
@@ -120,19 +150,11 @@
       </section>
     </header>
 
-    <main class="contact-form">
+    <main class="contact-form reveal">
       <div class="reservation-menu">
         <h1 class="mb-5">Reservation Form</h1>
 
-        <form
-          action="https://formsubmit.co/igunereve@gmail.com"
-          method="POST"
-          id="form"
-          class="form"
-        >
-          <input type="hidden" name="_subject" value="New submission!" />
-          <input type="hidden" name="_captcha" value="false" />
-
+        <form id="form" class="form">
           <div class="inputs-wrapper">
             <input
               id="input-name"
@@ -141,6 +163,7 @@
               onblur="this.placeholder = 'Your Name*'"
               placeholder="Your Name*"
               type="text"
+              name="name"
             />
 
             <input
@@ -150,6 +173,7 @@
               onblur="this.placeholder = 'Your Email*'"
               placeholder="Your Email*"
               type="email"
+              name="email"
             />
 
             <input
@@ -158,10 +182,17 @@
               onfocus="this.placeholder = ''"
               onblur="this.placeholder = 'Your Phone*'"
               placeholder="Your Phone*"
-              type="number"
+              type="text"
+              name="phone"
+              maxlength="13"
             />
 
-            <select required name="seats" id="seats">
+            <select
+              aria-label="This is a Select tag that allow to pick an option from the dropdown"
+              required
+              name="seats"
+              id="seats"
+            >
               <option value="">Seats*</option>
               <option value="1">1</option>
               <option value="2">2</option>
@@ -175,7 +206,12 @@
               <option value="10">10</option>
             </select>
 
-            <select required name="time" id="time">
+            <select
+              aria-label="This is a Select tag that allow to pick an option from the dropdown"
+              required
+              name="time"
+              id="time"
+            >
               <option value="">Time*</option>
               <option value="10:00">10:00</option>
               <option value="11:00">11:00</option>
@@ -190,7 +226,12 @@
               <option value="20:00">20:00</option>
             </select>
 
-            <select required name="day" id="day">
+            <select
+              aria-label="This is a Select tag that allow to pick an option from the dropdown"
+              required
+              name="day"
+              id="day"
+            >
               <option value="">Day*</option>
               <option value="Monday">Monday</option>
               <option value="Thusday">Thusday</option>
@@ -216,10 +257,6 @@
           </button>
         </form>
 
-        <p class="error-message">
-          Please enter a minimum of 50 characters to submit your form
-        </p>
-
         <div id="thank-message" class="thank-message">
           <h1>Thank you!</h1>
           <p>Your submission has been received!</p>
@@ -232,6 +269,7 @@
         <p class="footer-text">
           Copyrights &copy;
           <a
+            aria-label="This is a hyperlink that will redirect to a specific URL"
             class="link-text nav-link"
             href="https://www.frontendmentor.io/profile/igunereve"
             target="_blank"
@@ -245,18 +283,30 @@
 
       <div class="social-media fs-3">
         <a
+          title="linkedin"
+          aria-label="This is a hyperlink that will redirect to a specific URL"
           href="https://www.linkedin.com/in/pirvulescu-catalin-100390159/"
           target="_blank"
-          ><i class="fa-brands fa-linkedin ms-3"></i
+          ><i class="fa-brands fa-linkedin"></i
         ></a>
 
-        <a href="https://www.instagram.com/catalinclaudiu_/" target="_blank"
-          ><i class="fa-brands fa-instagram ms-3"></i
+        <a
+          title="instagram"
+          aria-label="This is a hyperlink that will redirect to a specific URL"
+          href="https://www.instagram.com/catalinclaudiu_/"
+          target="_blank"
+          ><i class="fa-brands fa-instagram"></i
         ></a>
 
-        <a href="https://github.com/Elyticus" target="_blank"
-          ><i class="fa-brands fa-github ms-3"></i
+        <a
+          title="github"
+          aria-label="This is a hyperlink that will redirect to a specific URL"
+          href="https://github.com/Elyticus"
+          target="_blank"
+          ><i class="fa-brands fa-github"></i
         ></a>
+
+        <p class="footer-motto">Coffee must be something special</p>
       </div>
     </footer>
 
@@ -268,7 +318,18 @@
     ></script>
 
     <!-- JavaScript Link -->
-    <script src="app.js"></script>
-    <script src="contact.js"></script>
+    <script src="https://smtpjs.com/v3/smtp.js"></script>
+    <script src="contact.js" type="module"></script>
+
+    <!-- Email Form -->
+    <script
+      type="text/javascript"
+      src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"
+    ></script>
+    <script type="text/javascript">
+      (function () {
+        emailjs.init("NpHkjTeTEXL9cOvga");
+      })();
+    </script>
   </body>
 </html>

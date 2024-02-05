@@ -44,7 +44,7 @@
     <link rel="stylesheet" href="about.css" />
 
     <!-- Favicon Link -->
-    <link rel="icon" type="image/x-icon" href="#" />
+    <link rel="icon" type="image/x-icon" href="./assets/coffee-cup.png" />
 
     <!-- Document Title -->
     <title>About</title>
@@ -54,8 +54,20 @@
       <nav class="navbar navbar-expand-lg">
         <div class="container-fluid">
           <div class="logo">
-            <a class="navbar-brand fw-bold" href="home.html">Creamy Cup</a>
-            <i class="fa-solid fa-mug-hot"></i>
+            <a
+              title="Home"
+              aria-label="This is a hyperlink which will redirect you to a specific URL"
+              class="navbar-brand fw-bold"
+              href="home.html"
+              >Creamy Cup</a
+            >
+            <a href="home.html"
+              ><i
+                title="I am a happy cup"
+                id="web-logo"
+                class="fa-solid fa-mug-hot"
+              ></i
+            ></a>
           </div>
 
           <button
@@ -74,6 +86,7 @@
             <ul class="navbar-nav me-auto mb-2 mb-lg-0">
               <li class="nav-item">
                 <a
+                  aria-label="This is a hyperlink which will redirect you to a specific URL"
                   class="nav-link px-0 active"
                   aria-current="page"
                   href="about.html"
@@ -82,6 +95,7 @@
               </li>
               <li class="nav-item">
                 <a
+                  aria-label="This is a hyperlink which will redirect you to a specific URL"
                   class="nav-link px-0 active"
                   aria-current="page"
                   href="contact.html"
@@ -90,6 +104,7 @@
               </li>
               <li class="nav-item">
                 <a
+                  aria-label="This is a hyperlink which will redirect you to a specific URL"
                   class="nav-link px-0 active"
                   aria-current="page"
                   href="order.html"
@@ -98,6 +113,7 @@
               </li>
               <li class="nav-item">
                 <a
+                  aria-label="This is a hyperlink which will redirect you to a specific URL"
                   class="nav-link px-0 active"
                   aria-current="page"
                   href="reviews.html"
@@ -106,11 +122,24 @@
               </li>
             </ul>
 
+<<<<<<< HEAD
             <div class="cart">
               <a href="order.html"><i class="fa-solid fa-cart-shopping"></i></a>
 
               <p id="count">0</p>
             </div>
+=======
+            <a href="cart.html">
+              <div class="cart">
+                <i
+                  title="order cart"
+                  id="shopCart"
+                  class="fa-solid fa-cart-shopping"
+                ></i>
+                <p id="count">0</p>
+              </div>
+            </a>
+>>>>>>> ed75509f935288f667b6ded105d0b81399ff7bf3
           </div>
         </div>
       </nav>
@@ -148,7 +177,7 @@
         </div>
       </section>
 
-      <section>
+      <section class="reveal">
         <div class="market">
           <div class="market-stats">
             <h2 class="benefits fw-bold">Our Benefits</h2>
@@ -179,15 +208,43 @@
             </div>
           </div>
 
-          <canvas id="draw" class="about-sec-image"></canvas>
+          <div
+            id="carouselExampleSlidesOnly"
+            class="carousel slide"
+            data-bs-ride="carousel"
+          >
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <img
+                  src="./assets/products/carousell 1.jpg"
+                  class="about-sec-image"
+                  alt="Image from the carousel"
+                />
+              </div>
+              <div class="carousel-item data-bs-interval=0.1s">
+                <img
+                  src="./assets/products/carousell 2.jpg"
+                  class="about-sec-image"
+                  alt="Image from the carousel"
+                />
+              </div>
+              <div class="carousel-item data-bs-interval=0.1s">
+                <img
+                  src="./assets/products/carousell 3.jpg"
+                  class="about-sec-image"
+                  alt="Image from the carousel"
+                />
+              </div>
+            </div>
+          </div>
         </div>
       </section>
 
-      <section class="about-history">
+      <section class="about-history reveal">
         <div class="history-pannel">
           <h1 class="history-title">Our history</h1>
 
-          <p id="history-book" class="mt-4 history-read">
+          <p id="history-book" class="mt-4 history-read reveal">
             Lorem ipsum dolor sit amet consectetur. Et orci urna mollis
             tincidunt non donec amet laoreet. Integer suspendisse volutpat
             viverra pellentesque eget sed. Odio quisque egestas ipsum pretium
@@ -222,7 +279,7 @@
         </div>
       </section>
 
-      <section class="about-location">
+      <section class="about-location reveal">
         <p class="location d-flex justify-content-center p-4 fs-1">
           Our locations
         </p>
@@ -235,6 +292,7 @@
         <p class="footer-text">
           Copyrights &copy;
           <a
+            aria-label="This is a hyperlink which will redirect you to a specific URL"
             class="link-text nav-link"
             href="https://www.frontendmentor.io/profile/igunereve"
             target="_blank"
@@ -248,18 +306,29 @@
 
       <div class="social-media fs-3">
         <a
+          title="linkedin"
+          aria-label="This is a hyperlink which will redirect you to a specific URL"
           href="https://www.linkedin.com/in/pirvulescu-catalin-100390159/"
           target="_blank"
-          ><i class="fa-brands fa-linkedin ms-3"></i
+          ><i class="fa-brands fa-linkedin"></i
         ></a>
 
-        <a href="https://www.instagram.com/catalinclaudiu_/" target="_blank"
-          ><i class="fa-brands fa-instagram ms-3"></i
+        <a
+          title="instagram"
+          aria-label="This is a hyperlink which will redirect you to a specific URL"
+          href="https://www.instagram.com/catalinclaudiu_/"
+          target="_blank"
+          ><i class="fa-brands fa-instagram"></i
         ></a>
 
-        <a href="https://github.com/Elyticus" target="_blank"
-          ><i class="fa-brands fa-github ms-3"></i
+        <a
+          title="github"
+          aria-label="This is a hyperlink which will redirect you to a specific URL"
+          href="https://github.com/Elyticus"
+          target="_blank"
+          ><i class="fa-brands fa-github"></i
         ></a>
+        <p class="footer-motto">Coffee must be something special</p>
       </div>
     </footer>
 
@@ -272,6 +341,5 @@
 
     <!-- JavaScript Link -->
     <script src="about.js" type="module"></script>
-    <script src="app.js"></script>
   </body>
 </html>
