@@ -88,6 +88,7 @@ cardElement3.addEventListener("click", () => {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 canvas.width = window.innerWidth;
 canvas.height = window.innerHeight;
 =======
@@ -102,10 +103,15 @@ let newNum = new Array();
 let number = "" + 15;
 let newNum = new Array();
 >>>>>>> parent of 4f8c0db (Revert "recover files")
+=======
+let number = "" + 15;
+let newNum = new Array();
+>>>>>>> parent of 4f8c0db (Revert "recover files")
 
 console.log(typeof number);
 console.log(newNum);
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -169,6 +175,8 @@ canvas.addEventListener("mouseout", () => {
 >>>>>>> parent of 4f8c0db (Revert "recover files")
 =======
 >>>>>>> parent of 4f8c0db (Revert "recover files")
+=======
+>>>>>>> parent of 4f8c0db (Revert "recover files")
 console.log(
   number.split("").map((n) => {
     newNum.push(n ** 2);
@@ -176,7 +184,10 @@ console.log(
 );
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> parent of 8444d65 (recover files)
+=======
+>>>>>>> parent of 4f8c0db (Revert "recover files")
 =======
 >>>>>>> parent of 4f8c0db (Revert "recover files")
 =======

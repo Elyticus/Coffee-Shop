@@ -32,9 +32,13 @@ reserveForm.addEventListener("submit", (e) => {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
     errorMessage.style.display = "none";
 >>>>>>> parent of 8444d65 (recover files)
+=======
+    errorMessage.style.display = "none";
+>>>>>>> parent of 4f8c0db (Revert "recover files")
 =======
     errorMessage.style.display = "none";
 >>>>>>> parent of 4f8c0db (Revert "recover files")
