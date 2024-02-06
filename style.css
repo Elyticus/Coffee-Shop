@@ -478,6 +478,37 @@ a.link-text {
   margin-right: 1rem;
 }
 
+<<<<<<< HEAD
+=======
+.cart {
+  height: 22px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.6em;
+  padding: 2em;
+  border-top: 1px solid black;
+}
+
+a {
+  text-decoration: none;
+}
+
+#count {
+  margin-bottom: 0;
+}
+
+.fa-cart-shopping {
+  display: flex;
+  align-items: center;
+  color: #212529;
+}
+
+.fa-cart-shopping:hover {
+  color: #4b4b4ad3;
+}
+
+>>>>>>> parent of 8444d65 (recover files)
 @media all and (min-width: 1024px) {
   .container-gallery {
     margin: 5rem 7rem;

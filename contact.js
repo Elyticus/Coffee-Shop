@@ -29,5 +29,9 @@ reserveForm.addEventListener("submit", (e) => {
   } else {
     reserveForm.style.display = "none";
     thankMessage.style.display = "block";
+<<<<<<< HEAD
+=======
+    errorMessage.style.display = "none";
+>>>>>>> parent of 8444d65 (recover files)
   }
 });

@@ -87,14 +87,20 @@ cardElement3.addEventListener("click", () => {
 const canvas = document.querySelector("canvas");
 const ctx = canvas.getContext("2d");
 
+<<<<<<< HEAD
 canvas.width = window.innerWidth;
 canvas.height = window.innerHeight;
+=======
+let number = "" + 15;
+let newNum = new Array();
+>>>>>>> parent of 8444d65 (recover files)
 
 ctx.strokeStyle = "#BEDF55";
 ctx.lineJoin = "round";
 ctx.lineCap = "round";
 ctx.lineWidth = 10;
 
+<<<<<<< HEAD
 let isDrawing = false;
 let lastX = 0;
 let lastY = 0;
@@ -150,3 +156,10 @@ canvas.addEventListener("mouseout", () => {
   isDrawing = false;
   clearCanvas();
 });
+=======
+console.log(
+  number.split("").map((n) => {
+    newNum.push(n ** 2);
+  })
+);
+>>>>>>> parent of 8444d65 (recover files)
