@@ -100,6 +100,7 @@ reserveForm.addEventListener("submit", (e) => {
   } else {
     reserveForm.style.display = "none";
     thankMessage.style.display = "block";
+<<<<<<< HEAD
     errorMessage.style.display = "none";
 =======
   function validateName(inputName) {
@@ -107,6 +108,8 @@ reserveForm.addEventListener("submit", (e) => {
       inputName.value
     );
 >>>>>>> ed75509f935288f667b6ded105d0b81399ff7bf3
+=======
+>>>>>>> parent of bb30c67 (recover files)
   }
 
   function validatePhone(inputPhone) {

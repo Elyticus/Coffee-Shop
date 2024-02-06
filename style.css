@@ -31,7 +31,6 @@ form {
   filter: blur(8px);
   -webkit-filter: blur(8px);
   pointer-events: none;
-  user-select: none;
 }
 
 a,
@@ -42,7 +41,7 @@ a,
 
 .nav-link,
 .sub-btn {
-  text-transform: uppercase; /* Bootstrap */
+  text-transform: uppercase;
 }
 
 .nav-link {
@@ -513,6 +512,7 @@ a.link-text {
   margin-right: 1rem;
 }
 
+<<<<<<< HEAD
 .cart {
   height: 22px;
   display: flex;
@@ -683,6 +683,8 @@ main {
 }
 
 >>>>>>> ed75509f935288f667b6ded105d0b81399ff7bf3
+=======
+>>>>>>> parent of bb30c67 (recover files)
 @media all and (min-width: 1024px) {
   .container-gallery {
     margin: 5rem 7rem;
@@ -748,10 +750,6 @@ main {
 
   .card {
     width: 400px;
-  }
-
-  .cart {
-    border: none;
   }
 
   .navbar-collapse {
