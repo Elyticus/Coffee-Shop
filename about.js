@@ -83,4 +83,140 @@ cardElement3.addEventListener("click", () => {
   `;
 });
 
-// Canvas Drawing_______________________________________________________
+// _________________________________________________________________
+
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+canvas.width = window.innerWidth;
+canvas.height = window.innerHeight;
+=======
+=======
+>>>>>>> parent of 8444d65 (recover files)
+let number = "" + 15;
+let newNum = new Array();
+>>>>>>> parent of 8444d65 (recover files)
+=======
+let number = "" + 15;
+let newNum = new Array();
+>>>>>>> parent of 4f8c0db (Revert "recover files")
+=======
+let number = "" + 15;
+let newNum = new Array();
+>>>>>>> parent of 4f8c0db (Revert "recover files")
+=======
+let number = "" + 15;
+let newNum = new Array();
+>>>>>>> parent of 4f8c0db (Revert "recover files")
+=======
+let number = "" + 15;
+let newNum = new Array();
+>>>>>>> parent of 4f8c0db (Revert "recover files")
+=======
+let number = "" + 15;
+let newNum = new Array();
+>>>>>>> parent of 4f8c0db (Revert "recover files")
+
+console.log(typeof number);
+console.log(newNum);
+
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+let isDrawing = false;
+let lastX = 0;
+let lastY = 0;
+let hue = 0;
+let direction = 1; // 1 for increasing hue, -1 for decreasing
+
+function draw(e) {
+  if (!isDrawing) return;
+
+  ctx.strokeStyle = `hsl(${hue}, 100%, 50%)`;
+
+  // Adjust the starting point to be in the middle of the cursor
+  ctx.beginPath();
+  ctx.moveTo(
+    e.clientX - canvas.getBoundingClientRect().left,
+    e.clientY - canvas.getBoundingClientRect().top
+  );
+
+  ctx.lineTo(lastX, lastY);
+  ctx.stroke();
+
+  [lastX, lastY] = [
+    e.clientX - canvas.getBoundingClientRect().left,
+    e.clientY - canvas.getBoundingClientRect().top,
+  ];
+
+  hue += direction;
+  if (hue >= 360 || hue <= 0) {
+    direction *= -1; // Reverse the direction when hue reaches the limits
+  }
+}
+
+function clearCanvas() {
+  ctx.clearRect(0, 0, canvas.width, canvas.height);
+}
+
+canvas.addEventListener("mousedown", (e) => {
+  isDrawing = true;
+  [lastX, lastY] = [
+    e.offsetX - ctx.lineWidth / 2,
+    e.offsetY - ctx.lineWidth / 2,
+  ];
+});
+
+canvas.addEventListener("mousemove", draw);
+
+canvas.addEventListener("mouseup", () => {
+  isDrawing = false;
+  clearCanvas();
+});
+
+canvas.addEventListener("mouseout", () => {
+  isDrawing = false;
+  clearCanvas();
+});
+=======
+=======
+>>>>>>> parent of 4f8c0db (Revert "recover files")
+=======
+>>>>>>> parent of 4f8c0db (Revert "recover files")
+=======
+>>>>>>> parent of 4f8c0db (Revert "recover files")
+=======
+>>>>>>> parent of 4f8c0db (Revert "recover files")
+=======
+>>>>>>> parent of 4f8c0db (Revert "recover files")
+console.log(
+  number.split("").map((n) => {
+    newNum.push(n ** 2);
+  })
+);
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> parent of 8444d65 (recover files)
+=======
+>>>>>>> parent of 4f8c0db (Revert "recover files")
+=======
+>>>>>>> parent of 4f8c0db (Revert "recover files")
+=======
+>>>>>>> parent of 4f8c0db (Revert "recover files")
+=======
+>>>>>>> parent of 8444d65 (recover files)
+=======
+>>>>>>> parent of 4f8c0db (Revert "recover files")
+=======
+>>>>>>> parent of 4f8c0db (Revert "recover files")
