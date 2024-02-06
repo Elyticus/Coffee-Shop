@@ -89,9 +89,12 @@ cardElement3.addEventListener("click", () => {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 canvas.width = window.innerWidth;
 canvas.height = window.innerHeight;
 =======
+=======
+>>>>>>> parent of 8444d65 (recover files)
 let number = "" + 15;
 let newNum = new Array();
 >>>>>>> parent of 8444d65 (recover files)
@@ -185,6 +188,7 @@ console.log(
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> parent of 8444d65 (recover files)
 =======
 >>>>>>> parent of 4f8c0db (Revert "recover files")
@@ -192,3 +196,5 @@ console.log(
 >>>>>>> parent of 4f8c0db (Revert "recover files")
 =======
 >>>>>>> parent of 4f8c0db (Revert "recover files")
+=======
+>>>>>>> parent of 8444d65 (recover files)
