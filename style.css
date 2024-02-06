@@ -17,6 +17,7 @@ body {
   filter: blur(8px);
   -webkit-filter: blur(8px);
   pointer-events: none;
+  user-select: none;
 }
 
 a,
@@ -27,7 +28,7 @@ a,
 
 .nav-link,
 .sub-btn {
-  text-transform: uppercase;
+  text-transform: uppercase; /* Bootstrap */
 }
 
 .nav-link {
@@ -44,7 +45,7 @@ a,
   height: 1.5px;
   bottom: 2px;
   left: 0;
-  background-color: black;
+  background-color: rgb(15, 14, 14);
   transform-origin: bottom right;
   transition: transform 0.25s ease-out;
 }
@@ -112,7 +113,6 @@ a,
 }
 
 .navbar-collapse {
-  padding-top: 2.2rem;
   flex-grow: 0;
 }
 
@@ -479,6 +479,70 @@ a.link-text {
   margin-right: 1rem;
 }
 
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> parent of 4f8c0db (Revert "recover files")
+=======
+>>>>>>> parent of 4f8c0db (Revert "recover files")
+=======
+>>>>>>> parent of 4f8c0db (Revert "recover files")
+=======
+>>>>>>> parent of 4f8c0db (Revert "recover files")
+=======
+>>>>>>> parent of 4f8c0db (Revert "recover files")
+.cart {
+  height: 22px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.6em;
+  padding: 2em;
+  border-top: 1px solid black;
+}
+
+a {
+  text-decoration: none;
+}
+
+#count {
+  margin-bottom: 0;
+}
+
+.fa-cart-shopping {
+  display: flex;
+  align-items: center;
+  color: #212529;
+}
+
+.fa-cart-shopping:hover {
+  color: #4b4b4ad3;
+}
+
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> parent of 8444d65 (recover files)
+=======
+>>>>>>> parent of 4f8c0db (Revert "recover files")
+=======
+>>>>>>> parent of 4f8c0db (Revert "recover files")
+=======
+>>>>>>> parent of 4f8c0db (Revert "recover files")
+=======
+>>>>>>> parent of 8444d65 (recover files)
+=======
+>>>>>>> parent of 4f8c0db (Revert "recover files")
+=======
+>>>>>>> parent of 4f8c0db (Revert "recover files")
 @media all and (min-width: 1024px) {
   .container-gallery {
     margin: 5rem 7rem;
@@ -497,6 +561,10 @@ a.link-text {
 
   .card {
     width: 400px;
+  }
+
+  .cart {
+    border: none;
   }
 
   .navbar-collapse {
