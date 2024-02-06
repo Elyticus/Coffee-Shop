@@ -83,10 +83,9 @@ cardElement3.addEventListener("click", () => {
   `;
 });
 
-// Canvas Drawing_______________________________________________________
-const canvas = document.querySelector("canvas");
-const ctx = canvas.getContext("2d");
+// _________________________________________________________________
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 canvas.width = window.innerWidth;
 canvas.height = window.innerHeight;
@@ -94,12 +93,15 @@ canvas.height = window.innerHeight;
 let number = "" + 15;
 let newNum = new Array();
 >>>>>>> parent of 8444d65 (recover files)
+=======
+let number = "" + 15;
+let newNum = new Array();
+>>>>>>> parent of 4f8c0db (Revert "recover files")
 
-ctx.strokeStyle = "#BEDF55";
-ctx.lineJoin = "round";
-ctx.lineCap = "round";
-ctx.lineWidth = 10;
+console.log(typeof number);
+console.log(newNum);
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 let isDrawing = false;
 let lastX = 0;
@@ -157,9 +159,14 @@ canvas.addEventListener("mouseout", () => {
   clearCanvas();
 });
 =======
+=======
+>>>>>>> parent of 4f8c0db (Revert "recover files")
 console.log(
   number.split("").map((n) => {
     newNum.push(n ** 2);
   })
 );
+<<<<<<< HEAD
 >>>>>>> parent of 8444d65 (recover files)
+=======
+>>>>>>> parent of 4f8c0db (Revert "recover files")

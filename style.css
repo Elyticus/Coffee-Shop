@@ -17,6 +17,7 @@ body {
   filter: blur(8px);
   -webkit-filter: blur(8px);
   pointer-events: none;
+  user-select: none;
 }
 
 a,
@@ -27,7 +28,7 @@ a,
 
 .nav-link,
 .sub-btn {
-  text-transform: uppercase;
+  text-transform: uppercase; /* Bootstrap */
 }
 
 .nav-link {
@@ -479,7 +480,10 @@ a.link-text {
 }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> parent of 4f8c0db (Revert "recover files")
 .cart {
   height: 22px;
   display: flex;
@@ -508,7 +512,10 @@ a {
   color: #4b4b4ad3;
 }
 
+<<<<<<< HEAD
 >>>>>>> parent of 8444d65 (recover files)
+=======
+>>>>>>> parent of 4f8c0db (Revert "recover files")
 @media all and (min-width: 1024px) {
   .container-gallery {
     margin: 5rem 7rem;
@@ -527,6 +534,10 @@ a {
 
   .card {
     width: 400px;
+  }
+
+  .cart {
+    border: none;
   }
 
   .navbar-collapse {

@@ -30,8 +30,12 @@ reserveForm.addEventListener("submit", (e) => {
     reserveForm.style.display = "none";
     thankMessage.style.display = "block";
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
     errorMessage.style.display = "none";
 >>>>>>> parent of 8444d65 (recover files)
+=======
+    errorMessage.style.display = "none";
+>>>>>>> parent of 4f8c0db (Revert "recover files")
   }
 });

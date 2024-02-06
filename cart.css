@@ -1,0 +1,278 @@
+.orderBtn,
+.checkout,
+.removeAll {
+  padding: 0.5em 1em;
+  border: 2px solid #212529;
+  margin-top: 1em;
+  letter-spacing: 3px;
+  border-radius: 5px;
+  background-color: #212529;
+  color: whitesmoke;
+}
+
+.checkout,
+.removeAll {
+  border: none;
+  color: #212529;
+  font-weight: 900;
+}
+
+.checkout {
+  background-color: #44a8b4;
+}
+
+.checkout:hover {
+  background-color: #0c59a7;
+  color: whitesmoke;
+  transition: 0.2s ease-in-out;
+}
+
+.removeAll {
+  background-color: #e23482;
+}
+
+.removeAll:hover {
+  background-color: #e01f2d;
+  color: whitesmoke;
+  transition: 0.2s ease-in-out;
+}
+
+.orderBtn:hover {
+  background-color: #125496;
+  border: 2px solid #125496;
+  transition: 0.2s ease-in-out;
+}
+
+.orderBtn:active {
+  border: 2px solid #212529;
+  background-color: transparent;
+  color: #212529;
+}
+
+.emptyCart {
+  margin-top: 3.2em;
+}
+
+.fa-xmark {
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #5b5b5c;
+  color: #212529;
+  width: 15px;
+  height: 15px;
+  padding: 0.7em;
+  border-radius: 50%;
+}
+
+.fa-xmark:hover {
+  background-color: #962412;
+  color: rgb(234, 235, 217);
+  transition: 0.2s ease-in-out;
+}
+
+.fa-brands {
+  margin-right: 0.5em;
+}
+
+.shopping-cart {
+  margin-top: 5em;
+  margin-bottom: 5em;
+  display: grid;
+  place-items: center;
+  min-width: 100%;
+  grid-template-columns: repeat(auto-fit, minmax(370px, 1fr));
+  gap: 2.3em;
+}
+
+.cart-item {
+  display: flex;
+  gap: 0.5em;
+  padding: 1em;
+  background-color: #94a0ac;
+  border-radius: 10px;
+}
+
+.title-price-close {
+  width: 170px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.product-details {
+  align-items: center;
+  gap: 0.7em;
+}
+
+.text-center {
+  margin-top: 3em;
+}
+
+.cart-btn {
+  display: flex;
+  gap: 1em;
+  margin-top: 1em;
+}
+
+.cart-buttons {
+  background: transparent;
+  border: none;
+  height: 0;
+}
+
+.fa-minus,
+.fa-plus {
+  width: 30px;
+  height: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  background: rgb(17, 14, 21);
+  padding: 0.5em;
+  border-radius: 50%;
+  color: whitesmoke;
+}
+
+.fa-minus:hover,
+.fa-plus:hover {
+  background-color: #125496;
+  transition: 0.2s ease-in-out;
+}
+
+.subtotal-text {
+  margin-bottom: 0;
+}
+
+.image-cart {
+  border-radius: 78% 22% 68% 32% / 28% 80% 20% 72%;
+}
+
+.product-info {
+  margin-bottom: 0;
+  font-weight: 900;
+  font-size: 18px;
+}
+
+.subtotal {
+  display: flex;
+  flex-direction: column;
+  background-color: rgb(26, 25, 25);
+  margin-top: 4em;
+  color: whitesmoke;
+  border-radius: 10px;
+}
+
+.subtotal-product-details {
+  margin-left: 1em;
+  padding: 0.5em 0;
+}
+
+h5 {
+  margin: 0;
+  font-size: 14px;
+}
+
+.amount-bill {
+  background-color: #34e27f;
+  padding: 0.2em 1em;
+  border-radius: 15px;
+}
+
+footer {
+  height: 285px;
+}
+
+.checkout-bill {
+  background-color: #8fd125;
+  padding: 0.3em 1em;
+  border-radius: 7px;
+  font-weight: 900;
+}
+
+.close-btn {
+  display: block;
+  background-color: #ff1205;
+  border-radius: 50%;
+  width: 15px;
+  height: 15px;
+  font-weight: 900;
+  border: none;
+}
+
+.close-btn:hover {
+  background-color: rgb(250, 151, 151);
+}
+
+.checkout-form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 1em;
+  gap: 0.5em;
+}
+
+input:focus {
+  border-radius: 5px;
+  border: 0.1rem solid #55ee0e;
+  outline: none;
+}
+
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type="number"] {
+  -moz-appearance: textfield;
+}
+
+.payment-btn {
+  margin-top: 0.5em;
+  border: none;
+  background-color: #0c59a7;
+  color: whitesmoke;
+  padding: 0.5em;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+.payment-btn:hover {
+  background-color: #237fdb;
+}
+
+.cards {
+  width: 100px;
+  padding: 0.5em 0;
+}
+
+.error-message {
+  display: none;
+  margin-bottom: 0;
+  color: #e01f2d;
+  font-style: italic;
+  font-size: 0.85em;
+}
+
+.bill {
+  display: flex;
+  justify-content: space-between;
+}
+
+.thankMessage {
+  margin: 0;
+}
+
+#totalBill {
+  margin: 0;
+}
+
+.coffee-order {
+  margin: 2em 0;
+  width: 250px;
+  border-radius: 40% 88% 68% 53% / 28% 52% 67% 82%;
+}
