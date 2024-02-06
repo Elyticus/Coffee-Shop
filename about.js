@@ -109,7 +109,6 @@ cardElement3.addEventListener("click", () => {
   `;
 });
 
-<<<<<<< HEAD
 // _________________________________________________________________
 
 <<<<<<< HEAD
@@ -163,81 +162,6 @@ console.log(newNum);
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
-=======
-// Canvas Drawing_______________________________________________________
-const canvas = document.querySelector("canvas");
-const ctx = canvas.getContext("2d");
-
-<<<<<<< HEAD
-<<<<<<< HEAD
-let number = "" + 15;
-let newNum = new Array();
-=======
-canvas.width = window.innerWidth;
-canvas.height = window.innerHeight;
->>>>>>> parent of bb30c67 (recover files)
-
-ctx.strokeStyle = "#BEDF55";
-ctx.lineJoin = "round";
-ctx.lineCap = "round";
-ctx.lineWidth = 10;
-
-<<<<<<< HEAD
-console.log(
-  number.split("").map((n) => {
-    newNum.push(n ** 2);
-  })
-);
-=======
-let basket = JSON.parse(localStorage.getItem("data")) || [];
-
-let calculation = () => {
-  let cartIcon = document.getElementById("count");
-  cartIcon.innerHTML = basket
-    .map((e) => e.item)
-    .reduce((total, currentItem) => total + currentItem, 0);
-};
-
-calculation();
-
-// Scroll Effect________________________________________________________
-window.addEventListener("scroll", reveal);
-function reveal() {
-  const reveals = document.querySelectorAll(".reveal");
-
-  for (let i = 0; i < reveals.length; i++) {
-    const windowHeight = window.innerHeight;
-    const revealTop = reveals[i].getBoundingClientRect().top;
-    const revealPoint = 150;
-
-    if (revealTop < windowHeight - revealPoint) {
-      reveals[i].classList.add("active");
-    } else {
-      reveals[i].classList.remove("active");
-    }
-  }
-}
-
-// Logo hover effect_____________________________________
-const logo = document.getElementById("web-logo");
-
-logo.addEventListener("mouseenter", () => {
-  logo.classList.add("fa-bounce");
-});
-
-logo.addEventListener("mouseout", () => {
-  logo.classList.remove("fa-bounce");
-});
-
-// Cart click animation__________________________________________
-const cartLogo = document.getElementById("shopCart");
-
-cartLogo.addEventListener("click", () => {
-  cartLogo.classList.add("fa-beat");
-});
->>>>>>> ed75509f935288f667b6ded105d0b81399ff7bf3
-=======
->>>>>>> df0e8b293498c3befc50b9ac963cb02bc524bb9a
 let isDrawing = false;
 let lastX = 0;
 let lastY = 0;
@@ -293,7 +217,6 @@ canvas.addEventListener("mouseout", () => {
   isDrawing = false;
   clearCanvas();
 });
-<<<<<<< HEAD
 =======
 =======
 >>>>>>> parent of 4f8c0db (Revert "recover files")
@@ -386,6 +309,3 @@ cartLogo.addEventListener("click", () => {
 >>>>>>> parent of 74d5f29 (Revert "recover files")
 =======
 >>>>>>> parent of 74d5f29 (Revert "recover files")
-=======
->>>>>>> parent of bb30c67 (recover files)
->>>>>>> df0e8b293498c3befc50b9ac963cb02bc524bb9a

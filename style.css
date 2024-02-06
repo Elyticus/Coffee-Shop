@@ -31,10 +31,7 @@ form {
   filter: blur(8px);
   -webkit-filter: blur(8px);
   pointer-events: none;
-<<<<<<< HEAD
   user-select: none;
-=======
->>>>>>> df0e8b293498c3befc50b9ac963cb02bc524bb9a
 }
 
 a,
@@ -45,11 +42,7 @@ a,
 
 .nav-link,
 .sub-btn {
-<<<<<<< HEAD
   text-transform: uppercase; /* Bootstrap */
-=======
-  text-transform: uppercase;
->>>>>>> df0e8b293498c3befc50b9ac963cb02bc524bb9a
 }
 
 .nav-link {
@@ -526,7 +519,6 @@ a.link-text {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
-<<<<<<< HEAD
 =======
 =======
 >>>>>>> parent of 4f8c0db (Revert "recover files")
@@ -538,8 +530,6 @@ a.link-text {
 >>>>>>> parent of 4f8c0db (Revert "recover files")
 =======
 >>>>>>> parent of 4f8c0db (Revert "recover files")
-=======
->>>>>>> df0e8b293498c3befc50b9ac963cb02bc524bb9a
 .cart {
   height: 22px;
   display: flex;
@@ -612,7 +602,6 @@ a {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
-<<<<<<< HEAD
 >>>>>>> parent of 8444d65 (recover files)
 =======
 >>>>>>> parent of 4f8c0db (Revert "recover files")
@@ -629,8 +618,6 @@ a {
 =======
 =======
 >>>>>>> parent of 74d5f29 (Revert "recover files")
-=======
->>>>>>> df0e8b293498c3befc50b9ac963cb02bc524bb9a
 =======
 .menu-header {
   background-image: url(./assets/order-image-cover.webp);
@@ -737,14 +724,9 @@ main {
 
 >>>>>>> ed75509f935288f667b6ded105d0b81399ff7bf3
 <<<<<<< HEAD
-<<<<<<< HEAD
 >>>>>>> parent of 74d5f29 (Revert "recover files")
 =======
 >>>>>>> parent of 74d5f29 (Revert "recover files")
-=======
-=======
->>>>>>> parent of bb30c67 (recover files)
->>>>>>> df0e8b293498c3befc50b9ac963cb02bc524bb9a
 @media all and (min-width: 1024px) {
   .container-gallery {
     margin: 5rem 7rem;
@@ -812,13 +794,10 @@ main {
     width: 400px;
   }
 
-<<<<<<< HEAD
   .cart {
     border: none;
   }
 
-=======
->>>>>>> df0e8b293498c3befc50b9ac963cb02bc524bb9a
   .navbar-collapse {
     padding-top: 0px;
   }
