@@ -11,7 +11,6 @@
 }
 
 .hero-image {
-  border-radius: 36% 64% 58% 42% / 36% 64% 36% 64%;
   width: 100%;
 }
 
@@ -20,10 +19,6 @@
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   place-items: center;
   margin: 5rem 0;
-}
-
-.fa-brands {
-  margin-right: 0.5em;
 }
 
 .location-title {
@@ -77,7 +72,9 @@
 
 .about-sec-image {
   margin-top: 2rem;
-  height: 170px;
+  width: 100%;
+  height: 100px;
+  background-color: #111216;
 }
 
 .years-cards {
@@ -130,10 +127,6 @@
   height: 316px;
 }
 
-.carousel {
-  margin-left: 0;
-}
-
 @media all and (min-width: 1024px) {
   .about-hero-text {
     text-align: left;
@@ -172,11 +165,8 @@
 
   .about-sec-image {
     margin-top: 0;
-    height: 685px;
-    width: 100%;
+    height: 400px;
     border-radius: 0 0 25px 25px;
-    display: flex;
-    justify-content: end;
   }
 
   .about-history {

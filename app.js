@@ -20,6 +20,7 @@ window.addEventListener("scroll", () => {
   mainPos = main.getBoundingClientRect().top;
 });
 
+// Start the animation loop
 updateNavbar();
 
 // __________________________________________________
@@ -53,11 +54,23 @@ const consentForm = document.getElementById("login-form");
 const innerText = document.getElementById("modal-inner");
 const declineBtn = document.getElementById("decline-btn");
 const choiceBtn = document.getElementById("modal-choice-btns");
-const inputNameCookie = document.getElementById("input-name-cookie");
 
-cookieModal.style.display = "inline";
-modalCloseBtn.disabled = true;
-inputNameCookie.value = "";
+// Deactivate the cookies when the page is lodded
+
+// if (!localStorage.getItem("visitedBefore")) {
+//   const cookieModal = document.getElementById("modal");
+//   const bodyElement = document.getElementById("container-main");
+
+//   if (cookieModal) {
+//     cookieModal.style.display = "block";
+//   }
+
+//   localStorage.setItem("visitedBefore", "true");
+// }
+
+setTimeout(() => {
+  cookieModal.style.display = "inline";
+}, 1000);
 
 modalCloseBtn.addEventListener("click", () => {
   cookieModal.style.display = "none";
@@ -74,134 +87,46 @@ consentForm.addEventListener("submit", (e) => {
   const formLoginData = new FormData(consentForm);
   const name = formLoginData.get("fullName");
 
-  function validCookieForm() {
-    function validateName(inputNameCookie) {
-      return /^(?=\S)(?:(?=\S{3,})[a-zA-Z]+(?:\s[a-zA-Z]+)?|[a-zA-Z]{3}(?!\s))[\sa-zA-Z]*$/.test(
-        inputNameCookie
-      );
-    }
+  setTimeout(() => {
+    innerText.innerHTML = `
+    <div class="inner-flex">
+      <h2 class="display-name">
+      Thanks <span class="modal-display-name">${name}</span>!
+      </h2>
+      <p class="end-message">Congratulations, you just unwittingly traded your eternal soul for a coffee refill! 😄</p>
+    </div>
+    `;
 
-    if (!validateName(name)) {
-      document.getElementById(
-        "input-name-cookie"
-      ).placeholder = `Enter a valid name`;
-      inputNameCookie.value = "";
-      return false;
-    } else {
-      inputNameCookie.value = "";
-      innerText.innerHTML = `
-      <div class="inner-flex">
-        <h2 class="display-name">
-        Thanks <span class="modal-display-name">${name}</span>!
-        </h2>
-        <p class="end-message">Congratulations, 
-        you just unwittingly traded your eternal soul for a coffee refill! 😄</p>
-      </div>
-      `;
-      modalCloseBtn.disabled = false;
-      return true;
-    }
-  }
-
-  validCookieForm();
+    modalCloseBtn.disabled = false;
+  }, 0);
 });
 
 // Email Address Validation________________________________________
 const subButton = document.getElementById("subscribe-btn");
-const subInput = document.getElementById("email");
+const subInput = document.getElementById("subscribe-input");
 const validMessage = document.getElementById("validation");
-const formValidation = document.getElementById("sub-form");
 
-let basket = JSON.parse(localStorage.getItem("data")) || [];
+function emailValidation() {
+  const regex = /\S+@\S+\.\S+/;
 
-let calculation = () => {
-  let cartIcon = document.getElementById("count");
-  cartIcon.innerHTML = basket
-    .map((e) => e.item)
-    .reduce((total, currentItem) => total + currentItem, 0);
-};
-
-calculation();
-
-// Send email function______________________________________________________
-const sendEmail = () => {
-  const params = {
-    name: inputNameCookie.value,
-    email: subInput.value,
-  };
-
-  const serviceID = "service_we7kf8s";
-  const templateID = "template_z3v6orp";
-
-  emailjs.send(serviceID, templateID, params).then(() => {
-    inputNameCookie.value = "";
+  if (subInput.value.trim() === "") {
+    document.getElementsByName(
+      "Email"
+    )[0].placeholder = `This field cannot be left empty!`;
+    return false;
+  } else if (!regex.test(subInput.value)) {
+    document.getElementsByName(
+      "Email"
+    )[0].placeholder = `Enter a valid email address, 'example@email.com'`;
     subInput.value = "";
-  });
-};
-
-// Send Email Form_________________________________________________________
-formValidation.addEventListener("submit", (e) => {
-  e.preventDefault();
-
-  function emailValidation() {
-    const regex = /^[a-zA-Z0-9._]+@[a-z]+\.[a-z]{2,6}$/;
-
-    if (subInput.value.trim() === "") {
-      document.getElementById(
-        "email"
-      ).placeholder = `This field cannot be left empty!`;
-      return false;
-    } else if (!regex.test(subInput.value)) {
-      document.getElementById(
-        "email"
-      ).placeholder = `Enter a valid email address, 'example@email.com'`;
-      subInput.value = "";
-      return false;
-    } else {
-      sendEmail();
-      subButton.style.display = "none";
-      subInput.style.display = "none";
-      validMessage.style.display = "block";
-      subInput.value = "";
-      return true;
-    }
-  }
-
-  emailValidation();
-});
-
-// Scroll Effect________________________________________________________
-window.addEventListener("scroll", reveal);
-function reveal() {
-  const reveals = document.querySelectorAll(".reveal");
-
-  for (let i = 0; i < reveals.length; i++) {
-    const windowHeight = window.innerHeight;
-    const revealTop = reveals[i].getBoundingClientRect().top;
-    const revealPoint = 150;
-
-    if (revealTop < windowHeight - revealPoint) {
-      reveals[i].classList.add("active");
-    } else {
-      reveals[i].classList.remove("active");
-    }
+    return false;
+  } else {
+    subButton.style.display = "none";
+    subInput.style.display = "none";
+    validMessage.style.display = "block";
+    subInput.value = "";
+    return true;
   }
 }
 
-// Logo hover effect_____________________________________
-const logo = document.getElementById("web-logo");
-
-logo.addEventListener("mouseenter", () => {
-  logo.classList.add("fa-bounce");
-});
-
-logo.addEventListener("mouseout", () => {
-  logo.classList.remove("fa-bounce");
-});
-
-// Cart click animation__________________________________________
-const cartLogo = document.getElementById("shopCart");
-
-cartLogo.addEventListener("click", () => {
-  cartLogo.classList.add("fa-beat");
-});
+subButton.addEventListener("click", emailValidation);
