@@ -64,15 +64,12 @@
   display: grid;
 }
 
-<<<<<<< HEAD
-=======
 .thank-message {
   background-color: rgb(253, 244, 121);
   border-radius: 10px;
   padding: 3rem 1.5rem;
 }
 
->>>>>>> 1523026b53f90eacf67e0fe8fc490242dc9029ec
 textarea {
   width: 100%;
   resize: none;
@@ -89,12 +86,6 @@ textarea {
   padding: 0.5rem;
   outline: none;
   font-family: var(--Cormorant-Garamond);
-<<<<<<< HEAD
-  border: none;
-  background-color: rgba(252, 253, 243, 0.816);
-}
-
-=======
   border: 2px solid white;
   background-color: rgba(252, 253, 243, 0.816);
 }
@@ -104,7 +95,6 @@ textarea:focus {
   border: 2px solid #9e50ecc4;
 }
 
->>>>>>> 1523026b53f90eacf67e0fe8fc490242dc9029ec
 select {
   cursor: pointer;
 }
@@ -123,11 +113,7 @@ input[type="number"] {
 
 .send-btn {
   margin-top: 2rem;
-<<<<<<< HEAD
-  border: none;
-=======
   border: 3px solid #9e50ecc4;
->>>>>>> 1523026b53f90eacf67e0fe8fc490242dc9029ec
   padding: 1rem 2rem;
   background-color: #9e50ecc4;
   font-family: var(--Cormorant-Garamond);
@@ -139,8 +125,6 @@ input[type="number"] {
   background-color: #cd9bffd4;
 }
 
-<<<<<<< HEAD
-=======
 .send-btn:active {
   border: 3px solid #9e50ecc4;
   background-color: transparent;
@@ -160,7 +144,6 @@ input[type="number"] {
   font-size: 0.7rem;
 }
 
->>>>>>> 1523026b53f90eacf67e0fe8fc490242dc9029ec
 @media all and (min-width: 1024px) {
   .contact-hero-text {
     width: 40%;
@@ -169,8 +152,6 @@ input[type="number"] {
   .inputs-wrapper {
     grid-template-columns: 1fr 1fr 1fr;
   }
-<<<<<<< HEAD
-=======
 
   .thank-message {
     padding: 3rem 7rem;
@@ -179,5 +160,4 @@ input[type="number"] {
   .error-message {
     font-size: 1rem;
   }
->>>>>>> 1523026b53f90eacf67e0fe8fc490242dc9029ec
 }

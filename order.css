@@ -25,19 +25,15 @@
   border-radius: 5px;
 }
 
-<<<<<<< HEAD
 .fa-brands {
   margin-right: 0.5em;
 }
 
-=======
->>>>>>> acc03266a408ce5ac1ed25c71ede7c7ea6e49e95
 .order-btn:hover {
   background-color: #172225;
   color: whitesmoke;
   transition: 0.2s ease-in-out;
 }
-<<<<<<< HEAD
 
 .product-image {
   transition: transform 0.2s;
@@ -59,5 +55,3 @@
   letter-spacing: 2px;
   font-size: 18px;
 }
-=======
->>>>>>> acc03266a408ce5ac1ed25c71ede7c7ea6e49e95
