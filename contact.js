@@ -107,6 +107,7 @@ reserveForm.addEventListener("submit", (e) => {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
     errorMessage.style.display = "none";
 <<<<<<< HEAD
@@ -133,6 +134,9 @@ reserveForm.addEventListener("submit", (e) => {
 =======
 =======
 >>>>>>> parent of 74d5f29 (Revert "recover files")
+=======
+    errorMessage.style.display = "none";
+>>>>>>> df0e8b293498c3befc50b9ac963cb02bc524bb9a
 =======
   function validateName(inputName) {
     return /^(?=\S)(?:(?=\S{3,})[a-zA-Z]+(?:\s[a-zA-Z]+)?|[a-zA-Z]{3}(?!\s))[\sa-zA-Z]*$/.test(
@@ -140,9 +144,14 @@ reserveForm.addEventListener("submit", (e) => {
     );
 >>>>>>> ed75509f935288f667b6ded105d0b81399ff7bf3
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> parent of 74d5f29 (Revert "recover files")
 =======
 >>>>>>> parent of 74d5f29 (Revert "recover files")
+=======
+=======
+>>>>>>> parent of bb30c67 (recover files)
+>>>>>>> df0e8b293498c3befc50b9ac963cb02bc524bb9a
   }
 
   function validatePhone(inputPhone) {
