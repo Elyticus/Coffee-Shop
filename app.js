@@ -117,7 +117,7 @@ function emailValidation() {
   } else if (!regex.test(subInput.value)) {
     document.getElementsByName(
       "Email"
-    )[0].placeholder = `Please ensure that your email address is correctly formatted, e.g., 'example@email.com'`;
+    )[0].placeholder = `Enter a valid email address, 'example@email.com'`;
     subInput.value = "";
     return false;
   } else {

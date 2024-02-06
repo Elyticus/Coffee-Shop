@@ -1,0 +1,120 @@
+:root {
+  --Cormorant-Garamond: "Cormorant Garamond", serif;
+}
+
+.contact-header {
+  position: relative;
+  background-image: url(assets/Contact-Coffee.webp);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.contact-header,
+.contact-hero {
+  width: 100%;
+  height: 350px;
+}
+
+.contact-hero {
+  position: absolute;
+  background-color: rgba(30, 30, 30, 0.373);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  gap: 2rem;
+  color: whitesmoke;
+  font-weight: 900;
+  font-size: 1.2rem;
+}
+
+.contact-title {
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  font-weight: 900;
+}
+
+.contact-hero-text {
+  align-self: center;
+  width: 70%;
+}
+
+.contact-form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  width: 100%;
+  background-color: rgb(199, 228, 253);
+  padding: 3rem;
+}
+
+.inputs-wrapper {
+  grid-column-gap: 1rem;
+  grid-row-gap: 10px;
+  grid-template-rows: auto;
+  grid-template-columns: 1fr;
+  grid-auto-columns: 1fr;
+  display: grid;
+}
+
+textarea {
+  width: 100%;
+  resize: none;
+  margin-top: 2rem;
+}
+
+input {
+  letter-spacing: 1px;
+}
+
+input,
+select,
+textarea {
+  padding: 0.5rem;
+  outline: none;
+  font-family: var(--Cormorant-Garamond);
+  border: none;
+  background-color: rgba(252, 253, 243, 0.816);
+}
+
+select {
+  cursor: pointer;
+}
+
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+}
+
+/* Firefox */
+input[type="number"] {
+  -moz-appearance: textfield;
+}
+
+.send-btn {
+  margin-top: 2rem;
+  border: none;
+  padding: 1rem 2rem;
+  background-color: #9e50ecc4;
+  font-family: var(--Cormorant-Garamond);
+  letter-spacing: 2px;
+  color: white;
+}
+
+.send-btn:hover {
+  background-color: #cd9bffd4;
+}
+
+@media all and (min-width: 1024px) {
+  .contact-hero-text {
+    width: 40%;
+  }
+
+  .inputs-wrapper {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}
