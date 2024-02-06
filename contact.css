@@ -16,6 +16,10 @@
   height: 350px;
 }
 
+.fa-brands {
+  margin-right: 0.5em;
+}
+
 .contact-hero {
   position: absolute;
   background-color: rgba(30, 30, 30, 0.373);
@@ -103,6 +107,7 @@ input::-webkit-inner-spin-button {
 
 /* Firefox */
 input[type="number"] {
+  appearance: none;
   -moz-appearance: textfield;
 }
 
