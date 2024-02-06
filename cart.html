@@ -34,24 +34,21 @@
 
     <!-- CSS Link -->
     <link rel="stylesheet" href="style.css" />
-    <link rel="stylesheet" href="order.css" />
+    <link rel="stylesheet" href="cart.css" />
 
     <!-- Favicon Link -->
     <link rel="icon" type="image/x-icon" href="./assets/coffee-cup.png" />
 
     <!-- Document Title -->
-    <title>Order</title>
+    <title>Cart</title>
   </head>
+
   <body>
     <header>
       <nav class="navbar navbar-expand-lg">
         <div class="container-fluid">
           <div class="logo">
-            <a
-              title="Home"
-              aria-label="This is a hyperlink that redirect to a specific URL"
-              class="navbar-brand fw-bold"
-              href="home.html"
+            <a title="Home" class="navbar-brand fw-bold" href="home.html"
               >Creamy Cup</a
             >
             <a href="home.html"
@@ -77,7 +74,6 @@
             <ul class="navbar-nav me-auto mb-2 mb-lg-0">
               <li class="nav-item">
                 <a
-                  aria-label="This is a hyperlink that redirect to a specific URL"
                   class="nav-link px-0 active"
                   aria-current="page"
                   href="about.html"
@@ -86,7 +82,6 @@
               </li>
               <li class="nav-item">
                 <a
-                  aria-label="This is a hyperlink that redirect to a specific URL"
                   class="nav-link px-0 active"
                   aria-current="page"
                   href="contact.html"
@@ -95,7 +90,6 @@
               </li>
               <li class="nav-item">
                 <a
-                  aria-label="This is a hyperlink that redirect to a specific URL"
                   class="nav-link px-0 active"
                   aria-current="page"
                   href="order.html"
@@ -104,7 +98,6 @@
               </li>
               <li class="nav-item">
                 <a
-                  aria-label="This is a hyperlink that redirect to a specific URL"
                   class="nav-link px-0 active"
                   aria-current="page"
                   href="reviews.html"
@@ -129,17 +122,12 @@
     </header>
 
     <main>
-      <div class="menu-header">
-        <div class="order-info">
-          <h1 class="menu-title">our delicious menu</h1>
-          <p class="menu-intro">
-            Since 1970, our family has been on a mission to provide sustainable
-            and ethical, hand-roasted, speciality coffee, at a fair price for
-            you and the farmers.
-          </p>
-        </div>
+      <div id="label" class="text-center"></div>
+      <div id="shopping-cart" class="shopping-cart"></div>
+      <div id="checkoutBackground"></div>
+      <div id="checkoutDisplay">
+        <p id="totalBill"></p>
       </div>
-      <div id="feed" class="reveal"></div>
     </main>
 
     <footer>
@@ -161,7 +149,6 @@
       <div class="social-media fs-3">
         <a
           title="linkedin"
-          aria-label="This is a hyperlink that redirect to a specific URL"
           href="https://www.linkedin.com/in/pirvulescu-catalin-100390159/"
           target="_blank"
           ><i class="fa-brands fa-linkedin"></i
@@ -169,17 +156,12 @@
 
         <a
           title="instagram"
-          aria-label="This is a hyperlink that redirect to a specific URL"
           href="https://www.instagram.com/catalinclaudiu_/"
           target="_blank"
           ><i class="fa-brands fa-instagram"></i
         ></a>
 
-        <a
-          title="github"
-          aria-label="This is a hyperlink that redirect to a specific URL"
-          href="https://github.com/Elyticus"
-          target="_blank"
+        <a title="github" href="https://github.com/Elyticus" target="_blank"
           ><i class="fa-brands fa-github"></i
         ></a>
 
@@ -195,6 +177,6 @@
     ></script>
 
     <!-- JavaScript Link -->
-    <script src="order.js" type="module"></script>
+    <script src="cart.js" type="module"></script>
   </body>
 </html>

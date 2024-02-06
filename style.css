@@ -8,15 +8,30 @@
   background: #8b31e5;
 }
 
+input,
+textarea {
+  caret-color: #ff00ff;
+}
+
 body {
   margin: 0;
   font-family: var(--font-forum);
+}
+
+form {
+  width: 100%;
+  margin: 0 auto;
+}
+
+#sub-form {
+  display: flex;
 }
 
 .blur {
   filter: blur(8px);
   -webkit-filter: blur(8px);
   pointer-events: none;
+  user-select: none;
 }
 
 a,
@@ -27,7 +42,7 @@ a,
 
 .nav-link,
 .sub-btn {
-  text-transform: uppercase;
+  text-transform: uppercase; /* Bootstrap */
 }
 
 .nav-link {
@@ -203,6 +218,13 @@ a,
 .image-product {
   object-fit: cover;
   border-radius: 10px;
+  transition: transform 0.2s;
+}
+
+.image-product:hover {
+  -ms-transform: scale(0.5); /* IE 9 */
+  -webkit-transform: scale(1.5); /* Safari 3-8 */
+  transform: scale(1.12);
 }
 
 .card,
@@ -251,11 +273,16 @@ a,
   margin: 5rem 2rem;
 }
 
+#sub-form {
+  flex-direction: column;
+}
+
 .subscribe {
   flex-direction: column;
 }
 
 .subscribe-input {
+  display: flex;
   outline: none;
   border-bottom: 1px solid black;
   text-align: center;
@@ -265,6 +292,15 @@ a,
   background-color: black;
   color: white;
   padding: 1rem;
+  margin-top: 2em;
+}
+
+.text-btn {
+  transition: 0.1s ease-in;
+}
+
+.text-btn:hover {
+  color: rgb(172, 170, 170);
 }
 
 .valid_confirmation {
@@ -297,7 +333,6 @@ a,
 }
 
 .container-gallery > div:hover {
-  cursor: pointer;
   flex: 4;
 }
 
@@ -478,20 +513,219 @@ a.link-text {
   margin-right: 1rem;
 }
 
+.cart {
+  height: 22px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.6em;
+}
+
+a {
+  text-decoration: none;
+  color: #151a1f;
+}
+
+.feedback-button {
+  color: #151a1f;
+  background-color: rgba(221, 223, 224, 0.841);
+  padding: 0.5em 1em;
+  border-radius: 7px;
+}
+
+.shop-btn {
+  margin-right: 0;
+}
+
+#count {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 0;
+  color: #212529;
+  background-color: #ff7e05;
+  padding: 0.8em;
+  border-radius: 50%;
+  width: 15px;
+  height: 15px;
+  font-weight: 900;
+}
+
+.fa-cart-shopping {
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  color: #212529;
+}
+
+.fa-cart-shopping:hover {
+  color: #4b4b4ad3;
+}
+
+.menu-header {
+  background-image: url(./assets/order-image-cover.webp);
+  background-position: center;
+  background-size: cover;
+  width: 100%;
+  height: 250px;
+  color: whitesmoke;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-top: 1em;
+}
+
+.menu-title {
+  text-align: center;
+  text-transform: uppercase;
+  font-weight: 900;
+}
+
+.menu-intro {
+  text-align: center;
+  max-width: 600px;
+  margin-inline: 2em;
+}
+
+.total-bill {
+  margin-inline: 1em;
+  border-radius: 10px;
+  background-color: #ff930f7a;
+  padding: 1em;
+}
+
+.shopping-cart {
+  padding-inline: 0px;
+}
+
+/* Scroll Effect */
+.reveal {
+  position: relative;
+  transform: translateY(100px);
+  opacity: 0;
+  transition: all 1s ease;
+}
+
+.reveal.active {
+  transform: translateY(0px);
+  opacity: 1;
+}
+
+main {
+  position: relative;
+}
+
+/* CheckOut button */
+.checkout-display {
+  position: fixed;
+  width: 100%;
+  height: 100vh;
+  background-color: rgb(32, 32, 32);
+  opacity: 0.7;
+  top: 0%;
+  z-index: 999;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.display-message {
+  position: fixed;
+  width: 320px;
+  background-color: white;
+  top: 20%;
+  left: 9%;
+  z-index: 999;
+  padding: 2em 1em;
+}
+
+.expiration-date {
+  display: flex;
+  gap: 1em;
+}
+
+.label-expirationCVC {
+  display: flex;
+  gap: 3.3em;
+}
+
+#expDateMonth,
+#expDateYear,
+#cvc {
+  width: 70px;
+}
+
+.thankMessage {
+  margin-top: 4.2em;
+  text-align: center;
+}
+
+.homeForm {
+  margin-top: 2em;
+}
+
 @media all and (min-width: 1024px) {
   .container-gallery {
     margin: 5rem 7rem;
     height: 27rem;
   }
 
+  .checkout-display {
+    z-index: 1;
+  }
+
+  .display-message {
+    top: 22%;
+    left: 39.6%;
+    z-index: 1;
+  }
+
+  .thankMessage {
+    margin-top: 2.2em;
+    text-align: center;
+  }
+
   .logo {
     margin-left: 8rem;
+  }
+
+  .total-bill {
+    margin-inline: 5.7em;
+  }
+
+  .cart {
+    padding: 0 2em;
+    border: none;
   }
 
   .hero-section {
     display: flex;
     flex-direction: row;
     justify-content: space-around;
+  }
+
+  .menu-header {
+    height: 350px;
+  }
+
+  .shopping-cart {
+    padding-inline: 11em;
+  }
+
+  .menu-intro {
+    text-align: left;
+    margin-inline: 0;
+  }
+
+  .menu-title {
+    text-align: left;
+    text-transform: uppercase;
+    font-size: 3em;
+  }
+
+  .order-info {
+    margin-left: 2.5em;
   }
 
   .card {
@@ -511,6 +745,7 @@ a.link-text {
   }
 
   .hero-image-main {
+    border-radius: 27% 73% 50% 50% / 65% 71% 29% 35%;
     padding: 2rem;
     height: 500px;
   }
@@ -566,7 +801,7 @@ a.link-text {
     display: none;
   }
 
-  .subscribe {
+  #sub-form {
     margin-bottom: 6rem;
     flex-direction: row;
     gap: 0;
@@ -592,6 +827,7 @@ a.link-text {
     background-color: black;
     color: white;
     letter-spacing: 2px;
+    margin-top: 0;
   }
 
   .valid_confirmation {
@@ -617,7 +853,7 @@ a.link-text {
 
   .modal-main {
     margin: auto;
-    max-width: 550px;
+    max-width: 400px;
   }
 
   .input-form {

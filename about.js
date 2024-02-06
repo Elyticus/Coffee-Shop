@@ -1,5 +1,29 @@
 import { coffeeData } from "./about-data.js";
 
+// Navbar
+const navbar = document.querySelector(".navbar");
+const main = document.querySelector("main");
+
+let mainPos = main.getBoundingClientRect().top;
+
+function updateNavbar() {
+  const scrollPos = window.scrollY;
+
+  if (scrollPos >= mainPos) {
+    navbar.classList.add("sticky");
+  } else {
+    navbar.classList.remove("sticky");
+  }
+
+  requestAnimationFrame(updateNavbar);
+}
+
+window.addEventListener("scroll", () => {
+  mainPos = main.getBoundingClientRect().top;
+});
+
+updateNavbar();
+
 // About Page________________________________________________
 function getHTML() {
   let feedHTML = "";
@@ -7,12 +31,14 @@ function getHTML() {
   coffeeData.forEach((coffee) => {
     feedHTML += `
     <div class="about-content">
-    <div><img class="about-img" src = "${coffee.image}"/></div>
     <div>
-    <p class="location-title fw-bold fs-5 mt-4">${coffee.city}</p>
+    <img class="about-img reveal" src = "${coffee.image}" alt="Image with the restaurant location"/>
+    </div>
+    <div>
+    <p class="location-title fw-bold fs-5 mt-4 reveal">${coffee.city}</p>
     </div>
 
-    <p>${coffee.address}</p>
+    <p class="reveal">${coffee.address}</p>
 
     </div>
     `;
@@ -83,70 +109,51 @@ cardElement3.addEventListener("click", () => {
   `;
 });
 
-// Canvas Drawing_______________________________________________________
-const canvas = document.querySelector("canvas");
-const ctx = canvas.getContext("2d");
+// _________________________________________________________________
 
-canvas.width = window.innerWidth;
-canvas.height = window.innerHeight;
+let basket = JSON.parse(localStorage.getItem("data")) || [];
 
-ctx.strokeStyle = "#BEDF55";
-ctx.lineJoin = "round";
-ctx.lineCap = "round";
-ctx.lineWidth = 10;
+let calculation = () => {
+  let cartIcon = document.getElementById("count");
+  cartIcon.innerHTML = basket
+    .map((e) => e.item)
+    .reduce((total, currentItem) => total + currentItem, 0);
+};
 
-let isDrawing = false;
-let lastX = 0;
-let lastY = 0;
-let hue = 0;
-let direction = 1; // 1 for increasing hue, -1 for decreasing
+calculation();
 
-function draw(e) {
-  if (!isDrawing) return;
+// Scroll Effect________________________________________________________
+window.addEventListener("scroll", reveal);
+function reveal() {
+  const reveals = document.querySelectorAll(".reveal");
 
-  ctx.strokeStyle = `hsl(${hue}, 100%, 50%)`;
+  for (let i = 0; i < reveals.length; i++) {
+    const windowHeight = window.innerHeight;
+    const revealTop = reveals[i].getBoundingClientRect().top;
+    const revealPoint = 150;
 
-  // Adjust the starting point to be in the middle of the cursor
-  ctx.beginPath();
-  ctx.moveTo(
-    e.clientX - canvas.getBoundingClientRect().left,
-    e.clientY - canvas.getBoundingClientRect().top
-  );
-
-  ctx.lineTo(lastX, lastY);
-  ctx.stroke();
-
-  [lastX, lastY] = [
-    e.clientX - canvas.getBoundingClientRect().left,
-    e.clientY - canvas.getBoundingClientRect().top,
-  ];
-
-  hue += direction;
-  if (hue >= 360 || hue <= 0) {
-    direction *= -1; // Reverse the direction when hue reaches the limits
+    if (revealTop < windowHeight - revealPoint) {
+      reveals[i].classList.add("active");
+    } else {
+      reveals[i].classList.remove("active");
+    }
   }
 }
 
-function clearCanvas() {
-  ctx.clearRect(0, 0, canvas.width, canvas.height);
-}
+// Logo hover effect_____________________________________
+const logo = document.getElementById("web-logo");
 
-canvas.addEventListener("mousedown", (e) => {
-  isDrawing = true;
-  [lastX, lastY] = [
-    e.offsetX - ctx.lineWidth / 2,
-    e.offsetY - ctx.lineWidth / 2,
-  ];
+logo.addEventListener("mouseenter", () => {
+  logo.classList.add("fa-bounce");
 });
 
-canvas.addEventListener("mousemove", draw);
-
-canvas.addEventListener("mouseup", () => {
-  isDrawing = false;
-  clearCanvas();
+logo.addEventListener("mouseout", () => {
+  logo.classList.remove("fa-bounce");
 });
 
-canvas.addEventListener("mouseout", () => {
-  isDrawing = false;
-  clearCanvas();
+// Cart click animation__________________________________________
+const cartLogo = document.getElementById("shopCart");
+
+cartLogo.addEventListener("click", () => {
+  cartLogo.classList.add("fa-beat");
 });

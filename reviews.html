@@ -34,9 +34,10 @@
 
     <!-- CSS Link -->
     <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="reviews.css" />
 
     <!-- Favicon Link -->
-    <link rel="icon" type="image/x-icon" href="#" />
+    <link rel="icon" type="image/x-icon" href="./assets/coffee-cup.png" />
 
     <!-- Document Title -->
     <title>Reviews</title>
@@ -46,8 +47,16 @@
       <nav class="navbar navbar-expand-lg">
         <div class="container-fluid">
           <div class="logo">
-            <a class="navbar-brand fw-bold" href="home.html">Creamy Cup</a>
-            <i class="fa-solid fa-mug-hot"></i>
+            <a title="Home" class="navbar-brand fw-bold" href="home.html"
+              >Creamy Cup</a
+            >
+            <a href="home.html"
+              ><i
+                title="I am a happy cup"
+                id="web-logo"
+                class="fa-solid fa-mug-hot"
+              ></i
+            ></a>
           </div>
           <button
             class="navbar-toggler"
@@ -60,6 +69,7 @@
           >
             <span class="navbar-toggler-icon"></span>
           </button>
+
           <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav me-auto mb-2 mb-lg-0">
               <li class="nav-item">
@@ -95,10 +105,52 @@
                 >
               </li>
             </ul>
+
+            <a href="cart.html">
+              <div class="cart">
+                <i
+                  title="order cart"
+                  id="shopCart"
+                  class="fa-solid fa-cart-shopping"
+                ></i>
+                <p id="count">0</p>
+              </div>
+            </a>
           </div>
         </div>
       </nav>
     </header>
+
+    <main>
+      <img
+        class="coffee-review"
+        src="./assets/coffee reviews.jpg"
+        alt="An illustration with two cups of coffee"
+      />
+      <div class="container reveal">
+        <h2 id="title">Share your thoughts</h2>
+
+        <textarea
+          name="Feedback Field"
+          id="textarea"
+          cols="20"
+          rows="10"
+          placeholder="Add your thought here..."
+        ></textarea>
+
+        <div class="form_field">
+          <input id="from_input" type="text" placeholder="From" />
+        </div>
+
+        <button id="add-button" type="button" class="publish">Publish</button>
+
+        <p class="endorsements">- Your Awesome Reviews -</p>
+
+        <div class="reviews">
+          <ul class="display_feedback" id="display_feedback"></ul>
+        </div>
+      </div>
+    </main>
 
     <footer>
       <div class="details-footer">
@@ -118,18 +170,23 @@
 
       <div class="social-media fs-3">
         <a
+          title="linkedin"
           href="https://www.linkedin.com/in/pirvulescu-catalin-100390159/"
           target="_blank"
-          ><i class="fa-brands fa-linkedin ms-3"></i
+          ><i class="fa-brands fa-linkedin"></i
         ></a>
 
-        <a href="https://www.instagram.com/catalinclaudiu_/" target="_blank"
-          ><i class="fa-brands fa-instagram ms-3"></i
+        <a
+          title="instagram"
+          href="https://www.instagram.com/catalinclaudiu_/"
+          target="_blank"
+          ><i class="fa-brands fa-instagram"></i
         ></a>
 
-        <a href="https://github.com/Elyticus" target="_blank"
-          ><i class="fa-brands fa-github ms-3"></i
+        <a title="github" href="https://github.com/Elyticus" target="_blank"
+          ><i class="fa-brands fa-github"></i
         ></a>
+        <p class="footer-motto">Coffee must be something special</p>
       </div>
     </footer>
 
@@ -141,6 +198,6 @@
     ></script>
 
     <!-- JavaScript Link -->
-    <script src="app.js"></script>
+    <script type="module" src="rewiews.js"></script>
   </body>
 </html>
