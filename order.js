@@ -1,5 +1,6 @@
 // Import the products form the data array object___________________________
 import { productData } from "./order-products-data.js";
+<<<<<<< HEAD
 
 // Navbar
 const navbar = document.querySelector(".navbar");
@@ -42,10 +43,14 @@ function reveal() {
     }
   }
 }
+=======
+console.log(productData);
+>>>>>>> acc03266a408ce5ac1ed25c71ede7c7ea6e49e95
 
 // Display the products on the screen_______________________________________
 const displayFeed = document.getElementById("feed");
 
+<<<<<<< HEAD
 let basket = JSON.parse(localStorage.getItem("data")) || [];
 
 const generateShop = () => {
@@ -117,4 +122,36 @@ const cartLogo = document.getElementById("shopCart");
 
 cartLogo.addEventListener("click", () => {
   cartLogo.classList.add("fa-beat");
+=======
+const listItems = productData.map((item) => {
+  const listItem = document.createElement("div");
+  listItem.classList.add("wrapper");
+  listItem.innerHTML = `
+
+    <img class="product-image" src=${item.img} />
+    <h3>${item.title}</h3>
+    <p>${item.description}</p>
+    <p>${item.price}</p>
+
+    <div>
+    <button id="orderBtn" class="order-btn">Add to Cart</button>
+    </div>
+
+  
+  `;
+  return listItem;
+});
+
+listItems.forEach((item) => {
+  displayFeed.appendChild(item);
+});
+
+let counter = 0;
+const countProducts = document.getElementById("count");
+const orderButtonElement = document.getElementById("orderBtn");
+
+orderButtonElement.addEventListener("click", () => {
+  counter++;
+  countProducts.innerHTML = counter;
+>>>>>>> acc03266a408ce5ac1ed25c71ede7c7ea6e49e95
 });

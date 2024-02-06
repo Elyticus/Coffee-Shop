@@ -513,16 +513,42 @@ a.link-text {
   margin-right: 1rem;
 }
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> parent of 4f8c0db (Revert "recover files")
+=======
+>>>>>>> parent of 4f8c0db (Revert "recover files")
+=======
+>>>>>>> parent of 4f8c0db (Revert "recover files")
+=======
+>>>>>>> parent of 4f8c0db (Revert "recover files")
+=======
+>>>>>>> parent of 4f8c0db (Revert "recover files")
+>>>>>>> acc03266a408ce5ac1ed25c71ede7c7ea6e49e95
 .cart {
   height: 22px;
   display: flex;
   justify-content: center;
   align-items: center;
   gap: 0.6em;
+<<<<<<< HEAD
+=======
+  padding: 2em;
+  border-top: 1px solid black;
+>>>>>>> acc03266a408ce5ac1ed25c71ede7c7ea6e49e95
 }
 
 a {
   text-decoration: none;
+<<<<<<< HEAD
   color: #151a1f;
 }
 
@@ -553,6 +579,15 @@ a {
 
 .fa-cart-shopping {
   cursor: pointer;
+=======
+}
+
+#count {
+  margin-bottom: 0;
+}
+
+.fa-cart-shopping {
+>>>>>>> acc03266a408ce5ac1ed25c71ede7c7ea6e49e95
   display: flex;
   align-items: center;
   color: #212529;
@@ -562,6 +597,7 @@ a {
   color: #4b4b4ad3;
 }
 
+<<<<<<< HEAD
 .menu-header {
   background-image: url(./assets/order-image-cover.webp);
   background-position: center;
@@ -665,6 +701,27 @@ main {
   margin-top: 2em;
 }
 
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> parent of 8444d65 (recover files)
+=======
+>>>>>>> parent of 4f8c0db (Revert "recover files")
+=======
+>>>>>>> parent of 4f8c0db (Revert "recover files")
+=======
+>>>>>>> parent of 4f8c0db (Revert "recover files")
+=======
+>>>>>>> parent of 8444d65 (recover files)
+=======
+>>>>>>> parent of 4f8c0db (Revert "recover files")
+=======
+>>>>>>> parent of 4f8c0db (Revert "recover files")
+>>>>>>> acc03266a408ce5ac1ed25c71ede7c7ea6e49e95
 @media all and (min-width: 1024px) {
   .container-gallery {
     margin: 5rem 7rem;
@@ -730,6 +787,10 @@ main {
 
   .card {
     width: 400px;
+  }
+
+  .cart {
+    border: none;
   }
 
   .navbar-collapse {

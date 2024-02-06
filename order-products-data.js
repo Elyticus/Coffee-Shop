@@ -1,5 +1,6 @@
 export const productData = [
   {
+<<<<<<< HEAD
     id: "a5",
     img: "./assets/product-1.webp",
     title: "Costa Rica Ceres",
@@ -85,5 +86,29 @@ export const productData = [
     description: `Lorem ipsum dolor, sit amet consectetur adipisicing elit. 
     Ea dignissimos magni in tenetur.`,
     price: 10.99,
+=======
+    id: 0,
+    img: "./assets/products/1.png",
+    title: "FRAPPE",
+    description: `Lorem ipsum dolor, sit amet consectetur adipisicing elit. 
+    Ea dignissimosmagni in tenetur.`,
+    price: "$ 10.00",
+  },
+  {
+    id: 1,
+    img: "./assets/products/2.png",
+    title: "AEROPRESS",
+    description: `Lorem ipsum dolor, sit amet consectetur adipisicing elit. 
+    Ea dignissimos magni in tenetur.`,
+    price: "$ 10.00",
+  },
+  {
+    id: 2,
+    img: "./assets/products/3.png",
+    title: "SLOW BREW",
+    description: `Lorem ipsum dolor, sit amet consectetur adipisicing elit. 
+    Ea dignissimos magni in tenetur.`,
+    price: "$ 10.00",
+>>>>>>> acc03266a408ce5ac1ed25c71ede7c7ea6e49e95
   },
 ];

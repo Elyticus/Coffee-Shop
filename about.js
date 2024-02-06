@@ -111,6 +111,7 @@ cardElement3.addEventListener("click", () => {
 
 // _________________________________________________________________
 
+<<<<<<< HEAD
 let basket = JSON.parse(localStorage.getItem("data")) || [];
 
 let calculation = () => {
@@ -121,6 +122,58 @@ let calculation = () => {
 };
 
 calculation();
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+canvas.width = window.innerWidth;
+canvas.height = window.innerHeight;
+=======
+=======
+>>>>>>> parent of 8444d65 (recover files)
+let number = "" + 15;
+let newNum = new Array();
+>>>>>>> parent of 8444d65 (recover files)
+=======
+let number = "" + 15;
+let newNum = new Array();
+>>>>>>> parent of 4f8c0db (Revert "recover files")
+=======
+let number = "" + 15;
+let newNum = new Array();
+>>>>>>> parent of 4f8c0db (Revert "recover files")
+=======
+let number = "" + 15;
+let newNum = new Array();
+>>>>>>> parent of 4f8c0db (Revert "recover files")
+=======
+let number = "" + 15;
+let newNum = new Array();
+>>>>>>> parent of 4f8c0db (Revert "recover files")
+=======
+let number = "" + 15;
+let newNum = new Array();
+>>>>>>> parent of 4f8c0db (Revert "recover files")
+
+console.log(typeof number);
+console.log(newNum);
+
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+let isDrawing = false;
+let lastX = 0;
+let lastY = 0;
+let hue = 0;
+let direction = 1; // 1 for increasing hue, -1 for decreasing
+>>>>>>> acc03266a408ce5ac1ed25c71ede7c7ea6e49e95
 
 // Scroll Effect________________________________________________________
 window.addEventListener("scroll", reveal);
@@ -157,3 +210,38 @@ const cartLogo = document.getElementById("shopCart");
 cartLogo.addEventListener("click", () => {
   cartLogo.classList.add("fa-beat");
 });
+=======
+=======
+>>>>>>> parent of 4f8c0db (Revert "recover files")
+=======
+>>>>>>> parent of 4f8c0db (Revert "recover files")
+=======
+>>>>>>> parent of 4f8c0db (Revert "recover files")
+=======
+>>>>>>> parent of 4f8c0db (Revert "recover files")
+=======
+>>>>>>> parent of 4f8c0db (Revert "recover files")
+console.log(
+  number.split("").map((n) => {
+    newNum.push(n ** 2);
+  })
+);
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> parent of 8444d65 (recover files)
+=======
+>>>>>>> parent of 4f8c0db (Revert "recover files")
+=======
+>>>>>>> parent of 4f8c0db (Revert "recover files")
+=======
+>>>>>>> parent of 4f8c0db (Revert "recover files")
+=======
+>>>>>>> parent of 8444d65 (recover files)
+=======
+>>>>>>> parent of 4f8c0db (Revert "recover files")
+=======
+>>>>>>> parent of 4f8c0db (Revert "recover files")

@@ -84,10 +84,56 @@ const sendEmail = () => {
 reserveForm.addEventListener("submit", (e) => {
   e.preventDefault();
 
+<<<<<<< HEAD
   function validateName(inputName) {
     return /^(?=\S)(?:(?=\S{3,})[a-zA-Z]+(?:\s[a-zA-Z]+)?|[a-zA-Z]{3}(?!\s))[\sa-zA-Z]*$/.test(
       inputName.value
     );
+=======
+  if (
+    (inputName.value = inputName.value) &&
+    (inputEmail.value = inputEmail.value) &&
+    (inputPhone.value = inputPhone.value) &&
+    (messageArea.value = messageArea.value) &&
+    messageArea.value.length < 50 &&
+    (selectSeats.value = selectSeats.value) &&
+    (selectTime.value = selectTime.value) &&
+    (selectDay.value = selectDay.value)
+  ) {
+    messageArea.value = messageArea.value.slice(0, 50);
+    errorMessage.style.display = "block";
+  } else {
+    reserveForm.style.display = "none";
+    thankMessage.style.display = "block";
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+    errorMessage.style.display = "none";
+>>>>>>> parent of 8444d65 (recover files)
+=======
+    errorMessage.style.display = "none";
+>>>>>>> parent of 4f8c0db (Revert "recover files")
+=======
+    errorMessage.style.display = "none";
+>>>>>>> parent of 4f8c0db (Revert "recover files")
+=======
+    errorMessage.style.display = "none";
+>>>>>>> parent of 4f8c0db (Revert "recover files")
+=======
+    errorMessage.style.display = "none";
+>>>>>>> parent of 8444d65 (recover files)
+=======
+    errorMessage.style.display = "none";
+>>>>>>> parent of 4f8c0db (Revert "recover files")
+=======
+    errorMessage.style.display = "none";
+>>>>>>> parent of 4f8c0db (Revert "recover files")
+>>>>>>> acc03266a408ce5ac1ed25c71ede7c7ea6e49e95
   }
 
   function validatePhone(inputPhone) {
