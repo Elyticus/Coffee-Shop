@@ -119,14 +119,11 @@ cardElement3.addEventListener("click", () => {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
-<<<<<<< HEAD
 canvas.width = window.innerWidth;
 canvas.height = window.innerHeight;
 =======
 =======
 >>>>>>> parent of 8444d65 (recover files)
-=======
->>>>>>> parent of 74d5f29 (Revert "recover files")
 =======
 >>>>>>> parent of 74d5f29 (Revert "recover files")
 let number = "" + 15;
@@ -240,7 +237,6 @@ console.log(
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
-<<<<<<< HEAD
 >>>>>>> parent of 8444d65 (recover files)
 =======
 >>>>>>> parent of 4f8c0db (Revert "recover files")
@@ -255,8 +251,6 @@ console.log(
 =======
 >>>>>>> parent of 4f8c0db (Revert "recover files")
 =======
-=======
->>>>>>> parent of 74d5f29 (Revert "recover files")
 =======
 let basket = JSON.parse(localStorage.getItem("data")) || [];
 
@@ -305,7 +299,4 @@ cartLogo.addEventListener("click", () => {
   cartLogo.classList.add("fa-beat");
 });
 >>>>>>> ed75509f935288f667b6ded105d0b81399ff7bf3
-<<<<<<< HEAD
->>>>>>> parent of 74d5f29 (Revert "recover files")
-=======
 >>>>>>> parent of 74d5f29 (Revert "recover files")
