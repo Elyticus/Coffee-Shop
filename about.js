@@ -83,16 +83,70 @@ cardElement3.addEventListener("click", () => {
   `;
 });
 
-// _________________________________________________________________
+// Canvas Drawing_______________________________________________________
+const canvas = document.querySelector("canvas");
+const ctx = canvas.getContext("2d");
 
-let number = "" + 15;
-let newNum = new Array();
+canvas.width = window.innerWidth;
+canvas.height = window.innerHeight;
 
-console.log(typeof number);
-console.log(newNum);
+ctx.strokeStyle = "#BEDF55";
+ctx.lineJoin = "round";
+ctx.lineCap = "round";
+ctx.lineWidth = 10;
 
-console.log(
-  number.split("").map((n) => {
-    newNum.push(n ** 2);
-  })
-);
+let isDrawing = false;
+let lastX = 0;
+let lastY = 0;
+let hue = 0;
+let direction = 1; // 1 for increasing hue, -1 for decreasing
+
+function draw(e) {
+  if (!isDrawing) return;
+
+  ctx.strokeStyle = `hsl(${hue}, 100%, 50%)`;
+
+  // Adjust the starting point to be in the middle of the cursor
+  ctx.beginPath();
+  ctx.moveTo(
+    e.clientX - canvas.getBoundingClientRect().left,
+    e.clientY - canvas.getBoundingClientRect().top
+  );
+
+  ctx.lineTo(lastX, lastY);
+  ctx.stroke();
+
+  [lastX, lastY] = [
+    e.clientX - canvas.getBoundingClientRect().left,
+    e.clientY - canvas.getBoundingClientRect().top,
+  ];
+
+  hue += direction;
+  if (hue >= 360 || hue <= 0) {
+    direction *= -1; // Reverse the direction when hue reaches the limits
+  }
+}
+
+function clearCanvas() {
+  ctx.clearRect(0, 0, canvas.width, canvas.height);
+}
+
+canvas.addEventListener("mousedown", (e) => {
+  isDrawing = true;
+  [lastX, lastY] = [
+    e.offsetX - ctx.lineWidth / 2,
+    e.offsetY - ctx.lineWidth / 2,
+  ];
+});
+
+canvas.addEventListener("mousemove", draw);
+
+canvas.addEventListener("mouseup", () => {
+  isDrawing = false;
+  clearCanvas();
+});
+
+canvas.addEventListener("mouseout", () => {
+  isDrawing = false;
+  clearCanvas();
+});

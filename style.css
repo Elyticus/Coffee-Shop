@@ -17,7 +17,6 @@ body {
   filter: blur(8px);
   -webkit-filter: blur(8px);
   pointer-events: none;
-  user-select: none;
 }
 
 a,
@@ -28,7 +27,7 @@ a,
 
 .nav-link,
 .sub-btn {
-  text-transform: uppercase; /* Bootstrap */
+  text-transform: uppercase;
 }
 
 .nav-link {
@@ -479,34 +478,6 @@ a.link-text {
   margin-right: 1rem;
 }
 
-.cart {
-  height: 22px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 0.6em;
-  padding: 2em;
-  border-top: 1px solid black;
-}
-
-a {
-  text-decoration: none;
-}
-
-#count {
-  margin-bottom: 0;
-}
-
-.fa-cart-shopping {
-  display: flex;
-  align-items: center;
-  color: #212529;
-}
-
-.fa-cart-shopping:hover {
-  color: #4b4b4ad3;
-}
-
 @media all and (min-width: 1024px) {
   .container-gallery {
     margin: 5rem 7rem;
@@ -525,10 +496,6 @@ a {
 
   .card {
     width: 400px;
-  }
-
-  .cart {
-    border: none;
   }
 
   .navbar-collapse {
