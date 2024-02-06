@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- Font Awesome CDN -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+      integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+
+    <!-- Google Font Link -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Forum&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Adobe Font Link -->
+    <link rel="stylesheet" href="https://use.typekit.net/hiy4muw.css" />
+
+    <!-- Bootstrap Link -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9"
+      crossorigin="anonymous"
+    />
+
+    <!-- CSS Link -->
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="contact.css" />
+
+    <!-- Favicon Link -->
+    <link rel="icon" type="image/x-icon" href="./assets/coffee-cup.png" />
+
+    <!-- Document Title -->
+    <title>Contact</title>
+  </head>
+
+  <body>
+    <header>
+      <nav class="navbar navbar-expand-lg">
+        <div class="container-fluid">
+          <div class="logo">
+            <a
+              title="Home"
+              aria-label="This is a hyperlink that will redirect to a specific URL"
+              class="navbar-brand fw-bold"
+              href="home.html"
+              >Creamy Cup</a
+            >
+            <a href="home.html"
+              ><i
+                title="I am a happy cup"
+                id="web-logo"
+                class="fa-solid fa-mug-hot"
+              ></i
+            ></a>
+          </div>
+
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a
+                  aria-label="This is a hyperlink that will redirect to a specific URL"
+                  class="nav-link px-0 active"
+                  aria-current="page"
+                  href="about.html"
+                  >About</a
+                >
+              </li>
+              <li class="nav-item">
+                <a
+                  aria-label="This is a hyperlink that will redirect to a specific URL"
+                  class="nav-link px-0 active"
+                  aria-current="page"
+                  href="contact.html"
+                  >Contact</a
+                >
+              </li>
+              <li class="nav-item">
+                <a
+                  aria-label="This is a hyperlink that will redirect to a specific URL"
+                  class="nav-link px-0 active"
+                  aria-current="page"
+                  href="order.html"
+                  >Order</a
+                >
+              </li>
+              <li class="nav-item">
+                <a
+                  aria-label="This is a hyperlink that will redirect to a specific URL"
+                  class="nav-link px-0 active"
+                  aria-current="page"
+                  href="reviews.html"
+                  >Reviews</a
+                >
+              </li>
+            </ul>
+
+<<<<<<< HEAD
+            <div class="cart">
+              <a href="order.html"><i class="fa-solid fa-cart-shopping"></i></a>
+
+              <p id="count">0</p>
+            </div>
+=======
+            <a href="cart.html">
+              <div class="cart">
+                <i
+                  title="order cart"
+                  id="shopCart"
+                  class="fa-solid fa-cart-shopping"
+                ></i>
+                <p id="count">0</p>
+              </div>
+            </a>
+>>>>>>> ed75509f935288f667b6ded105d0b81399ff7bf3
+          </div>
+        </div>
+      </nav>
+
+      <section class="contact-header">
+        <div class="contact-hero">
+          <h1 class="contact-title">Reservation</h1>
+          <p class="contact-hero-text">
+            Since 1970, our family has been on a mission to provide sustainable
+            and ethical, hand-roasted, speciality coffee, at a fair price for
+            you and the farmers.
+          </p>
+        </div>
+      </section>
+    </header>
+
+    <main class="contact-form reveal">
+      <div class="reservation-menu">
+        <h1 class="mb-5">Reservation Form</h1>
+
+        <form id="form" class="form">
+          <div class="inputs-wrapper">
+            <input
+              id="input-name"
+              required
+              onfocus="this.placeholder = ''"
+              onblur="this.placeholder = 'Your Name*'"
+              placeholder="Your Name*"
+              type="text"
+              name="name"
+            />
+
+            <input
+              id="input-email"
+              required
+              onfocus="this.placeholder = ''"
+              onblur="this.placeholder = 'Your Email*'"
+              placeholder="Your Email*"
+              type="email"
+              name="email"
+            />
+
+            <input
+              id="input-phone"
+              required
+              onfocus="this.placeholder = ''"
+              onblur="this.placeholder = 'Your Phone*'"
+              placeholder="Your Phone*"
+              type="text"
+              name="phone"
+              maxlength="13"
+            />
+
+            <select
+              aria-label="This is a Select tag that allow to pick an option from the dropdown"
+              required
+              name="seats"
+              id="seats"
+            >
+              <option value="">Seats*</option>
+              <option value="1">1</option>
+              <option value="2">2</option>
+              <option value="3">3</option>
+              <option value="4">4</option>
+              <option value="5">5</option>
+              <option value="6">6</option>
+              <option value="7">7</option>
+              <option value="8">8</option>
+              <option value="9">9</option>
+              <option value="10">10</option>
+            </select>
+
+            <select
+              aria-label="This is a Select tag that allow to pick an option from the dropdown"
+              required
+              name="time"
+              id="time"
+            >
+              <option value="">Time*</option>
+              <option value="10:00">10:00</option>
+              <option value="11:00">11:00</option>
+              <option value="12:00">12:00</option>
+              <option value="13:00">13:00</option>
+              <option value="14:00">14:00</option>
+              <option value="15:00">15:00</option>
+              <option value="16:00">16:00</option>
+              <option value="17:00">17:00</option>
+              <option value="18:00">18:00</option>
+              <option value="19:00">19:00</option>
+              <option value="20:00">20:00</option>
+            </select>
+
+            <select
+              aria-label="This is a Select tag that allow to pick an option from the dropdown"
+              required
+              name="day"
+              id="day"
+            >
+              <option value="">Day*</option>
+              <option value="Monday">Monday</option>
+              <option value="Thusday">Thusday</option>
+              <option value="Wednesday">Wednesday</option>
+              <option value="Thursday">Thursday</option>
+              <option value="Friday">Friday</option>
+              <option value="Saturday">Saturday</option>
+              <option value="Sunday">Sunday</option>
+            </select>
+          </div>
+
+          <textarea
+            required
+            name="name"
+            id="textarea"
+            cols="30"
+            rows="10"
+            placeholder="Type your sweet message..."
+          ></textarea>
+
+          <button type="submit" value="Submit" id="send-btn" class="send-btn">
+            Send message
+          </button>
+        </form>
+
+        <div id="thank-message" class="thank-message">
+          <h1>Thank you!</h1>
+          <p>Your submission has been received!</p>
+        </div>
+      </div>
+    </main>
+
+    <footer>
+      <div class="details-footer">
+        <p class="footer-text">
+          Copyrights &copy;
+          <a
+            aria-label="This is a hyperlink that will redirect to a specific URL"
+            class="link-text nav-link"
+            href="https://www.frontendmentor.io/profile/igunereve"
+            target="_blank"
+            >Pirvulescu Catalin</a
+          >
+          2023
+        </p>
+
+        <p class="subtext">Made with <span class="fst-italic">passion</span></p>
+      </div>
+
+      <div class="social-media fs-3">
+        <a
+          title="linkedin"
+          aria-label="This is a hyperlink that will redirect to a specific URL"
+          href="https://www.linkedin.com/in/pirvulescu-catalin-100390159/"
+          target="_blank"
+          ><i class="fa-brands fa-linkedin"></i
+        ></a>
+
+        <a
+          title="instagram"
+          aria-label="This is a hyperlink that will redirect to a specific URL"
+          href="https://www.instagram.com/catalinclaudiu_/"
+          target="_blank"
+          ><i class="fa-brands fa-instagram"></i
+        ></a>
+
+        <a
+          title="github"
+          aria-label="This is a hyperlink that will redirect to a specific URL"
+          href="https://github.com/Elyticus"
+          target="_blank"
+          ><i class="fa-brands fa-github"></i
+        ></a>
+
+        <p class="footer-motto">Coffee must be something special</p>
+      </div>
+    </footer>
+
+    <!-- Bootstrap JS Link -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
+      crossorigin="anonymous"
+    ></script>
+
+    <!-- JavaScript Link -->
+    <script src="https://smtpjs.com/v3/smtp.js"></script>
+    <script src="contact.js" type="module"></script>
+
+    <!-- Email Form -->
+    <script
+      type="text/javascript"
+      src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"
+    ></script>
+    <script type="text/javascript">
+      (function () {
+        emailjs.init("NpHkjTeTEXL9cOvga");
+      })();
+    </script>
+  </body>
+</html>
