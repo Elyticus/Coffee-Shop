@@ -1,29 +1,5 @@
 import { coffeeData } from "./about-data.js";
 
-// Navbar
-const navbar = document.querySelector(".navbar");
-const main = document.querySelector("main");
-
-let mainPos = main.getBoundingClientRect().top;
-
-function updateNavbar() {
-  const scrollPos = window.scrollY;
-
-  if (scrollPos >= mainPos) {
-    navbar.classList.add("sticky");
-  } else {
-    navbar.classList.remove("sticky");
-  }
-
-  requestAnimationFrame(updateNavbar);
-}
-
-window.addEventListener("scroll", () => {
-  mainPos = main.getBoundingClientRect().top;
-});
-
-updateNavbar();
-
 // About Page________________________________________________
 function getHTML() {
   let feedHTML = "";
@@ -31,14 +7,12 @@ function getHTML() {
   coffeeData.forEach((coffee) => {
     feedHTML += `
     <div class="about-content">
+    <div><img class="about-img" src = "${coffee.image}"/></div>
     <div>
-    <img class="about-img reveal" src = "${coffee.image}" alt="Image with the restaurant location"/>
-    </div>
-    <div>
-    <p class="location-title fw-bold fs-5 mt-4 reveal">${coffee.city}</p>
+    <p class="location-title fw-bold fs-5 mt-4">${coffee.city}</p>
     </div>
 
-    <p class="reveal">${coffee.address}</p>
+    <p>${coffee.address}</p>
 
     </div>
     `;
@@ -111,7 +85,6 @@ cardElement3.addEventListener("click", () => {
 
 // _________________________________________________________________
 
-<<<<<<< HEAD
 let number = "" + 15;
 let newNum = new Array();
 
@@ -123,51 +96,3 @@ console.log(
     newNum.push(n ** 2);
   })
 );
-=======
-let basket = JSON.parse(localStorage.getItem("data")) || [];
-
-let calculation = () => {
-  let cartIcon = document.getElementById("count");
-  cartIcon.innerHTML = basket
-    .map((e) => e.item)
-    .reduce((total, currentItem) => total + currentItem, 0);
-};
-
-calculation();
-
-// Scroll Effect________________________________________________________
-window.addEventListener("scroll", reveal);
-function reveal() {
-  const reveals = document.querySelectorAll(".reveal");
-
-  for (let i = 0; i < reveals.length; i++) {
-    const windowHeight = window.innerHeight;
-    const revealTop = reveals[i].getBoundingClientRect().top;
-    const revealPoint = 150;
-
-    if (revealTop < windowHeight - revealPoint) {
-      reveals[i].classList.add("active");
-    } else {
-      reveals[i].classList.remove("active");
-    }
-  }
-}
-
-// Logo hover effect_____________________________________
-const logo = document.getElementById("web-logo");
-
-logo.addEventListener("mouseenter", () => {
-  logo.classList.add("fa-bounce");
-});
-
-logo.addEventListener("mouseout", () => {
-  logo.classList.remove("fa-bounce");
-});
-
-// Cart click animation__________________________________________
-const cartLogo = document.getElementById("shopCart");
-
-cartLogo.addEventListener("click", () => {
-  cartLogo.classList.add("fa-beat");
-});
->>>>>>> ed75509f935288f667b6ded105d0b81399ff7bf3
