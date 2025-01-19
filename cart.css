@@ -72,6 +72,10 @@
   transition: 0.2s ease-in-out;
 }
 
+i.fa-solid {
+  display: flex;
+}
+
 .fa-brands {
   margin-right: 0.5em;
 }
