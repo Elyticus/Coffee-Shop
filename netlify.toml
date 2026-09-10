@@ -1,8 +1,9 @@
-# Build the Vite app and publish the compiled output, not the raw source
-# (serving /src/main.tsx directly fails with a MIME type error).
+# Static site: no build step, publish the repo root as-is.
 [build]
-  command = "npm run build"
-  publish = "dist"
+  publish = "."
 
-[build.environment]
-  NODE_VERSION = "22"
+# There is no index.html, so serve home.html at the root URL.
+[[redirects]]
+  from = "/"
+  to = "/home.html"
+  status = 200
